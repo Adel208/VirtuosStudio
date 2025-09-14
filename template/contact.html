@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Virtuos Studio</title>
+  <meta name="description" content="Contactez Virtuos Studio pour obtenir un devis, des informations sur nos services ou planifier un appel.">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header"></header>
+
+  <main class="section template-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="../index.html">Accueil</a> / Contact</div>
+      <h1 class="title">Entrons en contact</h1>
+      <p class="subtitle">Décrivez votre besoin et obtenez un retour rapide de notre équipe. Nous répondons sous 24h ouvrées.</p>
+
+      <div class="grid" style="gap:24px; grid-template-columns: 1.2fr .8fr; margin-top:24px">
+        <section class="card">
+          <h2 style="margin:0 0 12px">Formulaire de contact</h2>
+          <form class="contact-form" name="contact-page" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/template/merci.html">
+            <input type="hidden" name="form-name" value="contact-page" />
+            <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="grid form-grid">
+              <input type="text" name="name" placeholder="Nom" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="tel" name="phone" placeholder="Téléphone" />
+              <select name="budget" required>
+                <option value="" disabled selected>Budget estimé</option>
+                <option>Moins de 1 000€</option>
+                <option>1 000€ - 3 000€</option>
+                <option>3 000€ - 7 000€</option>
+                <option>7 000€+</option>
+              </select>
+              <textarea name="message" placeholder="Décrivez votre projet" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary" style="margin-top:12px">Envoyer</button>
+            <div data-netlify-recaptcha="true" style="margin-top:10px"></div>
+          </form>
+        </section>
+
+        <aside class="card" style="display:grid; gap:12px; align-content:start">
+          <h2 style="margin:0 0 12px">Coordonnées</h2>
+          <p style="color:var(--muted); margin:0">Vous pouvez aussi nous joindre via les coordonnées ci-dessous.</p>
+          <div>
+            <div style="font-weight:700">Téléphone</div>
+            <a href="tel:+33781451966">+33 7 81 45 19 66</a>
+          </div>
+          <div>
+            <div style="font-weight:700">Email</div>
+            <a href="mailto:contact@virtuos.studio">contact@virtuos.studio</a>
+          </div>
+          <div>
+            <div style="font-weight:700">Adresse</div>
+            <p style="margin:4px 0 0; color:var(--muted)">Virtuos Studio<br> 42 Avenue du Futur, 75000 Paris</p>
+          </div>
+          <div>
+            <div style="font-weight:700">Horaires</div>
+            <p style="margin:4px 0 0; color:var(--muted)">Lun–Ven: 9h–18h (CET)</p>
+          </div>
+          <div>
+            <div style="font-weight:700">Réseaux</div>
+            <p style="margin:4px 0 0">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> ·
+              <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a> ·
+              <a href="https://github.com" target="_blank" rel="noopener">GitHub</a> ·
+              <a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok</a>
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="card" style="margin-top:24px">
+        <h2 style="margin:0 0 12px">Localisation</h2>
+        <div class="template-frame" style="margin-top:8px">
+          <iframe title="Localisation Virtuos Studio" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.489%2C51.28%2C0.236%2C51.686&amp;layer=mapnik" loading="lazy"></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.3"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
