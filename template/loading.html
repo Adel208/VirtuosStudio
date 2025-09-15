@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chargement | Virtuos Studio</title>
+  <meta name="description" content="Page de chargement — préparation de l’expérience Virtuos Studio.">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    :root{
+      --loader-size: 120px;
+    }
+    .loading-wrap{min-height:100vh; display:grid; place-items:center; position:relative; overflow:hidden}
+    .loading-halo{position:absolute; width:600px; height:600px; border-radius:50%; filter: blur(80px); opacity:.35}
+    .loading-halo.h1{background: radial-gradient(circle, var(--brand) 0%, transparent 60%); left:-160px; top:-160px}
+    .loading-halo.h2{background: radial-gradient(circle, var(--brand-2) 0%, transparent 60%); right:-160px; bottom:-160px}
+    .loading-inner{display:grid; gap:18px; place-items:center; text-align:center; width:min(920px,92%)}
+    .loading-brand{font-size: clamp(30px, 6.4vw, 72px); letter-spacing:-.04em; margin:0}
+    .loading-sub{color:var(--muted); margin:0}
+    .loader{position:relative; width:var(--loader-size); height:var(--loader-size);}
+    .ring{position:absolute; inset:0; border-radius:50%; border: 2px solid rgba(255,255,255,0.12)}
+    .ring-fill{position:absolute; inset:0; border-radius:50%; border: 4px solid transparent; border-top-color: var(--brand); border-right-color: var(--brand-2)}
+    .progress{font-weight:700; letter-spacing:.08em}
+    .bar{width:min(360px, 80%); height:8px; border-radius:999px; background: rgba(255,255,255,0.08); overflow:hidden; border:1px solid var(--border)}
+    .bar > i{display:block; height:100%; width:0%; background: linear-gradient(90deg, var(--accent), var(--brand-2)); box-shadow: 0 0 16px rgba(108,246,255,.25)}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand">Virtuos<span>Studio</span></a>
+      <nav class="navbar" aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="./projets.html">Projets</a></li>
+          <li><a href="../index.html#pricing">Tarifs</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./faq.html">Faq</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <div class="nav-meta">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social">IG</a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social">FB</a>
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="social">GH</a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="TikTok" class="social">TT</a>
+          <a href="tel:+33781451966" class="phone">+33 7 81 45 19 66</a>
+        </div>
+        <a class="btn btn-primary" href="./contact.html">Obtenir un devis</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="loading-wrap">
+    <div class="loading-halo h1" aria-hidden="true"></div>
+    <div class="loading-halo h2" aria-hidden="true"></div>
+
+    <div class="loading-inner">
+      <h1 class="loading-brand">Virtuos<span style="color:var(--brand)">Studio</span></h1>
+      <p class="loading-sub">Chargement de l’expérience…</p>
+      <div class="loader" aria-hidden="true">
+        <span class="ring"></span>
+        <span class="ring-fill" id="ring"></span>
+      </div>
+      <div class="bar" aria-label="Progression du chargement">
+        <i id="barFill"></i>
+      </div>
+      <div class="progress" id="progress">0%</div>
+      <div class="hero-cta" style="margin-top:8px">
+        <a class="btn btn-outline" href="../index.html">Entrer maintenant</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-col">
+        <a href="../index.html" class="brand">Virtuos<span>Studio</span></a>
+        <p>Nous concevons des sites web premium, sombres et futuristes, animés avec GSAP.</p>
+      </div>
+      <div class="links-col">
+        <h4>Liens</h4>
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="./projets.html">Projets</a></li>
+          <li><a href="../index.html#pricing">Tarifs</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./faq.html">Faq</a></li>
+        </ul>
+      </div>
+      <div class="contact-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:virtuosagency@gmail.com">virtuosagency@gmail.com</a></li>
+          <li><a href="tel:+33781451966">+33 7 81 45 19 66</a></li>
+          <li class="socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> Virtuos Studio. Tous droits réservés.
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.3"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+    // Simulated loading + ring rotation
+    (function(){
+      const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const ring = document.getElementById('ring');
+      const bar = document.getElementById('barFill');
+      const txt = document.getElementById('progress');
+      let p = 0;
+      const duration = prefersReduce ? 1200 : 2200;
+      const step = 20; // ms
+      const inc = 100 / (duration / step);
+      const timer = setInterval(() => {
+        p = Math.min(100, p + inc);
+        bar.style.width = p.toFixed(0) + '%';
+        txt.textContent = p.toFixed(0) + '%';
+        if (p >= 100) {
+          clearInterval(timer);
+          setTimeout(() => {
+            window.location.href = '../index.html';
+          }, prefersReduce ? 200 : 350);
+        }
+      }, step);
+      if (!prefersReduce) {
+        // rotate the ring
+        let angle = 0;
+        setInterval(() => {
+          angle = (angle + 6) % 360;
+          ring.style.transform = `rotate(${angle}deg)`;
+        }, 16);
+      }
+    })();
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

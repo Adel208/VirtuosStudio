@@ -35,7 +35,7 @@ function buildHeaderHTML() {
           <li><a href="${tpl}projets.html">Projets</a></li>
           <li><a href="${tpl}tarifs.html">Tarifs</a></li>
           <li><a href="${tpl}contact.html">Contact</a></li>
-          <li><a href="${tpl}faq.html">FAQ</a></li>
+          <li><a href="${tpl}faq.html">Faq</a></li>
         </ul>
         <div class="nav-cta">
           <div class="nav-meta">
@@ -69,7 +69,7 @@ function buildFooterHTML() {
       <div class="links-col">
         <h4>Légal</h4>
         <ul>
-          <li><a href="${tpl}faq.html">FAQ</a></li>
+          <li><a href="${tpl}faq.html">Faq</a></li>
           <li><a href="${tpl}politique-confidentialite.html">Politique de confidentialité</a></li>
           <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
         </ul>
@@ -77,7 +77,7 @@ function buildFooterHTML() {
       <div class="contact-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:contact@virtuos.studio">contact@virtuos.studio</a></li>
+          <li><a href="mailto:virtuosagency@gmail.com">virtuosagency@gmail.com</a></li>
           <li><a href="tel:+33781451966">+33 7 81 45 19 66</a></li>
           <li class="socials">
             <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
@@ -240,6 +240,13 @@ window.addEventListener('load', () => {
     gsap.from('.subtitle', { y: 8, opacity: 0, duration: 0.4, delay: 0.16, ease: 'power2.out' });
     gsap.from('.hero-cta .btn', { y: 6, opacity: 0, duration: 0.4, delay: 0.22, stagger: 0.06, ease: 'power2.out' });
     gsap.from('.hero-badges span', { y: 4, opacity: 0, duration: 0.4, delay: 0.28, stagger: 0.05, ease: 'power2.out' });
+    // Subtle reveal for hero logos and micro proof (logo pills)
+    if (document.querySelector('.logos .logo-pill')) {
+      gsap.from('.logos .logo-pill', { y: 6, opacity: 0, duration: 0.35, delay: 0.34, stagger: 0.04, ease: 'power2.out' });
+    }
+    if (document.querySelector('.micro-proof')) {
+      gsap.from('.micro-proof', { y: 6, opacity: 0, duration: 0.35, delay: 0.42, ease: 'power2.out' });
+    }
 
     // Scroll reveals
     const revealUp = document.querySelectorAll('.service, .project, .price');
@@ -252,6 +259,22 @@ window.addEventListener('load', () => {
         scrollTrigger: {
           trigger: el,
           start: 'top 80%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+    });
+
+    // Reveal for section eyebrows and titles
+    const sectionHeaders = document.querySelectorAll('.section .eyebrow, .section .section-title');
+    sectionHeaders.forEach((el) => {
+      gsap.from(el, {
+        y: 10,
+        opacity: 0,
+        duration: 0.45,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
           toggleActions: 'play none none reverse'
         }
       });

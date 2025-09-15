@@ -57,4 +57,4 @@ https://adel208.github.io/VirtuosStudio/
 
 ## Contact
 
-Navbar et footer contiennent un CTA et des coordonnées (ex: contact@virtuos.studio, +33 7 81 45 19 66). Remplacez par vos infos.
+Navbar et footer contiennent un CTA et des coordonnées (ex: virtuosagency@gmail.com, +33 7 81 45 19 66). Remplacez par vos infos.

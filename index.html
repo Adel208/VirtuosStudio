@@ -11,6 +11,30 @@
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23A3FF12' d='M128 16l96 224H32z'/%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Virtuos Studio",
+    "url": "https://adel208.github.io/VirtuosStudio/",
+    "email": "mailto:virtuosagency@gmail.com",
+    "telephone": "+33781451966",
+    "sameAs": [
+      "https://www.instagram.com/",
+      "https://www.facebook.com/",
+      "https://github.com/",
+      "https://www.linkedin.com/"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Virtuos Studio",
+    "url": "https://adel208.github.io/VirtuosStudio/"
+  }
+  </script>
 </head>
 <body>
   <header class="site-header"></header>
@@ -19,18 +43,26 @@
     <section class="hero section" id="hero">
       <div class="container hero-inner">
         <div class="kicker">Agence Web premuim</div>
-        <h1 class="title">
-          Nous créons des expériences web premium, rapides et animées.
-        </h1>
-        <p class="subtitle">
-          Conception, développement, SEO et animations GSAP pour booster votre image de marque et vos conversions.
-        </p>
+        <h1 class="title">Des sites web premium qui convertissent</h1>
+        <p class="subtitle">Design sombre, animations maîtrisées et SEO efficace pour accroître votre visibilité et générer plus de leads.</p>
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-secondary">Voir nos projets</a>
-          <a href="#pricing" class="btn btn-outline">Nos tarifs</a>
+          <a href="./template/contact.html" class="btn btn-secondary">Obtenir un devis</a>
+          <a href="#projects" class="btn btn-outline">Voir nos projets</a>
         </div>
         <div class="hero-badges">
           <span>GSAP</span><span>SEO</span><span>Responsive</span><span>Performance</span>
+        </div>
+        <div class="logos" aria-label="Clients et partenaires">
+          <span class="logo-pill"><img src="./assets/img/logo-evasion.svg" alt="Evasion" width="112" height="28" /></span>
+          <span class="logo-pill"><img src="./assets/img/logo-wextrizy.svg" alt="Wextrizy" width="112" height="28" /></span>
+          <span class="logo-pill"><img src="./assets/img/logo-medical.svg" alt="Medical" width="112" height="28" /></span>
+          <span class="logo-pill"><img src="./assets/img/logo-presse.svg" alt="Presse" width="112" height="28" /></span>
+          <span class="logo-pill"><img src="./assets/img/logo-services.svg" alt="Services" width="112" height="28" /></span>
+        </div>
+        <div class="micro-proof">
+          <span>+30 projets livrés</span>
+          <span>Satisfaction moyenne 4,9/5</span>
+          <span>Réponse en &lt; 24h</span>
         </div>
       </div>
       <div class="glow-1"></div>
@@ -39,23 +71,33 @@
 
     <section class="services section" id="services">
       <div class="container">
+        <div class="eyebrow">Ce que nous faisons</div>
         <h2 class="section-title">Services</h2>
+        <div class="divider" aria-hidden="true"></div>
         <div class="grid services-grid">
           <article class="card service">
-            <h3>Design & Branding</h3>
-            <p>Identité visuelle, UI/UX sombre moderne, typographies impactantes, composants premium.</p>
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-brand.svg" alt="" width="24" height="24"></div>
+            <h3>Plus de crédibilité de marque</h3>
+            <p>Design premium et cohérent qui augmente la confiance et les conversions.</p>
+            <div class="meta"><b>Impact</b>: +15 à +25% de clics sur les CTA</div>
           </article>
           <article class="card service">
-            <h3>Développement Front/Back</h3>
-            <p>Sites vitrines, landing pages, intégrations, formulaires, performance et accessibilité.</p>
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-perf.svg" alt="" width="24" height="24"></div>
+            <h3>Mise en ligne rapide et performante</h3>
+            <p>Pages rapides et stables (Core Web Vitals au vert) pour convertir davantage.</p>
+            <div class="meta"><b>Perf</b>: −30% temps de chargement</div>
           </article>
           <article class="card service">
-            <h3>Animations & Interactions</h3>
-            <p>GSAP, ScrollTrigger, micro-interactions, parallax, transitions fluides et contrôlées.</p>
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-ux.svg" alt="" width="24" height="24"></div>
+            <h3>Engagement supérieur</h3>
+            <p>Animations maîtrisées qui guident le regard et retiennent l’attention.</p>
+            <div class="meta"><b>UX</b>: +20 à +35% de temps passé</div>
           </article>
           <article class="card service">
-            <h3>SEO & Analytics</h3>
-            <p>Optimisation SEO, Core Web Vitals, balisage sémantique, suivi et dashboards.</p>
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-seo.svg" alt="" width="24" height="24"></div>
+            <h3>Visibilité organique accrue</h3>
+            <p>SEO technique + contenu optimisé pour des positions gagnées.</p>
+            <div class="meta"><b>SEO</b>: +30% d’impressions organiques</div>
           </article>
         </div>
       </div>
@@ -63,72 +105,88 @@
 
     <section class="projects section" id="projects">
       <div class="container">
+        <div class="eyebrow">Réalisations</div>
         <h2 class="section-title">Projets en vedette</h2>
+        <div class="divider" aria-hidden="true"></div>
         <div class="grid projects-grid">
           <!-- Project cards generated manually -->
           <article class="card project">
+            <div class="project-thumb"><img src="./template/wextrizy/Capture d'écran 2025-09-13 à 13.20.07 PM.png" alt="Aperçu Wextrizy" loading="lazy" decoding="async" width="640" height="360"></div>
             <h3>Wextrizy</h3>
             <p>Studio créatif moderne, identité forte et interactions soignées.</p>
+            <div class="project-meta"><b>Objectif</b>: identité marquée · <b>Résultat</b>: +20% de clics sur les CTA</div>
             <div class="actions">
               <a class="btn btn-primary" href="https://wextrizy.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
               <a class="btn btn-outline" href="./template/wextrizy.html">Détails</a>
             </div>
           </article>
           <article class="card project">
-            <h3>Evasion Signature</h3>
-            <p>Expérience de voyage haut de gamme, élégante et immersive.</p>
+            <div class="project-thumb"><img src="./template/extrizy/extrizyhero.png" alt="Aperçu Extrizy" loading="lazy" decoding="async" width="640" height="360"></div>
+            <h3>Extrizy</h3>
+            <p>Identité digitale énergique et interface soignée.</p>
+            <div class="project-meta"><b>Objectif</b>: renforcer la marque · <b>Résultat</b>: +18% de temps passé</div>
             <div class="actions">
-              <a class="btn btn-primary" href="https://evasionsignature.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
-              <a class="btn btn-outline" href="./template/evasionsignature.html">Détails</a>
+              <a class="btn btn-primary" href="https://extrizy.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
+              <a class="btn btn-outline" href="./template/extrizy.html">Détails</a>
             </div>
           </article>
           <article class="card project">
+            <div class="project-thumb"><img src="./template/evasionvoyage/evasion voyage.png" alt="Aperçu Evasion Voyage" loading="lazy" decoding="async" width="640" height="360"></div>
             <h3>Evasion Voyage</h3>
             <p>Agence de voyage moderne avec storytelling visuel.</p>
+            <div class="project-meta"><b>Objectif</b>: augmenter les demandes · <b>Résultat</b>: +25% de clics vers le devis</div>
             <div class="actions">
               <a class="btn btn-primary" href="https://evasionvoyage.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
               <a class="btn btn-outline" href="./template/evasionvoyage.html">Détails</a>
             </div>
           </article>
           <article class="card project">
-            <h3>Docteur</h3>
+            <div class="project-thumb"><img src="./template/Medical/apropos.png" alt="Aperçu Medical" loading="lazy" decoding="async" width="640" height="360"></div>
+            <h3>Medical</h3>
             <p>Site médical clair, rassurant et orienté prise de rendez-vous.</p>
+            <div class="project-meta"><b>Objectif</b>: +RDV en ligne · <b>Résultat</b>: −15% de rebond</div>
             <div class="actions">
               <a class="btn btn-primary" href="https://docteur.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
-              <a class="btn btn-outline" href="./template/docteur.html">Détails</a>
+              <a class="btn btn-outline" href="./template/Medical.html">Détails</a>
             </div>
           </article>
           <article class="card project">
-            <h3>L'Afrique</h3>
+            <div class="project-thumb"><img src="./template/Presse/afriquewebsite.png" alt="Aperçu Presse" loading="lazy" decoding="async" width="640" height="360"></div>
+            <h3>Presse</h3>
             <p>Plateforme éditoriale moderne à l'esthétique audacieuse.</p>
+            <div class="project-meta"><b>Objectif</b>: lisibilité & engagement · <b>Résultat</b>: +22% pages/session</div>
             <div class="actions">
               <a class="btn btn-primary" href="https://lafrique.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
-              <a class="btn btn-outline" href="./template/lafrique.html">Détails</a>
+              <a class="btn btn-outline" href="./template/Presse.html">Détails</a>
             </div>
           </article>
           <article class="card project">
-            <h3>Plomberies</h3>
+            <div class="project-thumb"><img src="./template/Services/accueil.png" alt="Aperçu Services" loading="lazy" decoding="async" width="640" height="360"></div>
+            <h3>Services</h3>
             <p>Services techniques clairs, CTA visibles, conversion optimisée.</p>
+            <div class="project-meta"><b>Objectif</b>: +demandes qualifiées · <b>Résultat</b>: +17% de soumissions formulaire</div>
             <div class="actions">
               <a class="btn btn-primary" href="https://plomberies.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
-              <a class="btn btn-outline" href="./template/plomberies.html">Détails</a>
+              <a class="btn btn-outline" href="./template/Services.html">Détails</a>
             </div>
           </article>
         </div>
         <div class="section-cta" style="text-align:center; margin-top:24px;">
-          <a class="btn btn-ghost" href="./template/projets.html">Voir tous les projets</a>
+          <a class="btn btn-ghost" href="./template/projets.html">Voir Projets récents</a>
         </div>
       </div>
     </section>
 
     <section class="pricing section" id="pricing">
       <div class="container">
+        <div class="eyebrow">Offres</div>
         <h2 class="section-title">Tarifs</h2>
+        <div class="divider" aria-hidden="true"></div>
         <div class="grid pricing-grid">
           <article class="card price">
             <h3>Starter</h3>
             <p class="price-tag">1 290€</p>
-            <div class="hero-badges" style="margin-top:10px"><span>-20% créateurs</span></div>
+            
             <ul>
               <li>Page d’accueil + 4 pages</li>
               <li>Formulaire de contact Netlify</li>
@@ -141,7 +199,7 @@
             <div class="badge">Populaire</div>
             <h3>Pro</h3>
             <p class="price-tag">2 490€</p>
-            <div class="hero-badges" style="margin-top:10px"><span>-20% créateurs</span></div>
+            
             <ul>
               <li>Site vitrine 5-8 pages</li>
               <li>Animations GSAP avancées</li>
@@ -163,7 +221,7 @@
           </article>
         </div>
 
-        <div class="card" style="margin-top:24px">
+        <div class="card promo-offer" style="margin-top:24px">
           <div class="grid" style="grid-template-columns: 1fr 1fr; align-items:center">
             <div>
               <h3 style="margin:0 0 8px">Offre BGE ADIL -20 créateurs</h3>
@@ -180,7 +238,9 @@
 
     <section class="contact section" id="contact">
       <div class="container contact-inner">
+        <div class="eyebrow">Contact</div>
         <h2 class="section-title">Parlons de votre projet</h2>
+        <div class="divider" aria-hidden="true"></div>
         <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/template/merci.html">
           <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off" />
@@ -198,7 +258,6 @@
             <textarea name="message" placeholder="Décrivez votre projet" rows="5" required></textarea>
           </div>
           <button type="submit" class="btn btn-secondary">Envoyer</button>
-          <div data-netlify-recaptcha="true" style="margin-top:10px"></div>
         </form>
       </div>
     </section>

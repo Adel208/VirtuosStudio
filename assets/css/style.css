@@ -17,7 +17,7 @@
 html,body{height:100%}
 html{scroll-behavior:auto}
 body{
-  margin:0; font-family:'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+  margin:0; font-family:'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   color:var(--text); background:radial-gradient(1200px 800px at 20% -10%, rgba(163,255,18,0.06), transparent 50%), radial-gradient(800px 600px at 100% 10%, rgba(108,246,255,0.06), transparent 50%), var(--bg);
 }
 img{max-width:100%; display:block}
@@ -79,6 +79,16 @@ a{color:inherit; text-decoration:none}
   .nav-cta{display:flex; gap:12px}
 }
 
+/* Hero: logos and micro proof */
+.hero .logos{display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; align-items:center}
+.logo-chip{display:none}
+.logo-pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--border); background:rgba(255,255,255,0.06); border-radius:999px; backdrop-filter:saturate(120%) blur(6px); opacity:1; transition:transform .2s ease}
+.logo-pill:hover{transform:translateY(-1px)}
+.logo-pill img{height:22px; width:auto; display:block; opacity:1}
+@media (min-width: 720px){ .logo-pill img{height:24px} }
+.micro-proof{margin-top:10px; color:var(--muted); font-size:13px}
+.micro-proof span{margin-right:12px}
+
 /* Hero */
 .hero{position:relative; overflow:hidden}
 .kicker{font-size:13px; color:var(--brand-2); letter-spacing:.16em; text-transform:uppercase; margin-bottom:16px}
@@ -91,6 +101,29 @@ a{color:inherit; text-decoration:none}
   .hero-badges{margin-top:32px}
 }
 
+/* Sections & hierarchy */
+.section{padding: 88px 0}
+@media (max-width: 920px){
+  .section{padding: 72px 0}
+}
+.section .section-title{margin: 0 0 12px}
+.section .eyebrow{font-size:12px; color:var(--brand-2); letter-spacing:.18em; text-transform:uppercase; margin-bottom:8px}
+.section .divider{height:1px; background: linear-gradient(90deg, rgba(255,255,255,0.08), transparent); margin: 4px 0 12px; border-radius:1px}
+
+/* CTA accent consistency */
+.btn.btn-primary{background: linear-gradient(90deg, var(--brand), var(--brand-2)); border: none}
+.btn.btn-outline{border-color: var(--border); color: var(--text)}
+
+/* Sober interactions for promo offer buttons */
+.promo-offer .hero-cta .btn{transform:translateY(0); box-shadow:none; transition: transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease}
+.promo-offer .hero-cta .btn:hover{transform:translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,.08)}
+.promo-offer .hero-cta .btn:active{transform:translateY(0)}
+@media (prefers-reduced-motion: reduce){
+  .promo-offer .hero-cta .btn{transition: background-color .18s ease, color .18s ease, border-color .18s ease}
+  .promo-offer .hero-cta .btn:hover,
+  .promo-offer .hero-cta .btn:active{transform:none; box-shadow:none}
+}
+
 /* Extra spacing for template hero ctas */
 .template-hero .hero-cta{margin-bottom:24px}
 .glow-1,.glow-2{position:absolute; border-radius:50%; filter:blur(60px); opacity:.35; pointer-events:none}
@@ -99,16 +132,32 @@ a{color:inherit; text-decoration:none}
 
 /* Services */
 .services-grid{grid-template-columns: repeat(4, 1fr)}
+.service{position:relative; transition:transform .18s ease, box-shadow .18s ease}
+.service:hover{transform:translateY(-2px)}
 .service h3{margin:0 0 8px}
 .service p{margin:0; color:var(--muted)}
-@media (max-width: 1000px){.services-grid{grid-template-columns: repeat(2, 1fr)}}
-@media (max-width: 600px){.services-grid{grid-template-columns: 1fr}}
+.service .icon{width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.06); border:1px solid var(--border); margin-bottom:10px}
+.service .icon svg{width:20px; height:20px; opacity:.9}
+.service .meta{margin-top:8px; font-size:12px; color:var(--muted); opacity:.9}
+.service .meta b{color:var(--text); font-weight:600}
+
+/* Project cards thumbnails */
+.project-thumb{position:relative; border-radius:12px; overflow:hidden; border:1px solid var(--border); background:var(--glass); margin:0 0 10px; aspect-ratio: 16 / 9}
+.project-thumb img{position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; opacity:.2; transform:scale(1); transition: opacity .3s ease, transform .3s ease}
+.project-thumb::after{content:""; position:absolute; inset:0; background:rgba(0,0,0,0.55); transition: opacity .3s ease}
+.project:hover .project-thumb img{opacity:1; transform:scale(1.03)}
+.project:hover .project-thumb::after{opacity:0}
+.project-meta{margin:-6px 0 12px; font-size:12px; color:var(--muted); opacity:.9}
+.project-meta b{color:var(--text); font-weight:600}
 
 /* Projects */
 .projects-grid{grid-template-columns: repeat(3, 1fr)}
 .project h3{margin:0 0 6px}
 .project p{margin:0 0 14px; color:var(--muted)}
+.project-meta{margin:-6px 0 12px; font-size:12px; color:var(--muted); opacity:.9}
+.project-meta b{color:var(--text); font-weight:600}
 .project .actions{display:flex; gap:10px; flex-wrap:wrap}
+.project .project-meta-small{font-size:11px; color:var(--muted); opacity:.8; margin:4px 0 10px}
 @media (max-width: 1000px){.projects-grid{grid-template-columns: repeat(2, 1fr)}}
 @media (max-width: 640px){.projects-grid{grid-template-columns: 1fr}}
 
