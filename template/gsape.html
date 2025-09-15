@@ -4,26 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projet — Gsape | Virtuos Studio</title>
+  <meta name="description" content="Étude de cas GSAPE — Showcase technique autour d’animations GSAP: micro‑interactions sobres, scénarisation, et performances au vert." />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://adel208.github.io/VirtuosStudio/"},
+      {"@type": "ListItem", "position": 2, "name": "Projets", "item": "https://adel208.github.io/VirtuosStudio/template/projets.html"},
+      {"@type": "ListItem", "position": 3, "name": "Gsape", "item": "https://adel208.github.io/VirtuosStudio/template/gsape.html"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header"></header>
   <main class="section template-hero">
     <div class="container">
       <div class="breadcrumbs"><a href="../index.html">Accueil</a> / Projets / Gsape</div>
+      <div class="eyebrow">Projet</div>
       <h1 class="title">Gsape</h1>
-      <p class="subtitle">Showcase technique autour d'animations GSAP.</p>
+      <div class="divider" aria-hidden="true"></div>
+      <p class="subtitle">Showcase technique autour d’animations GSAP: micro‑interactions, transitions fluides et scroll‑based animations, avec une approche sobre et performante.</p>
       <div class="hero-cta" style="margin-top:16px">
         <a class="btn btn-secondary" href="https://gsape.netlify.app/" target="_blank" rel="noopener">Visiter le site</a>
       </div>
-      <div class="meta">
+      <div class="meta" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
         <span class="badge">Technique</span>
         <span class="badge">Animation</span>
+        <span class="badge">Performance</span>
       </div>
       <div class="template-frame card">
         <iframe src="https://gsape.netlify.app/" title="Gsape"></iframe>
+      </div>
+      
+      <div class="card" style="margin-top:20px">
+        <div class="grid" style="grid-template-columns: 1.2fr .8fr; gap:16px; align-items:start">
+          <section>
+            <h3 style="margin:0 0 8px">Présentation</h3>
+            <p style="margin:0; color:var(--muted)">Prototype démonstrateur des capacités GSAP: séquences scrollées (ScrollTrigger), entrées douces, et micro‑interactions utiles. Accent mis sur la sobriété et la stabilité.</p>
+          </section>
+          <aside>
+            <h3 style="margin:0 0 8px">Fiche projet</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li><b>Date</b>: 2025-05</li>
+              <li><b>Auteur</b>: Virtuos Studio</li>
+              <li><b>Rôle</b>: Animation, Front‑end</li>
+              <li><b>Livrables</b>: Prototype, Documentation</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap:16px">
+          <section>
+            <h3 style="margin:0 0 8px">Objectifs</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li>Illustrer des patterns d’animation utiles</li>
+              <li>Rester performant et accessible</li>
+              <li>Documenter les bonnes pratiques</li>
+            </ul>
+          </section>
+          <section>
+            <h3 style="margin:0 0 8px">Résultats</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li>Transitions plus cohérentes</li>
+              <li>Amélioration de l’engagement</li>
+              <li>Référentiel interne d’animations</li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   </main>

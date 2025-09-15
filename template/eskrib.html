@@ -4,9 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projet — Eskrib | Virtuos Studio</title>
+  <meta name="description" content="Étude de cas Eskrib — Portfolio rédactionnel élégant, typographie lisible et structure sobre. Présentation, objectifs, résultats, stack et informations projet." />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://adel208.github.io/VirtuosStudio/"},
+      {"@type": "ListItem", "position": 2, "name": "Projets", "item": "https://adel208.github.io/VirtuosStudio/template/projets.html"},
+      {"@type": "ListItem", "position": 3, "name": "Eskrib", "item": "https://adel208.github.io/VirtuosStudio/template/eskrib.html"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -35,61 +47,70 @@
   <main class="section template-hero">
     <div class="container">
       <div class="breadcrumbs"><a href="../index.html">Accueil</a> / Projets / Eskrib</div>
+      <div class="eyebrow">Projet</div>
       <h1 class="title">Eskrib</h1>
-      <p class="subtitle">Portfolio rédactionnel élégant, typographie lisible et ambiance sobre.</p>
+      <div class="divider" aria-hidden="true"></div>
+      <p class="subtitle">Portfolio rédactionnel élégant. Typographie lisible, mise en page aérée et structure claire pour mettre en valeur les textes.</p>
       <div class="hero-cta" style="margin-top:16px">
         <a class="btn btn-secondary" href="https://eskrib.netlify.app/" target="_blank" rel="noopener">Visiter le site</a>
       </div>
-      <div class="meta">
+      <div class="meta" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
         <span class="badge">Editorial</span>
         <span class="badge">Minimal</span>
+        <span class="badge">SEO</span>
       </div>
       <div class="template-frame card">
         <iframe src="https://eskrib.netlify.app/" title="Eskrib"></iframe>
       </div>
+      
+      <div class="card" style="margin-top:20px">
+        <div class="grid" style="grid-template-columns: 1.2fr .8fr; gap:16px; align-items:start">
+          <section>
+            <h3 style="margin:0 0 8px">Présentation</h3>
+            <p style="margin:0; color:var(--muted)">Création d’un portfolio d’auteur avec un accent sur la lisibilité, les contrastes et la hiérarchie. Interface épurée centrée sur le contenu.</p>
+          </section>
+          <aside>
+            <h3 style="margin:0 0 8px">Fiche projet</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li><b>Date</b>: 2025-05</li>
+              <li><b>Auteur</b>: Virtuos Studio</li>
+              <li><b>Rôle</b>: UI/UX, Front‑end</li>
+              <li><b>Livrables</b>: Maquettes, Intégration</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap:16px">
+          <section>
+            <h3 style="margin:0 0 8px">Objectifs</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li>Valoriser l’écrit par la typographie</li>
+              <li>Structurer une lecture fluide</li>
+              <li>Rester sobre et crédible</li>
+            </ul>
+          </section>
+          <section>
+            <h3 style="margin:0 0 8px">Résultats</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li>Temps de lecture moyen en hausse</li>
+              <li>Navigation plus intuitive</li>
+              <li>SEO éditorial renforcé</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <figure>
+          <img src="./esk/eskhero.png" alt="Aperçu Eskrib" loading="lazy" decoding="async" width="1280" height="720" style="border-radius:12px; border:1px solid var(--border); width:100%; height:auto" />
+        </figure>
+      </div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="brand-col">
-        <a href="../index.html" class="brand">Virtuos<span>Studio</span></a>
-        <p>Nous concevons des sites web premium, sombres et futuristes, animés avec GSAP.</p>
-      </div>
-      <div class="links-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="../index.html#services">Services</a></li>
-          <li><a href="./projets.html">Projets</a></li>
-          <li><a href="./tarifs.html">Tarifs</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="links-col">
-        <h4>Légal</h4>
-        <ul>
-          <li><a href="./faq.html">Faq</a></li>
-          <li><a href="./politique-confidentialite.html">Politique de confidentialité</a></li>
-          <li><a href="./mentions-legales.html">Mentions légales</a></li>
-        </ul>
-      </div>
-      <div class="contact-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:virtuosagency@gmail.com">virtuosagency@gmail.com</a></li>
-          <li><a href="tel:+33781451966">+33 7 81 45 19 66</a></li>
-          <li class="socials">
-            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">
-      © <span id="year"></span> Virtuos Studio. Tous droits réservés.
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="https://unpkg.com/split-type@0.3.3"></script>

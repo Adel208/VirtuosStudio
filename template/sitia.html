@@ -4,23 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projet — Sitia | Virtuos Studio</title>
+  <meta name="description" content="Étude de cas Sitia — Expérience corporate premium, crédibilisation de l’offre et sobriété visuelle. Présentation, objectifs, résultats, stack et informations projet." />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://adel208.github.io/VirtuosStudio/"},
+      {"@type": "ListItem", "position": 2, "name": "Projets", "item": "https://adel208.github.io/VirtuosStudio/template/projets.html"},
+      {"@type": "ListItem", "position": 3, "name": "Sitia", "item": "https://adel208.github.io/VirtuosStudio/template/sitia.html"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header"></header>
   <main class="section template-hero">
     <div class="container">
       <div class="breadcrumbs"><a href="../index.html">Accueil</a> / Projets / Sitia</div>
+      <div class="eyebrow">Projet</div>
       <h1 class="title">Sitia</h1>
-      <p class="subtitle">Expérience corporate premium, crédibilité et sobriété.</p>
-      <div class="meta">
+      <div class="divider" aria-hidden="true"></div>
+      <p class="subtitle">Expérience corporate premium, crédibilité et sobriété. Grille solide, contenu clair et hiérarchie stricte pour une image professionnelle.</p>
+      <div class="meta" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
         <span class="badge">Corporate</span>
         <span class="badge">Qualité</span>
+        <span class="badge">SEO</span>
       </div>
       <div class="template-frame card">
         <iframe src="https://sitia.netlify.app/" title="Sitia"></iframe>
+      </div>
+      
+      <div class="card" style="margin-top:20px">
+        <div class="grid" style="grid-template-columns: 1.2fr .8fr; gap:16px; align-items:start">
+          <section>
+            <h3 style="margin:0 0 8px">Présentation</h3>
+            <p style="margin:0; color:var(--muted)">Positionnement corporate clair et crédible. Packaging de l’information, structure modulaire, et mise en avant des atouts clés de l’entreprise.</p>
+          </section>
+          <aside>
+            <h3 style="margin:0 0 8px">Fiche projet</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li><b>Date</b>: 2025-06</li>
+              <li><b>Auteur</b>: Virtuos Studio</li>
+              <li><b>Rôle</b>: UI/UX, Front‑end</li>
+              <li><b>Livrables</b>: Design system, Intégration</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap:16px">
+          <section>
+            <h3 style="margin:0 0 8px">Objectifs</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li>Renforcer la crédibilité</li>
+              <li>Structurer l’offre et les preuves</li>
+              <li>Optimiser la lisibilité</li>
+            </ul>
+          </section>
+          <section>
+            <h3 style="margin:0 0 8px">Résultats</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li>Image de marque professionnalisée</li>
+              <li>Parcours plus clair</li>
+              <li>Engagement en hausse</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <figure>
+          <img src="./sitia/sitia.png" alt="Aperçu Sitia" loading="lazy" decoding="async" width="1280" height="720" style="border-radius:12px; border:1px solid var(--border); width:100%; height:auto" />
+        </figure>
       </div>
     </div>
   </main>
