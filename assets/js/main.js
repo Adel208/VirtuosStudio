@@ -105,17 +105,22 @@ function renderGlobalHeaderFooter() {
   }
 }
 
-// Lenis smooth scroll
-const lenis = new Lenis({
-  duration: 1.2,
-  smooth: true,
-  wheelMultiplier: 1.1,
-});
-function raf(time){
-  lenis.raf(time);
+// Feature flags for motion depending on device and user prefs
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+const isNarrow = window.matchMedia('(max-width: 920px)').matches;
+const isMobileEnv = isCoarsePointer || isNarrow;
+
+// Lenis smooth scroll (disabled on mobile or reduced motion)
+let lenis;
+if (!prefersReduced && !isMobileEnv) {
+  lenis = new Lenis({ duration: 1.2, smooth: true, wheelMultiplier: 1.1 });
+  function raf(time){
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
   requestAnimationFrame(raf);
 }
-requestAnimationFrame(raf);
 
 // SplitType text for hero title
 let split;
@@ -126,7 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
   updateYear();
 
   const title = document.querySelector('.title');
-  if (title) {
+  if (title && !prefersReduced && !isMobileEnv) {
     split = new SplitType(title, { types: 'lines, words' });
   }
 
@@ -224,90 +229,93 @@ window.addEventListener('load', () => {
   if (window.gsap) {
     const { gsap } = window;
     gsap.registerPlugin(ScrollTrigger);
+    
+    // Disable animations on mobile or reduced motion
+    if (!prefersReduced && !isMobileEnv) {
+      // Intro timeline (softer)
+      gsap.from('.site-header', { y: -16, opacity: 0, duration: 0.4, ease: 'power2.out' });
+      gsap.from('.kicker', { y: 8, opacity: 0, duration: 0.4, delay: 0.08, ease: 'power2.out' });
 
-    // Intro timeline (softer)
-    gsap.from('.site-header', { y: -16, opacity: 0, duration: 0.4, ease: 'power2.out' });
-    gsap.from('.kicker', { y: 8, opacity: 0, duration: 0.4, delay: 0.08, ease: 'power2.out' });
+      if (document.querySelector('.title .word')) {
+        gsap.from('.title .word', {
+          y: 16,
+          opacity: 0,
+          stagger: 0.03,
+          duration: 0.6,
+          ease: 'power2.out'
+        });
+      }
 
-    if (document.querySelector('.title .word')) {
-      gsap.from('.title .word', {
-        y: 16,
-        opacity: 0,
-        stagger: 0.03,
-        duration: 0.6,
-        ease: 'power2.out'
+      gsap.from('.subtitle', { y: 8, opacity: 0, duration: 0.4, delay: 0.16, ease: 'power2.out' });
+      gsap.from('.hero-cta .btn', { y: 6, opacity: 0, duration: 0.4, delay: 0.22, stagger: 0.06, ease: 'power2.out' });
+      gsap.from('.hero-badges span', { y: 4, opacity: 0, duration: 0.4, delay: 0.28, stagger: 0.05, ease: 'power2.out' });
+      // Subtle reveal for hero logos and micro proof (logo pills)
+      if (document.querySelector('.logos .logo-pill')) {
+        gsap.from('.logos .logo-pill', { y: 6, opacity: 0, duration: 0.35, delay: 0.34, stagger: 0.04, ease: 'power2.out' });
+      }
+      if (document.querySelector('.micro-proof')) {
+        gsap.from('.micro-proof', { y: 6, opacity: 0, duration: 0.35, delay: 0.42, ease: 'power2.out' });
+      }
+
+      // Scroll reveals
+      const revealUp = document.querySelectorAll('.service, .project, .price');
+      revealUp.forEach((el) => {
+        gsap.from(el, {
+          y: 16,
+          opacity: 0,
+          duration: 0.6,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+          }
+        });
       });
-    }
 
-    gsap.from('.subtitle', { y: 8, opacity: 0, duration: 0.4, delay: 0.16, ease: 'power2.out' });
-    gsap.from('.hero-cta .btn', { y: 6, opacity: 0, duration: 0.4, delay: 0.22, stagger: 0.06, ease: 'power2.out' });
-    gsap.from('.hero-badges span', { y: 4, opacity: 0, duration: 0.4, delay: 0.28, stagger: 0.05, ease: 'power2.out' });
-    // Subtle reveal for hero logos and micro proof (logo pills)
-    if (document.querySelector('.logos .logo-pill')) {
-      gsap.from('.logos .logo-pill', { y: 6, opacity: 0, duration: 0.35, delay: 0.34, stagger: 0.04, ease: 'power2.out' });
-    }
-    if (document.querySelector('.micro-proof')) {
-      gsap.from('.micro-proof', { y: 6, opacity: 0, duration: 0.35, delay: 0.42, ease: 'power2.out' });
-    }
+      // Reveal for section eyebrows and titles
+      const sectionHeaders = document.querySelectorAll('.section .eyebrow, .section .section-title');
+      sectionHeaders.forEach((el) => {
+        gsap.from(el, {
+          y: 10,
+          opacity: 0,
+          duration: 0.45,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+          }
+        });
+      });
 
-    // Scroll reveals
-    const revealUp = document.querySelectorAll('.service, .project, .price');
-    revealUp.forEach((el) => {
-      gsap.from(el, {
-        y: 16,
-        opacity: 0,
-        duration: 0.6,
-        ease: 'power2.out',
+      // Parallax glows
+      gsap.to('.glow-1', {
+        yPercent: 10,
+        xPercent: 4,
+        ease: 'none',
         scrollTrigger: {
-          trigger: el,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse'
+          trigger: '#hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true
         }
       });
-    });
-
-    // Reveal for section eyebrows and titles
-    const sectionHeaders = document.querySelectorAll('.section .eyebrow, .section .section-title');
-    sectionHeaders.forEach((el) => {
-      gsap.from(el, {
-        y: 10,
-        opacity: 0,
-        duration: 0.45,
-        ease: 'power2.out',
+      gsap.to('.glow-2', {
+        yPercent: -10,
+        xPercent: -4,
+        ease: 'none',
         scrollTrigger: {
-          trigger: el,
-          start: 'top 85%',
-          toggleActions: 'play none none reverse'
+          trigger: '#hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true
         }
       });
-    });
-
-    // Parallax glows
-    gsap.to('.glow-1', {
-      yPercent: 10,
-      xPercent: 4,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true
-      }
-    });
-    gsap.to('.glow-2', {
-      yPercent: -10,
-      xPercent: -4,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true
-      }
-    });
+    }
 
     // Magnetic hover for primary CTAs (hero/nav) — toned down, not on cards
-    const canHover = window.matchMedia('(hover: hover)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const canHover = window.matchMedia('(hover: hover)').matches && !prefersReduced && !isMobileEnv;
     if (canHover) {
       // Softer magnetic hover only on hero CTAs
       const magnetBtns = document.querySelectorAll('.hero-cta .btn');
@@ -339,9 +347,8 @@ window.addEventListener('load', () => {
     }
 
     // Glow pulse on main hero CTA (homepage)
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const heroPrimary = document.querySelector('#hero .hero-cta .btn.btn-secondary');
-    if (heroPrimary && !reduceMotion) {
+    if (heroPrimary && !prefersReduced && !isMobileEnv) {
       gsap.to(heroPrimary, {
         boxShadow: '0 0 16px rgba(181,123,255,0.12), 0 0 0 2px rgba(108,246,255,0.06)',
         duration: 2.0,
