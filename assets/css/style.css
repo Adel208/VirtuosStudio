@@ -112,6 +112,10 @@ a{color:inherit; text-decoration:none}
 .section .section-title{margin: 0 0 12px}
 .section .eyebrow{font-size:12px; color:var(--brand-2); letter-spacing:.18em; text-transform:uppercase; margin-bottom:8px}
 .section .divider{height:1px; background: linear-gradient(90deg, rgba(255,255,255,0.08), transparent); margin: 4px 0 12px; border-radius:1px}
+.divider-mobile{display:none; height:1px; background: linear-gradient(90deg, rgba(255,255,255,0.06), transparent); margin: 6px 0 12px}
+@media (max-width: 640px){
+  .divider-mobile{display:block}
+}
 
 /* CTA accent consistency */
 .btn.btn-primary{background: linear-gradient(90deg, var(--brand), var(--brand-2)); border: none}
@@ -143,6 +147,19 @@ a{color:inherit; text-decoration:none}
 .service .icon svg{width:20px; height:20px; opacity:.9}
 .service .meta{margin-top:8px; font-size:12px; color:var(--muted); opacity:.9}
 .service .meta b{color:var(--text); font-weight:600}
+
+/* Responsive simplification for Services */
+@media (max-width: 1000px){
+  .services-grid{grid-template-columns: repeat(2, 1fr)}
+  .service{padding:20px}
+}
+@media (max-width: 640px){
+  .services-grid{grid-template-columns: 1fr}
+  .service .icon{width:34px; height:34px; margin-bottom:8px}
+  .service h3{font-size:16px}
+  .service p{font-size:14px}
+  .service .meta{display:none}
+}
 
 /* Project cards thumbnails */
 .project-thumb{position:relative; border-radius:12px; overflow:hidden; border:1px solid var(--border); background:var(--glass); margin:0 0 10px; aspect-ratio: 16 / 9}
@@ -246,8 +263,14 @@ a{color:inherit; text-decoration:none}
 @media (max-width: 900px){
   .footer-inner{grid-template-columns: 1fr 1fr}
 }
-@media (max-width: 600px){
-  .footer-inner{grid-template-columns: 1fr}
+@media (max-width: 720px){
+  .footer-inner{grid-template-columns: 1fr; gap:18px; text-align:center}
+  .site-footer{padding-top:28px}
+  .footer-inner .brand-col p{max-width: 34ch; margin:6px auto 0}
+  .footer-inner .links-col ul,
+  .footer-inner .contact-col ul{justify-items:center}
+  .footer-inner .links-col ul li,
+  .footer-inner .contact-col ul li{text-align:center}
 }
 .promo-banner .promo-close{margin-left:10px; cursor:pointer; border:none; background:transparent; color:var(--muted); padding:6px; border-radius:8px}
 .promo-banner .promo-close:hover{background: rgba(255,255,255,0.06); color:var(--text)}

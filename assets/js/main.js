@@ -55,28 +55,7 @@ function buildFooterHTML() {
   const tpl = isTpl ? './' : './template/';
   return `
     <div class="container footer-inner">
-      <div class="brand-col">
-        <a href="${root}index.html" class="brand">Virtuos<span>Studio</span></a>
-        <p>Nous concevons des sites web premium, sombres et futuristes, animés avec GSAP.</p>
-      </div>
-      <div class="links-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="${root}index.html#services">Services</a></li>
-          <li><a href="${tpl}projets.html">Projets</a></li>
-          <li><a href="${tpl}tarifs.html">Tarifs</a></li>
-          <li><a href="${tpl}contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="links-col">
-        <h4>Légal</h4>
-        <ul>
-          <li><a href="${tpl}faq.html">Faq</a></li>
-          <li><a href="${tpl}politique-confidentialite.html">Politique de confidentialité</a></li>
-          <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
-        </ul>
-      </div>
-      <div class="contact-col">
+      <div class="contact-col" style="grid-column:1/-1">
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:virtuosagency@gmail.com">virtuosagency@gmail.com</a></li>
