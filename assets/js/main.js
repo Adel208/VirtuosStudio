@@ -55,15 +55,44 @@ function buildFooterHTML() {
   const tpl = isTpl ? './' : './template/';
   return `
     <div class="container footer-inner">
-      <div class="contact-col" style="grid-column:1/-1">
+      <div class="contact-col footer-contact" style="grid-column:1/-1">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:virtuosagency@gmail.com">virtuosagency@gmail.com</a></li>
-          <li><a href="tel:+33781451966">+33 7 81 45 19 66</a></li>
+          <li>
+            <a href="mailto:virtuosagency@gmail.com">
+              <span class="icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v12H3z" stroke="currentColor" opacity=".9"/><path d="M3 7l9 7 9-7" stroke="currentColor"/></svg>
+              </span>
+              <span>virtuosagency@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+33781451966">
+              <span class="icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 4l3 1-1 4c1.5 3 3.5 5 6 6l4-1 1 3-2 3c-6 0-11-5-11-11L5 4z" stroke="currentColor"/></svg>
+              </span>
+              <span>+33 7 81 45 19 66</span>
+            </a>
+          </li>
           <li class="socials">
-            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+              <span class="icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 5.8a7.6 7.6 0 01-2.2.6 3.7 3.7 0 001.6-2 7.6 7.6 0 01-2.4.9 3.7 3.7 0 00-6.3 3.4A10.5 10.5 0 013 5.3a3.7 3.7 0 001.1 4.9 3.6 3.6 0 01-1.7-.5v.1c0 1.8 1.3 3.3 3 3.6a3.7 3.7 0 01-1.7.1 3.7 3.7 0 003.4 2.5A7.4 7.4 0 013 18.1 10.5 10.5 0 008.6 20c6.7 0 10.4-5.6 10.4-10.4v-.5A7.3 7.3 0 0022 5.8z" stroke="currentColor"/></svg>
+              </span>
+              <span>Twitter</span>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <span class="icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/><circle cx="12" cy="12" r="4" stroke="currentColor"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              </span>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <span class="icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor"/><path d="M7 10v7M7 7v1M11 17v-4.5a2 2 0 114 0V17" stroke="currentColor"/></svg>
+              </span>
+              <span>LinkedIn</span>
+            </a>
           </li>
         </ul>
       </div>
