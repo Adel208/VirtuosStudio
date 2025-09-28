@@ -11,6 +11,22 @@
   --shadow: 0 4px 16px rgba(0,0,0,0.4);
   --radius: 12px;
 }
+
+/* Conditional animation classes */
+.has-hover .card:hover{transform:translateY(-2px); transition:transform 0.3s ease}
+.has-hover .btn:hover{transform:translateY(-1px)}
+.has-hover .logo-pill:hover{transform:translateY(-2px)}
+
+/* High contrast mode */
+.high-contrast{
+  --border: rgba(255,255,255,0.25);
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.9);
+}
+
+/* Backdrop filter fallback */
+.no-backdrop .site-header{background:rgba(11,13,16,0.95)}
+.no-backdrop .navbar .nav-list{background:rgba(11,13,16,0.98)}
 *{box-sizing:border-box}
 html,body{height:100%}
 html{scroll-behavior:auto}

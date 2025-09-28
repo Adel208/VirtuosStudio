@@ -177,21 +177,48 @@ function addActiveNavStates() {
   });
 }
 
-// Feature flags for motion depending on device and user prefs
+// Enhanced feature flags for motion and device capabilities
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
 const isNarrow = window.matchMedia('(max-width: 920px)').matches;
 const isMobileEnv = isCoarsePointer || isNarrow;
+const hasHover = window.matchMedia('(hover: hover)').matches;
+const isHighRefresh = window.screen?.refreshRate > 60 || false;
+const supportsBackdrop = CSS.supports('backdrop-filter', 'blur(10px)');
+const prefersContrast = window.matchMedia('(prefers-contrast: high)').matches;
 
-// Lenis smooth scroll (disabled on mobile or reduced motion)
+// Conditional animations and smooth scroll
 let lenis;
-if (!prefersReduced && !isMobileEnv) {
-  lenis = new Lenis({ duration: 1.2, smooth: true, wheelMultiplier: 1.1 });
+
+// Initialize smooth scroll with enhanced conditions
+if (!prefersReduced && !isMobileEnv && hasHover) {
+  const scrollConfig = {
+    duration: isHighRefresh ? 1.0 : 1.2,
+    smooth: true,
+    wheelMultiplier: isHighRefresh ? 1.2 : 1.1
+  };
+  
+  lenis = new Lenis(scrollConfig);
   function raf(time){
     lenis.raf(time);
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+}
+
+// Conditional hover effects
+if (hasHover && !prefersReduced) {
+  document.documentElement.classList.add('has-hover');
+}
+
+// High contrast mode adjustments
+if (prefersContrast) {
+  document.documentElement.classList.add('high-contrast');
+}
+
+// Backdrop filter fallback
+if (!supportsBackdrop) {
+  document.documentElement.classList.add('no-backdrop');
 }
 
 // SplitType text for hero title
