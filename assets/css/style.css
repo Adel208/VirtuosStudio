@@ -306,6 +306,34 @@ a{color:inherit; text-decoration:none}
 .footer-contact .socials a:hover{color:var(--text)}
 /* Avoid long links overflow */
 .footer-contact a{overflow-wrap:anywhere}
+
+/* Footer links bar for mobile */
+.footer-links-bar{
+  background:var(--elev);
+  border-top:1px solid var(--border);
+  padding:12px 0;
+  display:none;
+}
+.footer-links{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.footer-links a{
+  color:var(--muted);
+  font-size:14px;
+  padding:8px 12px;
+  border-radius:8px;
+  transition:all 0.2s ease;
+}
+.footer-links a:hover{
+  color:var(--text);
+  background:var(--glass);
+}
 /* Single-column footer only on mobile */
 @media (max-width: 720px){
   .site-footer .footer-inner{grid-template-columns:1fr; justify-items:center; text-align:center}
@@ -321,6 +349,7 @@ a{color:inherit; text-decoration:none}
   .footer-inner .contact-col ul{justify-items:center}
   .footer-inner .links-col ul li,
   .footer-inner .contact-col ul li{text-align:center}
+  .footer-links-bar{display:block}
 }
 .promo-banner .promo-close{margin-left:10px; cursor:pointer; border:none; background:transparent; color:var(--muted); padding:6px; border-radius:8px}
 .promo-banner .promo-close:hover{background: rgba(255,255,255,0.06); color:var(--text)}

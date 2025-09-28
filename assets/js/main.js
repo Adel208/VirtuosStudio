@@ -59,24 +59,6 @@ function buildFooterHTML() {
         <a href="${root}index.html" class="brand brand-lg">Virtuos<span>Studio</span></a>
         <p>Sites web premium: design sombre, animations maîtrisées et SEO efficace.</p>
       </div>
-      <div class="links-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="${root}index.html#services">Services</a></li>
-          <li><a href="${tpl}projets.html">Projets</a></li>
-          <li><a href="${tpl}tarifs.html">Tarifs</a></li>
-          <li><a href="${tpl}articles.html">Articles</a></li>
-          <li><a href="${tpl}faq.html">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="links-col">
-        <h4>Ressources</h4>
-        <ul>
-          <li><a href="${tpl}contact.html">Contact</a></li>
-          <li><a href="${tpl}politique-confidentialite.html">Confidentialité</a></li>
-          <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
-        </ul>
-      </div>
       <div class="contact-col footer-contact">
         <h4>Contact</h4>
         <ul>
@@ -119,8 +101,18 @@ function buildFooterHTML() {
         </ul>
       </div>
     </div>
+    <div class="footer-links-bar">
+      <div class="container">
+        <ul class="footer-links">
+          <li><a href="${tpl}faq.html">FAQ</a></li>
+          <li><a href="${tpl}politique-confidentialite.html">Confidentialité</a></li>
+          <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
+          <li><a href="${tpl}contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="copyright">
-      © <span id="year"></span> Virtuos Studio. Tous droits réservés.
+      &copy; <span id="year"></span> Virtuos Studio. Tous droits r&eacute;serv&eacute;s.
     </div>`;
 }
 
@@ -175,9 +167,9 @@ window.addEventListener('DOMContentLoaded', () => {
       banner.className = 'promo-banner';
       banner.innerHTML = `
         <div class="container promo-inner">
-          <div class="promo-text">🎉 <b>-20% pour les nouveaux créateurs d’entreprise</b> sur votre premier projet. Code <b>NEW20</b></div>
+          <div class="promo-text"> <b>-20% pour les nouveaux cr&eacute;ateurs d&rsquo;entreprise</b> sur votre premier projet. Code <b>NEW20</b></div>
           <div class="promo-cta">
-            <a class="btn btn-outline" href="${location.pathname.includes('/template/') ? './contact.html' : './template/contact.html'}?promo=NEW20">Profiter de l’offre</a>
+            <a class="btn btn-outline" href="${location.pathname.includes('/template/') ? './contact.html' : './template/contact.html'}?promo=NEW20">Profiter de l&rsquo;offre</a>
             <button class="promo-close" aria-label="Masquer la promotion">✕</button>
           </div>
         </div>`;
@@ -210,7 +202,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const forms = document.querySelectorAll('form.contact-form');
   forms.forEach((form) => {
     form.addEventListener('submit', () => {
-      showToast('Merci ! Le formulaire a été ouvert, finalisez l’envoi.');
+      showToast('Merci ! Le formulaire a &eacute;t&eacute; ouvert, finalisez l&rsquo;envoi.');
     });
   });
 });
