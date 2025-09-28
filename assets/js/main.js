@@ -59,6 +59,24 @@ function buildFooterHTML() {
         <a href="${root}index.html" class="brand brand-lg">Virtuos<span>Studio</span></a>
         <p>Sites web premium: design sombre, animations maîtrisées et SEO efficace.</p>
       </div>
+      <div class="links-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="${root}index.html#services">Services</a></li>
+          <li><a href="${tpl}projets.html">Projets</a></li>
+          <li><a href="${tpl}tarifs.html">Tarifs</a></li>
+          <li><a href="${tpl}contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="links-col">
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="${tpl}faq.html">FAQ</a></li>
+          <li><a href="${tpl}confidentialite.html">Confidentialité</a></li>
+          <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
+          <li><a href="${tpl}articles.html">Articles</a></li>
+        </ul>
+      </div>
       <div class="contact-col footer-contact">
         <h4>Contact</h4>
         <ul>
@@ -78,38 +96,41 @@ function buildFooterHTML() {
               <span>+33 7 81 45 19 66</span>
             </a>
           </li>
-          <li class="socials">
-            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
-              <span class="icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 5.8a7.6 7.6 0 01-2.2.6 3.7 3.7 0 001.6-2 7.6 7.6 0 01-2.4.9 3.7 3.7 0 00-6.3 3.4A10.5 10.5 0 013 5.3a3.7 3.7 0 001.1 4.9 3.6 3.6 0 01-1.7-.5v.1c0 1.8 1.3 3.3 3 3.6a3.7 3.7 0 01-1.7.1 3.7 3.7 0 003.4 2.5A7.4 7.4 0 013 18.1 10.5 10.5 0 008.6 20c6.7 0 10.4-5.6 10.4-10.4v-.5A7.3 7.3 0 0022 5.8z" stroke="currentColor"/></svg>
-              </span>
-              <span>Twitter</span>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-              <span class="icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/><circle cx="12" cy="12" r="4" stroke="currentColor"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-              </span>
-              <span>Instagram</span>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <span class="icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor"/><path d="M7 10v7M7 7v1M11 17v-4.5a2 2 0 114 0V17" stroke="currentColor"/></svg>
-              </span>
-              <span>LinkedIn</span>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
     <div class="footer-links-bar">
-      <div class="container">
-        <ul class="footer-links">
-          <li><a href="${tpl}faq.html">FAQ</a></li>
-          <li><a href="${tpl}politique-confidentialite.html">Confidentialité</a></li>
-          <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
-          <li><a href="${tpl}contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <ul class="footer-links">
+        <li><a href="${tpl}faq.html">FAQ</a></li>
+        <li><a href="${tpl}confidentialite.html">Confidentialité</a></li>
+        <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </div>
+    <div class="socials">
+      <a href="https://www.behance.net/adeljebali" target="_blank" rel="noopener" aria-label="Behance">
+        <span class="icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 4C5.5 4 4 5.5 4 7.5v9C4 18.5 5.5 20 7.5 20h9c2 0 3.5-1.5 3.5-3.5v-9C20 5.5 18.5 4 16.5 4h-9zm7.5 2h3v1h-3V6zM8 7h2.5c1.4 0 2.5 1.1 2.5 2.5S11.9 12 10.5 12H8V7zm0 7h3c1.7 0 3 1.3 3 3s-1.3 3-3 3H8v-6z" stroke="currentColor"/></svg>
+        </span>
+        <span>Behance</span>
+      </a>
+      <a href="https://www.instagram.com/adel.djeb.144/" target="_blank" rel="noopener" aria-label="Instagram">
+        <span class="icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/><circle cx="12" cy="12" r="4" stroke="currentColor"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </span>
+        <span>Instagram</span>
+      </a>
+      <a href="https://github.com/Adel208" target="_blank" rel="noopener" aria-label="GitHub">
+        <span class="icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.13-1.11-1.44-1.11-1.44-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" stroke="currentColor"/></svg>
+        </span>
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.facebook.com/share/19YV6Zni92/" target="_blank" rel="noopener" aria-label="Facebook">
+        <span class="icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" stroke="currentColor"/></svg>
+        </span>
+        <span>Facebook</span>
+      </a>
     </div>
     <div class="copyright">
       &copy; <span id="year"></span> Virtuos Studio. Tous droits r&eacute;serv&eacute;s.
