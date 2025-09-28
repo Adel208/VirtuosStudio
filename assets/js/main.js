@@ -120,11 +120,40 @@ function renderGlobalHeaderFooter() {
   const headerEl = document.querySelector('.site-header');
   if (headerEl) {
     headerEl.innerHTML = buildHeaderHTML();
+    // Add active states to navigation
+    addActiveNavStates();
   }
   const footerEl = document.querySelector('.site-footer');
   if (footerEl) {
     footerEl.innerHTML = buildFooterHTML();
   }
+}
+
+function addActiveNavStates() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-list a');
+  
+  navLinks.forEach(link => {
+    const linkPath = new URL(link.href).pathname;
+    
+    // Check if current page matches the link
+    if (currentPath === linkPath || 
+        (currentPath.includes('/template/') && linkPath.includes('/template/')) ||
+        (currentPath.endsWith('index.html') && linkPath.endsWith('index.html')) ||
+        (currentPath === '/' && linkPath.endsWith('index.html'))) {
+      
+      // Special handling for different sections
+      if (linkPath.includes('projets.html') && currentPath.includes('projets')) {
+        link.classList.add('active');
+      } else if (linkPath.includes('contact.html') && currentPath.includes('contact')) {
+        link.classList.add('active');
+      } else if (linkPath.includes('#services') && currentPath.includes('index')) {
+        link.classList.add('active');
+      } else if (currentPath === linkPath) {
+        link.classList.add('active');
+      }
+    }
+  });
 }
 
 // Feature flags for motion depending on device and user prefs
