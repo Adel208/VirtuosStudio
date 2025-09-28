@@ -31,7 +31,7 @@ function buildHeaderHTML() {
           <span></span><span></span><span></span>
         </button>
         <ul id="nav-list" class="nav-list">
-          <li><a href="${root}index.html#services">Services</a></li>
+          <li><a href="${root}index.html">Accueil</a></li>
           <li><a href="${tpl}projets.html">Projets</a></li>
           <li><a href="${tpl}tarifs.html">Tarifs</a></li>
           <li><a href="${tpl}contact.html">Contact</a></li>
@@ -62,7 +62,7 @@ function buildFooterHTML() {
       <div class="links-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="${root}index.html#services">Services</a></li>
+          <li><a href="${root}index.html">Accueil</a></li>
           <li><a href="${tpl}projets.html">Projets</a></li>
           <li><a href="${tpl}tarifs.html">Tarifs</a></li>
           <li><a href="${tpl}contact.html">Contact</a></li>
