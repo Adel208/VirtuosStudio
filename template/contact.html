@@ -41,8 +41,7 @@
       <div class="grid contact-grid" style="margin-top:24px">
         <section class="card">
           <h2 style="margin:0 0 12px">Formulaire de contact</h2>
-          <form class="contact-form" name="contact-page" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/template/merci.html">
-            <input type="hidden" name="form-name" value="contact-page" />
+          <form class="contact-form" method="POST">
             <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="grid form-grid">
               <input type="text" name="name" placeholder="Nom" required />
@@ -101,5 +100,6 @@
   <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/contact-form.js"></script>
 </body>
 </html>
