@@ -267,8 +267,7 @@
         <div class="eyebrow">Contact</div>
         <h2 class="section-title">Parlons de votre projet</h2>
         <div class="divider" aria-hidden="true"></div>
-        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/template/merci.html">
-          <input type="hidden" name="form-name" value="contact" />
+        <form class="contact-form" method="POST">
           <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="grid form-grid">
             <input type="text" name="name" placeholder="Nom" required />
@@ -298,5 +297,6 @@
   <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/contact-form.js"></script>
 </body>
 </html>
