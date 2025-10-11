@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ouverture | Virtuos Studio</title>
+  <meta name="description" content="Page d’ouverture — plongez dans l’univers premium de Virtuos Studio avant d’entrer sur le site.">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    /* Fullscreen opening canvas */
+    .opening {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .opening .halo{position:absolute; width:700px; height:700px; border-radius:50%; filter: blur(80px); opacity:.35}
+    .opening .halo.h1{background: radial-gradient(circle, var(--brand) 0%, transparent 60%); left:-160px; top:-160px}
+    .opening .halo.h2{background: radial-gradient(circle, var(--brand-2) 0%, transparent 60%); right:-160px; bottom:-160px}
+    .opening-inner{width:min(900px, 92%); text-align:center}
+    .opening .brandname{font-size: clamp(40px, 8vw, 120px); line-height: .95; letter-spacing:-.04em; margin:0 0 10px}
+    .opening .kicker{font-size:13px; color:var(--brand-2); letter-spacing:.2em; text-transform:uppercase; margin-bottom:16px}
+    .opening .lead{max-width: 760px; margin: 0 auto; color: var(--muted)}
+    .opening .actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:24px}
+    .opening .small{font-size:12px; color:var(--muted); margin-top:10px}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand">Virtuos<span>Studio</span></a>
+      <nav class="navbar" aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="./projets.html">Projets</a></li>
+          <li><a href="../index.html#pricing">Tarifs</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./faq.html">Faq</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <div class="nav-meta">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social">IG</a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social">FB</a>
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="social">GH</a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="TikTok" class="social">TT</a>
+          <a href="tel:+33781451966" class="phone">+33 7 81 45 19 66</a>
+        </div>
+        <a class="btn btn-primary" href="./contact.html">Obtenir un devis</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="opening">
+    <div class="halo h1" aria-hidden="true"></div>
+    <div class="halo h2" aria-hidden="true"></div>
+
+    <div class="opening-inner">
+      <div class="kicker">Bienvenue</div>
+      <h1 class="brandname">Virtuos<span style="color:var(--brand)">Studio</span></h1>
+      <p class="lead">Nous créons des expériences web premium, rapides et animées. Entrez et explorez nos services, projets et offres.</p>
+      <div class="actions hero-cta">
+        <a class="btn btn-secondary" href="../index.html">Entrer sur le site</a>
+        <a class="btn btn-outline" href="./projets.html">Voir nos projets</a>
+      </div>
+      <div class="small">Faites défiler pour en savoir plus</div>
+    </div>
+  </main>
+
+  <section class="section" aria-label="Aperçu">
+    <div class="container">
+      <h2 class="section-title">Aperçu</h2>
+      <div class="grid" style="grid-template-columns: repeat(3, 1fr)">
+        <article class="card">
+          <h3>Design premium</h3>
+          <p>Interfaces sombres et futuristes, micro-interactions et typographie soignée.</p>
+        </article>
+        <article class="card">
+          <h3>Performance</h3>
+          <p>Pages rapides, accessibles et optimisées pour le SEO.</p>
+        </article>
+        <article class="card">
+          <h3>Animation</h3>
+          <p>Transitions fluides avec GSAP et ScrollTrigger.</p>
+        </article>
+      </div>
+      <div class="hero-cta" style="margin-top:24px">
+        <a class="btn btn-primary" href="./contact.html">Démarrer un projet</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-col">
+        <a href="../index.html" class="brand">Virtuos<span>Studio</span></a>
+        <p>Nous concevons des sites web premium, sombres et futuristes, animés avec GSAP.</p>
+      </div>
+      <div class="links-col">
+        <h4>Liens</h4>
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="./projets.html">Projets</a></li>
+          <li><a href="../index.html#pricing">Tarifs</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./faq.html">Faq</a></li>
+        </ul>
+      </div>
+      <div class="contact-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:virtuosagency@gmail.com">virtuosagency@gmail.com</a></li>
+          <li><a href="tel:+33781451966">+33 7 81 45 19 66</a></li>
+          <li class="socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> Virtuos Studio. Tous droits réservés.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.3"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Tiny entrance animation specific to opening page
+    document.addEventListener('DOMContentLoaded', () => {
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' }});
+      tl.from('.opening .kicker', { y: 20, opacity: 0, duration: .5 })
+        .from('.opening .brandname', { y: 24, opacity: 0, duration: .7 }, '-=0.2')
+        .from('.opening .lead', { y: 18, opacity: 0, duration: .6 }, '-=0.3')
+        .from('.opening .actions .btn', { y: 16, opacity: 0, duration: .5, stagger: 0.06 }, '-=0.3');
+      gsap.to('.opening .halo.h1', { xPercent: 4, yPercent: 6, duration: 6, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+      gsap.to('.opening .halo.h2', { xPercent: -4, yPercent: -6, duration: 6.5, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+    });
+  </script>
+</body>
+</html>

@@ -23,6 +23,7 @@ function buildHeaderHTML() {
   const isTpl = location.pathname.includes('/template/');
   const root = isTpl ? '../' : './';
   const tpl = isTpl ? './' : './template/';
+  console.log('Building header - isTpl:', isTpl, 'root:', root, 'tpl:', tpl);
   return `
     <div class="container nav-wrap">
       <a href="${root}index.html" class="brand brand-lg">Virtuos<span>Studio</span></a>
@@ -33,9 +34,9 @@ function buildHeaderHTML() {
         <ul id="nav-list" class="nav-list">
           <li><a href="${root}index.html">Accueil</a></li>
           <li><a href="${tpl}projets.html">Projets</a></li>
+          <li><a href="${tpl}blog.html">Blog</a></li>
           <li><a href="${tpl}tarifs.html">Tarifs</a></li>
           <li><a href="${tpl}contact.html">Contact</a></li>
-          <li><a href="${tpl}faq.html">Faq</a></li>
           <li class="only-mobile"><a href="tel:+33781451966">+33 7 81 45 19 66</a></li>
           <li class="only-mobile"><a class="btn btn-primary" href="${tpl}contact.html">Obtenir un devis</a></li>
         </ul>
@@ -64,6 +65,7 @@ function buildFooterHTML() {
         <ul>
           <li><a href="${root}index.html">Accueil</a></li>
           <li><a href="${tpl}projets.html">Projets</a></li>
+          <li><a href="${tpl}blog.html">Blog</a></li>
           <li><a href="${tpl}tarifs.html">Tarifs</a></li>
           <li><a href="${tpl}contact.html">Contact</a></li>
         </ul>
@@ -74,7 +76,6 @@ function buildFooterHTML() {
           <li><a href="${tpl}faq.html">FAQ</a></li>
           <li><a href="${tpl}confidentialite.html">Confidentialité</a></li>
           <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
-          <li><a href="${tpl}articles.html">Articles</a></li>
         </ul>
       </div>
       <div class="contact-col footer-contact">
@@ -143,6 +144,14 @@ function renderGlobalHeaderFooter() {
     headerEl.innerHTML = buildHeaderHTML();
     // Add active states to navigation
     addActiveNavStates();
+    
+    // Add click handlers for navigation links
+    const navLinks = document.querySelectorAll('.nav-list a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        console.log('Navigation click:', link.href);
+      });
+    });
   }
   const footerEl = document.querySelector('.site-footer');
   if (footerEl) {
@@ -165,6 +174,8 @@ function addActiveNavStates() {
       
       // Special handling for different sections
       if (linkPath.includes('projets.html') && currentPath.includes('projets')) {
+        link.classList.add('active');
+      } else if (linkPath.includes('blog.html') && (currentPath.includes('blog') || currentPath.includes('articles'))) {
         link.classList.add('active');
       } else if (linkPath.includes('contact.html') && currentPath.includes('contact')) {
         link.classList.add('active');
@@ -224,10 +235,12 @@ if (!supportsBackdrop) {
 // SplitType text for hero title
 let split;
 window.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM loaded, initializing...');
   // Inject global header/footer first for consistency across pages
   renderGlobalHeaderFooter();
   bindMobileNav();
   updateYear();
+  console.log('Navigation initialized');
 
   const title = document.querySelector('.title');
   if (title && !prefersReduced && !isMobileEnv) {

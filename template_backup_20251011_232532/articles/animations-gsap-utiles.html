@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animations GSAP utiles — micro‑interactions | Virtuos Studio</title>
+  <meta name="description" content="Nos patterns GSAP préférés: transitions qui guident l’œil, reveals sobres, feedbacks clairs et performances respectées." />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://adel208.github.io/VirtuosStudio/"},
+      {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://adel208.github.io/VirtuosStudio/template/articles.html"},
+      {"@type": "ListItem", "position": 3, "name": "Animations GSAP utiles", "item": "https://adel208.github.io/VirtuosStudio/template/articles/animations-gsap-utiles.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header"></header>
+  <main class="section template-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="../../index.html">Accueil</a> / <a href="../articles.html">Articles</a> / Animations GSAP utiles</div>
+      <h1 class="title">Animations GSAP: micro‑interactions utiles (pas gadget)</h1>
+      <p class="subtitle">Des effets au service de l’usage: transitions, reveals et feedbacks qui améliorent la compréhension et la fluidité.</p>
+
+      <article class="card" style="margin-top:18px; display:grid; gap:12px">
+        <h2 style="margin:0">1) Reveals sobres et utiles</h2>
+        <p style="margin:0; color:var(--muted)">Un "reveal" est une légère apparition d’un élément quand il entre à l’écran. Pour rester utile (et non décoratif), limitez‑vous à un petit mouvement vertical (8–16px) et une transition d’opacité. Déclenchez l’effet quand l’élément est déjà bien visible (par ex. 80% du viewport). Cela attire l’attention sans distraire.</p>
+
+        <h2 style="margin:8px 0 0">2) Transitions de contexte</h2>
+        <p style="margin:0; color:var(--muted)">Les transitions aident l’utilisateur à comprendre ce qui change. Ouvrir un menu, afficher un message de confirmation ou mettre un bouton en évidence sont de bons cas d’usage. L’idée est d’éclairer le changement d’état, pas d’animer tout en permanence.</p>
+
+        <h2 style="margin:8px 0 0">3) Micro‑interactions de feedback</h2>
+        <p style="margin:0; color:var(--muted)">Un bouton peut légèrement grandir au survol (sur ordinateur) ou vibrer subtilement après un clic réussi. Un champ valide peut passer à une bordure verte. Ces micro‑signaux rendent l’interface plus compréhensible, surtout pour des utilisateurs novices.</p>
+
+        <h2 style="margin:8px 0 0">4) Performances et accessibilité d’abord</h2>
+        <p style="margin:0; color:var(--muted)">Utilisez les propriétés GPU‑friendly (transform, opacity), réduisez le nombre d’éléments animés, et respectez <em>prefers‑reduced‑motion</em> pour les personnes sensibles au mouvement. Évitez les effets lourds sur mobile: un site fluide vaut mieux qu’un site "trop animé".</p>
+      </article>
+
+      <section class="section" id="related-posts" style="padding:24px 0 0">
+        <div class="container">
+          <div class="eyebrow">Articles récents</div>
+          <div class="divider" aria-hidden="true"></div>
+          <div class="grid articles-grid">
+            <article class="card article">
+              <h3 class="article-title"><a href="./design-premium-sombre.html">Pourquoi un design premium sombre performe</a></h3>
+              <p class="article-excerpt">Organiser la hiérarchie, maîtriser le contraste et guider l’œil.</p>
+            </article>
+            <article class="card article">
+              <h3 class="article-title"><a href="./seo-bases-pme.html">SEO pour PME: 7 bases à mettre en place</a></h3>
+              <p class="article-excerpt">Des actions simples pour gagner en visibilité rapidement.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"></footer>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.3"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

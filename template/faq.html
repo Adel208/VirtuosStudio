@@ -3,11 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Faq | Virtuos Studio</title>
-  <meta name="description" content="Questions fréquentes à propos des services, délais, tarifs et processus chez Virtuos Studio.">
+  <title>FAQ - Questions Fréquentes | Virtuos Studio</title>
+  <meta name="description" content="Toutes les réponses sur nos services web, tarifs, délais, processus de création et support. Agence web premium spécialisée en sites modernes et SEO.">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adel208.github.io/VirtuosStudio/template/faq.html" />
+  <meta property="og:title" content="FAQ - Questions Fréquentes | Virtuos Studio" />
+  <meta property="og:description" content="Toutes les réponses sur nos services web, tarifs, délais, processus de création et support. Agence web premium spécialisée en sites modernes et SEO." />
+  <meta property="og:image" content="https://adel208.github.io/VirtuosStudio/assets/img/og-image.jpg" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAQ - Questions Fréquentes | Virtuos Studio" />
+  <meta name="twitter:description" content="Toutes les réponses sur nos services web, tarifs, délais, processus de création et support." />
+  
+  <!-- Données structurées FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quels types de sites web créez-vous ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nous créons des sites vitrines premium, landing pages, sites e-commerce, applications web et effectuons des refontes complètes. Chaque projet bénéficie d'un design moderne avec animations fluides et optimisations SEO."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "Quels sont vos délais de livraison ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Landing page : 3-7 jours, Site vitrine : 2-3 semaines, Site e-commerce : 4-6 semaines, Application complexe : 6-12 semaines. Ces délais incluent les phases de validation client."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont vos tarifs détaillés ?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Formule Starter : 1 290€, Formule Pro : 2 490€, Formule Elite : 4 990€+. Tous nos devis sont transparents et tout-inclus avec hébergement, domaine, SSL et support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mes sites seront-ils rapides et bien référencés ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, nous garantissons un score PageSpeed > 90/100, Core Web Vitals au vert, temps de chargement < 3 secondes. SEO technique inclus avec balises optimisées, sitemap XML et données structurées."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header"></header>
@@ -15,55 +69,385 @@
   <main class="section template-hero">
     <div class="container">
       <div class="breadcrumbs"><a href="../index.html">Accueil</a> / Faq</div>
-      <h1 class="title">Faq</h1>
-      <p class="subtitle">Les réponses aux questions les plus fréquentes sur nos prestations et notre processus.</p>
+      <h1 class="title">Questions Fréquentes</h1>
+      <p class="subtitle">Toutes les réponses sur nos services, processus, tarifs et accompagnement. Vous ne trouvez pas votre réponse ? <a href="../index.html#contact" style="color: var(--brand);">Contactez-nous</a>.</p>
 
-      <div class="grid" style="gap:16px; margin-top:24px;">
-        <details class="card">
-          <summary style="cursor:pointer; font-weight:700;">Quels types de sites proposez-vous ?</summary>
-          <div style="margin-top:10px; color:var(--muted)">
-            Nous réalisons des sites vitrines, landing pages, microsites évènementiels et présentations de projets, avec des animations GSAP et un thème sombre premium.
-          </div>
-        </details>
-
-        <details class="card">
-          <summary style="cursor:pointer; font-weight:700;">Quels sont les délais moyens ?</summary>
-          <div style="margin-top:10px; color:var(--muted)">
-            Une landing page nécessite 3 à 7 jours. Un site vitrine 5–8 pages prend en général 2 à 3 semaines. Les projets sur-mesure varient selon la complexité.
-          </div>
-        </details>
-
-        <details class="card">
-          <summary style="cursor:pointer; font-weight:700;">Comment se déroule le projet ?</summary>
-          <div style="margin-top:10px; color:var(--muted)">
-            1) Brief & objectifs. 2) Design UI/UX. 3) Intégration & animations. 4) Optimisations SEO/perf. 5) Recette & mise en ligne. 6) Handover & support.
-          </div>
-        </details>
-
-        <details class="card">
-          <summary style="cursor:pointer; font-weight:700;">Proposez-vous le référencement (SEO) ?</summary>
-          <div style="margin-top:10px; color:var(--muted)">
-            Oui, nous intégrons les bonnes pratiques SEO (balises, performance, sémantique) et fournissons des recommandations pour le contenu.
-          </div>
-        </details>
-
-        <details class="card">
-          <summary style="cursor:pointer; font-weight:700;">Quels sont vos tarifs ?</summary>
-          <div style="margin-top:10px; color:var(--muted)">
-            Consultez la section <a href="../index.html#pricing">Tarifs</a>. Nous proposons des formules Starter, Pro et Elite. Les projets complexes font l'objet d'un devis personnalisé.
-          </div>
-        </details>
-
-        <details class="card">
-          <summary style="cursor:pointer; font-weight:700;">Offrez-vous un support après livraison ?</summary>
-          <div style="margin-top:10px; color:var(--muted)">
-            Oui, un support de prise en main est inclus. Des forfaits de maintenance peuvent être proposés selon vos besoins.
-          </div>
-        </details>
+      <!-- Navigation FAQ -->
+      <div class="card" style="margin: 32px 0; padding: 24px; background: var(--glass);">
+        <h3 style="margin: 0 0 16px; font-size: 18px;">Navigation rapide :</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <a href="#services" style="padding: 8px 16px; background: rgba(163,255,18,0.1); border: 1px solid rgba(163,255,18,0.3); border-radius: 20px; text-decoration: none; font-size: 14px; color: var(--brand);">Services</a>
+          <a href="#processus" style="padding: 8px 16px; background: rgba(163,255,18,0.1); border: 1px solid rgba(163,255,18,0.3); border-radius: 20px; text-decoration: none; font-size: 14px; color: var(--brand);">Processus</a>
+          <a href="#tarifs" style="padding: 8px 16px; background: rgba(163,255,18,0.1); border: 1px solid rgba(163,255,18,0.3); border-radius: 20px; text-decoration: none; font-size: 14px; color: var(--brand);">Tarifs</a>
+          <a href="#technique" style="padding: 8px 16px; background: rgba(163,255,18,0.1); border: 1px solid rgba(163,255,18,0.3); border-radius: 20px; text-decoration: none; font-size: 14px; color: var(--brand);">Technique</a>
+          <a href="#support" style="padding: 8px 16px; background: rgba(163,255,18,0.1); border: 1px solid rgba(163,255,18,0.3); border-radius: 20px; text-decoration: none; font-size: 14px; color: var(--brand);">Support</a>
+        </div>
       </div>
 
-      <div style="margin-top:28px">
-        <a class="btn btn-secondary" href="../index.html#contact">Poser une autre question</a>
+      <!-- SECTION SERVICES -->
+      <section id="services">
+        <h2 style="font-size: 24px; margin: 40px 0 20px; color: var(--brand); border-bottom: 2px solid var(--brand); padding-bottom: 8px;">🚀 Services & Prestations</h2>
+        <div class="grid" style="gap:16px;">
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Quels types de sites web créez-vous ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Sites vitrines premium</strong> : Présentation professionnelle de votre entreprise avec design moderne et animations fluides.</p>
+            <p><strong>Landing pages</strong> : Pages de conversion optimisées pour vos campagnes marketing et génération de leads.</p>
+            <p><strong>Sites e-commerce</strong> : Boutiques en ligne performantes avec intégration paiement et gestion des stocks.</p>
+            <p><strong>Applications web</strong> : Solutions sur-mesure avec interfaces interactives et fonctionnalités avancées.</p>
+            <p><strong>Refonte de sites existants</strong> : Modernisation complète de votre présence digitale.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Travaillez-vous avec tous les secteurs d'activité ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p>Oui, nous avons de l'expérience dans de nombreux domaines :</p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+              <li><strong>Santé & Médical</strong> : Cabinets, cliniques, téléconsultation</li>
+              <li><strong>Services B2B</strong> : Consulting, expertise, prestations professionnelles</li>
+              <li><strong>Tourisme & Voyage</strong> : Agences, hébergements, activités</li>
+              <li><strong>Créatif & Design</strong> : Studios, artistes, portfolios</li>
+              <li><strong>Tech & SaaS</strong> : Startups, applications, plateformes</li>
+              <li><strong>Commerce & Retail</strong> : Boutiques, marques, e-commerce</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Proposez-vous des sites multilingues ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            Absolument ! Nous créons des sites multilingues avec gestion des contenus traduits, URLs optimisées SEO par langue, et adaptation culturelle du design selon les marchés cibles.
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <!-- SECTION PROCESSUS -->
+      <section id="processus">
+        <h2 style="font-size: 24px; margin: 40px 0 20px; color: var(--brand); border-bottom: 2px solid var(--brand); padding-bottom: 8px;">⚙️ Processus & Méthodologie</h2>
+        <div class="grid" style="gap:16px;">
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Comment se déroule un projet de A à Z ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>1. Découverte & Stratégie (2-3 jours)</strong></p>
+            <ul style="margin: 5px 0 15px 20px;">
+              <li>Brief détaillé et analyse de vos besoins</li>
+              <li>Étude de la concurrence et benchmarking</li>
+              <li>Définition des objectifs et KPIs</li>
+              <li>Architecture de l'information</li>
+            </ul>
+            
+            <p><strong>2. Design & UX (5-7 jours)</strong></p>
+            <ul style="margin: 5px 0 15px 20px;">
+              <li>Wireframes et maquettes interactives</li>
+              <li>Design system et charte graphique</li>
+              <li>Prototypage des interactions</li>
+              <li>Validation et ajustements</li>
+            </ul>
+            
+            <p><strong>3. Développement (7-14 jours)</strong></p>
+            <ul style="margin: 5px 0 15px 20px;">
+              <li>Intégration HTML/CSS responsive</li>
+              <li>Animations GSAP et interactions</li>
+              <li>Optimisations SEO et performances</li>
+              <li>Tests multi-navigateurs et appareils</li>
+            </ul>
+            
+            <p><strong>4. Mise en ligne & Support (2-3 jours)</strong></p>
+            <ul style="margin: 5px 0 15px 20px;">
+              <li>Configuration serveur et domaine</li>
+              <li>Formation à la gestion du contenu</li>
+              <li>Documentation et handover</li>
+              <li>Support post-lancement inclus</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Quels sont vos délais de livraison ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Landing page</strong> : 3-7 jours ouvrés</p>
+            <p><strong>Site vitrine (5-8 pages)</strong> : 2-3 semaines</p>
+            <p><strong>Site e-commerce</strong> : 4-6 semaines</p>
+            <p><strong>Application web complexe</strong> : 6-12 semaines</p>
+            <p><strong>Refonte complète</strong> : 3-8 semaines selon l'ampleur</p>
+            <p style="margin-top: 15px;"><em>Ces délais incluent les phases de validation client. Un planning détaillé est fourni en début de projet.</em></p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Combien de révisions sont incluses ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Phase Design</strong> : 3 rounds de révisions majeures inclus</p>
+            <p><strong>Phase Développement</strong> : Ajustements illimités sur les éléments convenus</p>
+            <p><strong>Révisions supplémentaires</strong> : Facturées au taux horaire si hors scope initial</p>
+            <p style="margin-top: 10px;">Nous privilégions la communication continue pour éviter les mauvaises surprises et garantir votre satisfaction.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Travaillez-vous en agile ou en cycle en V ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            Nous adaptons notre méthodologie selon le projet. Pour les sites vitrines, nous utilisons un processus linéaire optimisé. Pour les applications complexes, nous privilégions l'agile avec des sprints de 1-2 semaines et des points de validation réguliers.
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <!-- SECTION TARIFS -->
+      <section id="tarifs">
+        <h2 style="font-size: 24px; margin: 40px 0 20px; color: var(--brand); border-bottom: 2px solid var(--brand); padding-bottom: 8px;">💰 Tarifs & Facturation</h2>
+        <div class="grid" style="gap:16px;">
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Quels sont vos tarifs détaillés ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Formule Starter (1 290€)</strong></p>
+            <ul style="margin: 5px 0 15px 20px;">
+              <li>Site vitrine 5 pages maximum</li>
+              <li>Design responsive moderne</li>
+              <li>SEO de base et optimisations</li>
+              <li>Formulaire de contact</li>
+              <li>Support 15 jours</li>
+            </ul>
+            
+            <p><strong>Formule Pro (2 490€)</strong></p>
+            <ul style="margin: 5px 0 15px 20px;">
+              <li>Site vitrine 5-8 pages</li>
+              <li>Animations GSAP avancées</li>
+              <li>Blog/actualités intégré</li>
+              <li>SEO technique complet</li>
+              <li>Analytics et suivi</li>
+              <li>Support 30 jours</li>
+            </ul>
+            
+            <p><strong>Formule Elite (4 990€+)</strong></p>
+            <ul style="margin: 5px 0 15px 20px;">
+              <li>Projet sur-mesure illimité</li>
+              <li>Design system complet</li>
+              <li>Intégrations API avancées</li>
+              <li>Parcours utilisateur optimisé</li>
+              <li>Formation équipe incluse</li>
+              <li>Support 60 jours</li>
+            </ul>
+            
+            <p style="margin-top: 15px;"><a href="../index.html#pricing" style="color: var(--brand);">Voir tous les détails des formules →</a></p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Proposez-vous des facilités de paiement ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Paiement en 3 fois sans frais</strong> pour tous les projets > 1500€</p>
+            <p><strong>Échelonnement personnalisé</strong> possible pour les gros projets</p>
+            <p><strong>Acompte de 30%</strong> à la signature, solde à la livraison</p>
+            <p><strong>Moyens acceptés</strong> : Virement, chèque, CB via Stripe</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Y a-t-il des frais cachés ou supplémentaires ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Aucun frais caché !</strong> Nos devis sont transparents et tout-inclus :</p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+              <li>✅ Design et développement</li>
+              <li>✅ Hébergement 1ère année offerte</li>
+              <li>✅ Nom de domaine inclus</li>
+              <li>✅ Certificat SSL gratuit</li>
+              <li>✅ Formation et documentation</li>
+              <li>✅ Support post-lancement</li>
+            </ul>
+            <p><strong>Seuls suppléments possibles</strong> : Révisions hors scope, maintenance optionnelle, fonctionnalités ajoutées en cours de projet.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Offrez-vous des réductions pour les associations/startups ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Réduction BGE/ADIL -20%</strong> pour les nouveaux créateurs d'entreprise</p>
+            <p><strong>Tarif préférentiel associations</strong> : -15% sur nos formules</p>
+            <p><strong>Startups</strong> : Possibilité de paiement différé selon le projet</p>
+            <p><strong>Parrainage</strong> : -10% pour vous et votre filleul</p>
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <!-- SECTION TECHNIQUE -->
+      <section id="technique">
+        <h2 style="font-size: 24px; margin: 40px 0 20px; color: var(--brand); border-bottom: 2px solid var(--brand); padding-bottom: 8px;">🔧 Aspects Techniques</h2>
+        <div class="grid" style="gap:16px;">
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Quelles technologies utilisez-vous ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Front-end</strong> : HTML5, CSS3, JavaScript ES6+, GSAP pour les animations</p>
+            <p><strong>Frameworks</strong> : React, Vue.js, Svelte selon les besoins</p>
+            <p><strong>CSS</strong> : Sass/SCSS, TailwindCSS, CSS Grid & Flexbox</p>
+            <p><strong>Build tools</strong> : Vite, Webpack, Parcel</p>
+            <p><strong>CMS</strong> : WordPress, Strapi, Sanity, Contentful</p>
+            <p><strong>Hébergement</strong> : Netlify, Vercel, AWS, serveurs dédiés</p>
+            <p><strong>Performance</strong> : Optimisation images, lazy loading, compression</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Mes sites seront-ils rapides et bien référencés ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Performance garantie</strong> :</p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+              <li>Score PageSpeed > 90/100</li>
+              <li>Core Web Vitals au vert</li>
+              <li>Temps de chargement < 3 secondes</li>
+              <li>Images optimisées et compressées</li>
+            </ul>
+            
+            <p><strong>SEO technique inclus</strong> :</p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+              <li>Balises meta optimisées</li>
+              <li>Structure sémantique HTML5</li>
+              <li>Sitemap XML automatique</li>
+              <li>Schema.org et données structurées</li>
+              <li>Optimisation mobile-first</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Proposez-vous l'intégration d'outils tiers ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p>Oui, nous intégrons tous types d'outils :</p>
+            <p><strong>Analytics</strong> : Google Analytics, Hotjar, Mixpanel</p>
+            <p><strong>Marketing</strong> : Mailchimp, HubSpot, Klaviyo</p>
+            <p><strong>E-commerce</strong> : Stripe, PayPal, Shopify</p>
+            <p><strong>Réservation</strong> : Calendly, Acuity, systèmes sur-mesure</p>
+            <p><strong>Chat</strong> : Intercom, Crisp, Zendesk</p>
+            <p><strong>Réseaux sociaux</strong> : Flux Instagram, partage automatique</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Mes données sont-elles sécurisées ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Sécurité maximale garantie</strong> :</p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+              <li>Certificats SSL/TLS automatiques</li>
+              <li>Sauvegardes quotidiennes automatisées</li>
+              <li>Protection contre les attaques DDoS</li>
+              <li>Conformité RGPD intégrée</li>
+              <li>Chiffrement des données sensibles</li>
+              <li>Monitoring 24/7 de la sécurité</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Puis-je modifier mon site moi-même après livraison ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Absolument !</strong> Nous privilégions votre autonomie :</p>
+            <p><strong>CMS intuitif</strong> : Interface simple pour modifier textes, images, actualités</p>
+            <p><strong>Formation incluse</strong> : Session de prise en main de 1h en visio</p>
+            <p><strong>Documentation</strong> : Guide utilisateur détaillé avec captures d'écran</p>
+            <p><strong>Vidéos tutoriels</strong> : Bibliothèque de mini-formations</p>
+            <p><strong>Support continu</strong> : Assistance technique pendant la période de garantie</p>
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <!-- SECTION SUPPORT -->
+      <section id="support">
+        <h2 style="font-size: 24px; margin: 40px 0 20px; color: var(--brand); border-bottom: 2px solid var(--brand); padding-bottom: 8px;">🛟 Support & Maintenance</h2>
+        <div class="grid" style="gap:16px;">
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Quel support proposez-vous après livraison ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Support inclus selon la formule</strong> :</p>
+            <p><strong>Starter</strong> : 15 jours de support technique</p>
+            <p><strong>Pro</strong> : 30 jours de support + formation</p>
+            <p><strong>Elite</strong> : 60 jours de support premium</p>
+            
+            <p style="margin-top: 15px;"><strong>Pendant cette période</strong> :</p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+              <li>Correction de bugs gratuite</li>
+              <li>Assistance technique par email/téléphone</li>
+              <li>Petites modifications de contenu</li>
+              <li>Formation à la gestion du site</li>
+              <li>Réponse garantie sous 24h</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Proposez-vous des contrats de maintenance ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Maintenance Essentielle (49€/mois)</strong> :</p>
+            <ul style="margin: 5px 0 15px 20px;">
+              <li>Sauvegardes automatiques</li>
+              <li>Mises à jour sécurité</li>
+              <li>Monitoring uptime</li>
+              <li>Support email prioritaire</li>
+            </ul>
+            
+            <p><strong>Maintenance Premium (99€/mois)</strong> :</p>
+            <ul style="margin: 5px 0 15px 20px;">
+              <li>Tout de l'Essentielle +</li>
+              <li>2h de modifications incluses/mois</li>
+              <li>Optimisations performances</li>
+              <li>Rapports mensuels détaillés</li>
+              <li>Support téléphonique</li>
+            </ul>
+            
+            <p><strong>Maintenance Sur-mesure (sur devis)</strong> : Pour les besoins spécifiques</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Que se passe-t-il si mon site tombe en panne ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Garantie de disponibilité 99.9%</strong></p>
+            <p><strong>Monitoring automatique</strong> : Détection des pannes en temps réel</p>
+            <p><strong>Intervention rapide</strong> : Résolution sous 2h en moyenne</p>
+            <p><strong>Sauvegardes multiples</strong> : Restauration possible en quelques minutes</p>
+            <p><strong>Communication transparente</strong> : Vous êtes informé de chaque étape</p>
+            <p style="margin-top: 10px;"><em>En cas de panne due à notre hébergement, nous offrons une compensation proportionnelle.</em></p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Comment puis-je vous contacter pour du support ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Plusieurs canaux à votre disposition</strong> :</p>
+            <p><strong>Email prioritaire</strong> : support@virtuosstudio.com (réponse < 4h)</p>
+            <p><strong>Téléphone</strong> : +33 7 81 45 19 66 (lun-ven 9h-18h)</p>
+            <p><strong>Chat en ligne</strong> : Disponible sur notre site</p>
+            <p><strong>Tickets support</strong> : Système de suivi dédié</p>
+            <p><strong>Urgences</strong> : Numéro d'astreinte pour les clients Premium</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary style="cursor:pointer; font-weight:700;">Puis-je changer d'hébergeur après la livraison ?</summary>
+          <div style="margin-top:10px; color:var(--muted)">
+            <p><strong>Liberté totale garantie !</strong> Votre site vous appartient entièrement.</p>
+            <p><strong>Migration incluse</strong> : Nous vous aidons à transférer votre site</p>
+            <p><strong>Documentation fournie</strong> : Toutes les informations techniques</p>
+            <p><strong>Code source accessible</strong> : Aucun vendor lock-in</p>
+            <p><strong>Accompagnement</strong> : Support pendant la transition</p>
+            <p style="margin-top: 10px;"><em>Nous recommandons toutefois nos solutions d'hébergement optimisées pour vos besoins.</em></p>
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <div style="margin-top:40px; text-align: center;">
+        <a class="btn btn-primary" href="../index.html#contact">Poser une autre question</a>
+        <p style="margin-top: 16px; color: var(--muted); font-size: 14px;">
+          Vous ne trouvez pas la réponse à votre question ? Notre équipe vous répond sous 24h.
+        </p>
       </div>
     </div>
   </main>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OG Image - Projets - Virtuos Studio</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+    
+    .og-image {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      padding: 60px;
+      box-sizing: border-box;
+    }
+    
+    .og-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center right, rgba(125,211,252,0.15) 0%, transparent 70%);
+    }
+    
+    .left-content {
+      flex: 1;
+      z-index: 2;
+      max-width: 500px;
+    }
+    
+    .right-content {
+      flex: 1;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 500px;
+    }
+    
+    .logo {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #A3FF12, #7DD3FC);
+      margin-bottom: 25px;
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .title {
+      font-size: 56px;
+      font-weight: 900;
+      margin: 0 0 20px;
+      background: linear-gradient(135deg, #A3FF12, #7DD3FC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    
+    .subtitle {
+      font-size: 24px;
+      color: #ffffff;
+      margin: 0 0 30px;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+    
+    .stats {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .stat-number {
+      font-size: 36px;
+      font-weight: 900;
+      color: #A3FF12;
+      min-width: 80px;
+    }
+    
+    .stat-label {
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    
+    .project-card {
+      background: rgba(255,255,255,0.08);
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(163,255,18,0.2);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .project-card.featured {
+      border: 2px solid #A3FF12;
+      background: rgba(163,255,18,0.1);
+    }
+    
+    .project-name {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: #A3FF12;
+    }
+    
+    .project-type {
+      font-size: 14px;
+      opacity: 0.8;
+      margin: 0;
+    }
+    
+    .project-result {
+      font-size: 12px;
+      color: #7DD3FC;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+    
+    .bottom-text {
+      position: absolute;
+      bottom: 25px;
+      left: 60px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+    }
+    
+    .accent-dots {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(163,255,18,0.2) 2px, transparent 2px);
+      background-size: 15px 15px;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="og-image">
+    <div class="accent-dots"></div>
+    <div class="left-content">
+      <div class="logo"></div>
+      <h1 class="title">PROJETS</h1>
+      <p class="subtitle">Portfolio de nos réalisations</p>
+      
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">+30</div>
+          <div class="stat-label">Projets réalisés</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">4.9</div>
+          <div class="stat-label">Note moyenne /5</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">+40%</div>
+          <div class="stat-label">Conversions en moyenne</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="right-content">
+      <div class="project-card featured">
+        <div class="project-name">MailZen</div>
+        <div class="project-type">SaaS Platform</div>
+        <div class="project-result">+40% productivité</div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-name">Virtuos Life</div>
+        <div class="project-type">Site Vitrine</div>
+        <div class="project-result">+15% clics CTA</div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-name">Wextrizy</div>
+        <div class="project-type">Studio Créatif</div>
+        <div class="project-result">+20% conversions</div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-name">Evasion</div>
+        <div class="project-type">Agence Voyage</div>
+        <div class="project-result">+25% devis</div>
+      </div>
+    </div>
+    
+    <div class="bottom-text">Virtuos Studio • Portfolio complet disponible</div>
+  </div>
+</body>
+</html>

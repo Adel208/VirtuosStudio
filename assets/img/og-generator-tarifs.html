@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OG Image - Tarifs - Virtuos Studio</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+    
+    .og-image {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 60px;
+      box-sizing: border-box;
+    }
+    
+    .og-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(163,255,18,0.1) 0%, transparent 70%);
+    }
+    
+    .content {
+      text-align: center;
+      z-index: 2;
+      max-width: 1000px;
+    }
+    
+    .logo {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #A3FF12, #7DD3FC);
+      margin: 0 auto 25px;
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .title {
+      font-size: 56px;
+      font-weight: 900;
+      margin: 0 0 20px;
+      background: linear-gradient(135deg, #A3FF12, #7DD3FC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    
+    .subtitle {
+      font-size: 24px;
+      color: #ffffff;
+      margin: 0 0 40px;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+    
+    .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .pricing-card {
+      background: rgba(255,255,255,0.08);
+      padding: 30px 25px;
+      border-radius: 15px;
+      border: 1px solid rgba(163,255,18,0.3);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      min-width: 200px;
+    }
+    
+    .pricing-card.featured {
+      border: 2px solid #A3FF12;
+      background: rgba(163,255,18,0.1);
+      transform: scale(1.05);
+    }
+    
+    .plan-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 10px;
+      color: #A3FF12;
+    }
+    
+    .plan-price {
+      font-size: 32px;
+      font-weight: 900;
+      margin: 0 0 5px;
+      color: white;
+    }
+    
+    .plan-period {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-bottom: 15px;
+    }
+    
+    .plan-feature {
+      font-size: 14px;
+      margin: 8px 0;
+      opacity: 0.9;
+    }
+    
+    .bottom-text {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .accent-elements {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      font-size: 100px;
+      opacity: 0.1;
+      color: #A3FF12;
+    }
+  </style>
+</head>
+<body>
+  <div class="og-image">
+    <div class="accent-elements">€</div>
+    <div class="content">
+      <div class="logo"></div>
+      <h1 class="title">TARIFS</h1>
+      <p class="subtitle">Des solutions adaptées à tous les budgets</p>
+      
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <div class="plan-name">STARTER</div>
+          <div class="plan-price">1 290€</div>
+          <div class="plan-period">Site vitrine</div>
+          <div class="plan-feature">5 pages</div>
+          <div class="plan-feature">Responsive</div>
+          <div class="plan-feature">SEO de base</div>
+        </div>
+        
+        <div class="pricing-card featured">
+          <div class="plan-name">PRO</div>
+          <div class="plan-price">2 490€</div>
+          <div class="plan-period">Recommandé</div>
+          <div class="plan-feature">8 pages</div>
+          <div class="plan-feature">Animations</div>
+          <div class="plan-feature">SEO avancé</div>
+        </div>
+        
+        <div class="pricing-card">
+          <div class="plan-name">ELITE</div>
+          <div class="plan-price">4 990€</div>
+          <div class="plan-period">Sur-mesure</div>
+          <div class="plan-feature">Illimité</div>
+          <div class="plan-feature">Premium</div>
+          <div class="plan-feature">Support VIP</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bottom-text">Devis gratuit • Paiement en 3x sans frais • Support inclus</div>
+  </div>
+</body>
+</html>

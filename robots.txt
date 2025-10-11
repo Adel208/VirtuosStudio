@@ -1,0 +1,75 @@
+# Robots.txt pour Virtuos Studio
+# https://adel208.github.io/VirtuosStudio/
+
+User-agent: *
+Allow: /
+
+# Pages importantes à indexer en priorité
+Allow: /index.html
+Allow: /template/contact.html
+Allow: /template/tarifs.html
+Allow: /template/faq.html
+
+# Projets et réalisations
+Allow: /template/mailzen.html
+Allow: /template/VirtuosLife.html
+Allow: /template/wextrizy.html
+Allow: /template/extrizy.html
+Allow: /template/evasionvoyage.html
+Allow: /template/Presse.html
+
+# Articles de blog
+Allow: /template/articles/
+
+# Bloquer les fichiers sensibles
+Disallow: /netlify/
+Disallow: /assets/js/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /README.md
+Disallow: /SETUP_EMAIL.md
+Disallow: /capture_mailzen_hero.md
+
+# Bloquer les templates d'audit (contenu privé)
+Disallow: /template/audit-template.html
+
+# Bloquer les pages de remerciement (pas d'intérêt SEO)
+Disallow: /template/merci.html
+Disallow: /template/audit-merci.html
+
+# Bloquer les fichiers temporaires et de développement
+Disallow: /*.tmp
+Disallow: /*.log
+Disallow: /*~
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Autoriser les ressources CSS et images pour l'indexation
+Allow: /assets/css/
+Allow: /assets/img/
+
+# Sitemap
+Sitemap: https://adel208.github.io/VirtuosStudio/sitemap.xml
+
+# Délai entre les requêtes (optionnel, pour éviter la surcharge)
+Crawl-delay: 1
+
+# Instructions spécifiques pour Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Instructions spécifiques pour Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquer les bots de scraping agressifs
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

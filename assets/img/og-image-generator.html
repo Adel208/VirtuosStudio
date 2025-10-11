@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Graph Image Generator - Virtuos Studio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    .og-image {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .og-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(163,255,18,0.1) 0%, transparent 70%);
+    }
+    
+    .content {
+      text-align: center;
+      z-index: 2;
+      max-width: 900px;
+      padding: 40px;
+    }
+    
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #A3FF12, #7DD3FC);
+      margin: 0 auto 30px;
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .title {
+      font-size: 64px;
+      font-weight: 900;
+      margin: 0 0 20px;
+      background: linear-gradient(135deg, #A3FF12, #7DD3FC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    
+    .subtitle {
+      font-size: 28px;
+      color: #ffffff;
+      margin: 0 0 30px;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+    
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .feature {
+      background: rgba(255,255,255,0.1);
+      padding: 15px 25px;
+      border-radius: 25px;
+      font-size: 18px;
+      font-weight: 600;
+      border: 1px solid rgba(163,255,18,0.3);
+    }
+    
+    .bottom-text {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .accent-dots {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(163,255,18,0.2) 2px, transparent 2px);
+      background-size: 20px 20px;
+      top: 50px;
+      right: 50px;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="og-image">
+    <div class="accent-dots"></div>
+    <div class="content">
+      <div class="logo"></div>
+      <h1 class="title">VIRTUOS STUDIO</h1>
+      <p class="subtitle">Agence Web Premium</p>
+      <div class="features">
+        <span class="feature">SEO</span>
+        <span class="feature">Performance</span>
+        <span class="feature">Design</span>
+      </div>
+    </div>
+    <div class="bottom-text">+30 projets réussis • Devis gratuit sous 24h</div>
+  </div>
+
+  <script>
+    // Instructions pour capturer l'image :
+    // 1. Ouvrir cette page dans le navigateur
+    // 2. Faire clic droit > Inspecter l'élément
+    // 3. Sélectionner l'élément .og-image
+    // 4. Clic droit > Capture node screenshot
+    // 5. Sauvegarder sous "og-image.jpg" (1200x630px)
+    console.log('Image Open Graph prête à être capturée');
+    console.log('Dimensions: 1200x630px');
+    console.log('Format recommandé: JPG ou PNG');
+  </script>
+</body>
+</html>
