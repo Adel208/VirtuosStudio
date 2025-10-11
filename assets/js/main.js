@@ -152,6 +152,9 @@ function renderGlobalHeaderFooter() {
         console.log('Navigation click:', link.href);
       });
     });
+
+    // GA4 Conversion Tracking
+    setupConversionTracking();
   }
   const footerEl = document.querySelector('.site-footer');
   if (footerEl) {
@@ -185,6 +188,57 @@ function addActiveNavStates() {
         link.classList.add('active');
       }
     }
+  });
+}
+
+// GA4 Conversion Tracking
+function setupConversionTracking() {
+  // Track phone calls
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', () => {
+      gtag('event', 'phone_call', {
+        'event_category': 'contact',
+        'event_label': 'phone_click',
+        'value': 1
+      });
+      console.log('Phone call tracked');
+    });
+  });
+
+  // Track email clicks
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', () => {
+      gtag('event', 'email_contact', {
+        'event_category': 'contact',
+        'event_label': 'email_click',
+        'value': 1
+      });
+      console.log('Email contact tracked');
+    });
+  });
+
+  // Track CTA button clicks
+  document.querySelectorAll('.btn-primary').forEach(button => {
+    button.addEventListener('click', () => {
+      gtag('event', 'cta_click', {
+        'event_category': 'engagement',
+        'event_label': button.textContent.trim(),
+        'value': 1
+      });
+      console.log('CTA clicked:', button.textContent.trim());
+    });
+  });
+
+  // Track form submissions
+  document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', () => {
+      gtag('event', 'form_submit', {
+        'event_category': 'conversion',
+        'event_label': 'contact_form',
+        'value': 5
+      });
+      console.log('Form submission tracked');
+    });
   });
 }
 
