@@ -229,15 +229,30 @@ function setupConversionTracking() {
     });
   });
 
-  // Track form submissions
+  // Track form submissions with specific labels
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', () => {
+      let formType = 'contact_form';
+      let formValue = 5;
+      
+      // Identify form type by class or context
+      if (form.classList.contains('audit-form')) {
+        formType = 'audit_request';
+        formValue = 10; // Higher value for audit requests
+      } else if (form.classList.contains('contact-form')) {
+        formType = 'contact_form';
+        formValue = 5;
+      } else if (form.closest('.newsletter')) {
+        formType = 'newsletter_signup';
+        formValue = 2;
+      }
+      
       gtag('event', 'form_submit', {
         'event_category': 'conversion',
-        'event_label': 'contact_form',
-        'value': 5
+        'event_label': formType,
+        'value': formValue
       });
-      console.log('Form submission tracked');
+      console.log('Form submission tracked:', formType);
     });
   });
 }
