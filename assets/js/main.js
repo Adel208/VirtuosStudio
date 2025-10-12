@@ -23,10 +23,13 @@ function buildHeaderHTML() {
   const isTpl = location.pathname.includes('/template/');
   const root = isTpl ? '../' : './';
   const tpl = isTpl ? './' : './template/';
-  console.log('Building header - isTpl:', isTpl, 'root:', root, 'tpl:', tpl);
+  // Smart home URL detection for local and production
+  const isGitHubPages = location.hostname === 'adel208.github.io';
+  const homeUrl = isGitHubPages ? '/VirtuosStudio/index.html' : (isTpl ? '../index.html' : './index.html');
+  console.log('Building header - isTpl:', isTpl, 'root:', root, 'tpl:', tpl, 'homeUrl:', homeUrl);
   return `
     <div class="container nav-wrap">
-      <a href="${root}index.html" class="brand brand-lg">Virtuos<span>Studio</span></a>
+      <a href="${homeUrl}" class="brand brand-lg">Virtuos<span>Studio</span></a>
       <nav class="navbar" aria-label="Navigation principale">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
           <span></span><span></span><span></span>
