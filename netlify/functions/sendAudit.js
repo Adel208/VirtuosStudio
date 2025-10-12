@@ -159,7 +159,7 @@ exports.handler = async (event) => {
             </div>
             
             <p style="color: #555; line-height: 1.6; margin: 20px 0;">
-              En attendant, n'hésitez pas à consulter nos <a href="https://adel208.github.io/VirtuosStudio/#projects" style="color: #A3FF12; text-decoration: none;">projets récents</a> pour découvrir notre approche.
+              En attendant, n'hésitez pas à consulter nos <a href="https://virtuos.life/#projects" style="color: #A3FF12; text-decoration: none;">projets récents</a> pour découvrir notre approche.
             </p>
             
             <div style="text-align: center; margin: 30px 0;">

@@ -45,7 +45,7 @@ Le script détecte automatiquement si la page est dans `template/` pour ajuster 
 L’action GitHub déploie sur GitHub Pages. Une fois activé dans Settings → Pages, l’URL sera:
 
 ```
-https://adel208.github.io/VirtuosStudio/
+https://virtuos.life/
 ```
 
 ## Contribution

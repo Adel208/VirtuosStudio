@@ -1,5 +1,5 @@
 # Robots.txt pour Virtuos Studio
-# https://adel208.github.io/VirtuosStudio/
+# https://virtuos.life/
 
 User-agent: *
 Allow: /
@@ -49,7 +49,7 @@ Allow: /assets/css/
 Allow: /assets/img/
 
 # Sitemap
-Sitemap: https://adel208.github.io/VirtuosStudio/sitemap.xml
+Sitemap: https://virtuos.life/sitemap.xml
 
 # Délai entre les requêtes (optionnel, pour éviter la surcharge)
 Crawl-delay: 1
