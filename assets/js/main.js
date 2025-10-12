@@ -21,12 +21,25 @@ function bindMobileNav() {
 // Global header/footer renderer
 function buildHeaderHTML() {
   const isTpl = location.pathname.includes('/template/');
-  const root = isTpl ? '../' : './';
-  const tpl = isTpl ? './' : './template/';
-  // Smart home URL detection for local and production
   const isGitHubPages = location.hostname === 'adel208.github.io';
-  const homeUrl = isGitHubPages ? '/VirtuosStudio/index.html' : (isTpl ? '../index.html' : './index.html');
-  console.log('Building header - isTpl:', isTpl, 'root:', root, 'tpl:', tpl, 'homeUrl:', homeUrl);
+  
+  let root, tpl, homeUrl;
+  
+  if (isGitHubPages) {
+    // GitHub Pages URLs
+    root = isTpl ? '/VirtuosStudio/' : '/VirtuosStudio/';
+    tpl = isTpl ? '/VirtuosStudio/template/' : '/VirtuosStudio/template/';
+    homeUrl = '/VirtuosStudio/';
+  } else {
+    // Local development URLs
+    root = isTpl ? '../' : './';
+    tpl = isTpl ? './' : './template/';
+    homeUrl = isTpl ? '../index.html' : './index.html';
+  }
+  
+  console.log('Building header - pathname:', location.pathname, 'hostname:', location.hostname);
+  console.log('Building header - isGitHubPages:', isGitHubPages, 'isTpl:', isTpl);
+  console.log('Building header - root:', root, 'tpl:', tpl, 'homeUrl:', homeUrl);
   return `
     <div class="container nav-wrap">
       <a href="${homeUrl}" class="brand brand-lg">Virtuos<span>Studio</span></a>
@@ -35,7 +48,7 @@ function buildHeaderHTML() {
           <span></span><span></span><span></span>
         </button>
         <ul id="nav-list" class="nav-list">
-          <li class="desktop-only"><a href="${root}index.html">Accueil</a></li>
+          <li class="desktop-only"><a href="${homeUrl}">Accueil</a></li>
           <li><a href="${tpl}projets.html">Projets</a></li>
           <li class="desktop-only"><a href="${tpl}blog.html">Blog</a></li>
           <li class="desktop-only"><a href="${tpl}tarifs.html">Tarifs</a></li>
@@ -54,12 +67,25 @@ function buildHeaderHTML() {
 
 function buildFooterHTML() {
   const isTpl = location.pathname.includes('/template/');
-  const root = isTpl ? '../' : './';
-  const tpl = isTpl ? './' : './template/';
+  const isGitHubPages = location.hostname === 'adel208.github.io';
+  
+  let root, tpl, homeUrl;
+  
+  if (isGitHubPages) {
+    // GitHub Pages URLs
+    root = isTpl ? '/VirtuosStudio/' : '/VirtuosStudio/';
+    tpl = isTpl ? '/VirtuosStudio/template/' : '/VirtuosStudio/template/';
+    homeUrl = '/VirtuosStudio/';
+  } else {
+    // Local development URLs
+    root = isTpl ? '../' : './';
+    tpl = isTpl ? './' : './template/';
+    homeUrl = isTpl ? '../index.html' : './index.html';
+  }
   return `
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="${root}index.html" class="brand brand-lg">Virtuos<span>Studio</span></a>
+        <a href="${homeUrl}" class="brand brand-lg">Virtuos<span>Studio</span></a>
         <p>Agence web premium spécialisée en design moderne et SEO.</p>
       </div>
       
@@ -131,22 +157,33 @@ function buildFooterHTML() {
 }
 
 function renderGlobalHeaderFooter() {
+  console.log('renderGlobalHeaderFooter called');
   const headerEl = document.querySelector('.site-header');
   if (headerEl) {
+    console.log('Header element found, building HTML...');
     headerEl.innerHTML = buildHeaderHTML();
+    console.log('Header HTML set, adding navigation handlers...');
+    
     // Add active states to navigation
     addActiveNavStates();
     
     // Add click handlers for navigation links
     const navLinks = document.querySelectorAll('.nav-list a');
+    console.log('Found', navLinks.length, 'navigation links');
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         console.log('Navigation click:', link.href);
+        // Check if link exists
+        if (link.href.includes('template/') && !link.href.includes('#')) {
+          console.log('Template link clicked, checking if file exists...');
+        }
       });
     });
 
     // GA4 Conversion Tracking
     setupConversionTracking();
+  } else {
+    console.error('Header element (.site-header) not found!');
   }
   const footerEl = document.querySelector('.site-footer');
   if (footerEl) {
