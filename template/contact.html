@@ -67,10 +67,10 @@
       <h1 class="title">Entrons en contact</h1>
       <p class="subtitle">Décrivez votre besoin et obtenez un retour rapide de notre équipe. Nous répondons sous 24h ouvrées.</p>
 
-      <div class="grid contact-grid" style="margin-top:24px">
+      <div class="contact-grid">
         <section class="card contact-form-card">
-          <h2 style="margin:0 0 16px; font-size: 24px;">Formulaire de contact</h2>
-          <p style="color: var(--muted); margin: 0 0 20px; font-size: 14px;">Tous les champs marqués d'un * sont obligatoires</p>
+          <h2 class="contact-form-title">Formulaire de contact</h2>
+          <p class="contact-form-subtitle">Tous les champs marqués d'un * sont obligatoires</p>
           <form class="contact-form" method="POST" novalidate>
             <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="contact-form-grid">
@@ -112,8 +112,8 @@
         </section>
 
         <aside class="card contact-info-card">
-          <h2 style="margin:0 0 16px; font-size: 24px;">Coordonnées</h2>
-          <p style="color:var(--muted); margin:0 0 20px; font-size: 14px;">Vous pouvez aussi nous joindre directement via les coordonnées ci-dessous.</p>
+          <h2 class="contact-info-title">Coordonnées</h2>
+          <p class="contact-info-subtitle">Vous pouvez aussi nous joindre directement via les coordonnées ci-dessous.</p>
           
           <div class="contact-info-grid">
             <div class="contact-info-item">
@@ -160,15 +160,15 @@
           </div>
           
           <div class="contact-cta">
-            <p style="margin: 20px 0 12px; font-size: 14px; color: var(--muted);">Besoin d'une réponse rapide ?</p>
+            <p class="contact-cta-text">Besoin d'une réponse rapide ?</p>
             <a href="tel:+33781451966" class="btn btn-outline btn-sm">Appeler maintenant</a>
           </div>
         </aside>
       </div>
 
-      <section class="card" style="margin-top:24px">
-        <h2 style="margin:0 0 12px">Localisation</h2>
-        <div class="template-frame" style="margin-top:8px">
+      <section class="card contact-location">
+        <h2 class="contact-location-title">Localisation</h2>
+        <div class="template-frame contact-map">
           <iframe title="Localisation Virtuos Studio" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.489%2C51.28%2C0.236%2C51.686&amp;layer=mapnik" loading="lazy"></iframe>
         </div>
       </section>
