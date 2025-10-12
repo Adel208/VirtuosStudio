@@ -68,46 +68,100 @@
       <p class="subtitle">Décrivez votre besoin et obtenez un retour rapide de notre équipe. Nous répondons sous 24h ouvrées.</p>
 
       <div class="grid contact-grid" style="margin-top:24px">
-        <section class="card">
-          <h2 style="margin:0 0 12px">Formulaire de contact</h2>
-          <form class="contact-form" method="POST">
+        <section class="card contact-form-card">
+          <h2 style="margin:0 0 16px; font-size: 24px;">Formulaire de contact</h2>
+          <p style="color: var(--muted); margin: 0 0 20px; font-size: 14px;">Tous les champs marqués d'un * sont obligatoires</p>
+          <form class="contact-form" method="POST" novalidate>
             <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off" />
-            <div class="grid form-grid">
-              <input type="text" name="name" placeholder="Nom" required />
-              <input type="email" name="email" placeholder="Email" required />
-              <input type="tel" name="phone" placeholder="Téléphone" />
-              <select name="budget" required>
-                <option value="" disabled selected>Budget estimé</option>
-                <option>Moins de 1 000€</option>
-                <option>1 000€ - 3 000€</option>
-                <option>3 000€ - 7 000€</option>
-                <option>7 000€+</option>
-              </select>
-              <textarea name="message" placeholder="Décrivez votre projet" rows="6" required></textarea>
+            <div class="grid form-grid contact-form-grid">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nom complet *</label>
+                <input type="text" id="contact-name" name="name" placeholder="Votre nom complet" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email *</label>
+                <input type="email" id="contact-email" name="email" placeholder="votre@email.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Téléphone</label>
+                <input type="tel" id="contact-phone" name="phone" placeholder="+33 6 12 34 56 78" autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label for="contact-budget" class="form-label">Budget estimé *</label>
+                <select id="contact-budget" name="budget" required>
+                  <option value="" disabled selected>Sélectionnez votre budget</option>
+                  <option value="moins-1000">Moins de 1 000€</option>
+                  <option value="1000-3000">1 000€ - 3 000€</option>
+                  <option value="3000-7000">3 000€ - 7 000€</option>
+                  <option value="7000-plus">7 000€ et plus</option>
+                </select>
+              </div>
+              <div class="form-group form-group-full">
+                <label for="contact-message" class="form-label">Décrivez votre projet *</label>
+                <textarea id="contact-message" name="message" placeholder="Parlez-nous de votre projet, vos objectifs, vos besoins spécifiques..." rows="6" required></textarea>
+              </div>
             </div>
-            <button type="submit" class="btn btn-secondary" style="margin-top:12px">Envoyer</button>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-secondary contact-submit-btn">
+                <span class="btn-text">Envoyer ma demande</span>
+                <span class="btn-loading" style="display: none;">Envoi en cours...</span>
+              </button>
+              <p class="form-note">Réponse garantie sous 24h ouvrées</p>
+            </div>
           </form>
         </section>
 
-        <aside class="card" style="display:grid; gap:12px; align-content:start">
-          <h2 style="margin:0 0 12px">Coordonnées</h2>
-          <p style="color:var(--muted); margin:0">Vous pouvez aussi nous joindre via les coordonnées ci-dessous.</p>
-          <div>
-            <div style="font-weight:700">Téléphone</div>
-            <a href="tel:+33781451966">+33 7 81 45 19 66</a>
+        <aside class="card contact-info-card">
+          <h2 style="margin:0 0 16px; font-size: 24px;">Coordonnées</h2>
+          <p style="color:var(--muted); margin:0 0 20px; font-size: 14px;">Vous pouvez aussi nous joindre directement via les coordonnées ci-dessous.</p>
+          
+          <div class="contact-info-grid">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Téléphone</div>
+                <a href="tel:+33781451966" class="contact-info-link">+33 7 81 45 19 66</a>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <a href="mailto:virtuosagency@gmail.com" class="contact-info-link">virtuosagency@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Réseaux sociaux</div>
+                <div class="social-links-contact">
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-link">Instagram</a>
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-link">Facebook</a>
+                  <a href="https://github.com" target="_blank" rel="noopener" class="social-link">GitHub</a>
+                  <a href="https://www.tiktok.com" target="_blank" rel="noopener" class="social-link">TikTok</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <div style="font-weight:700">Email</div>
-            <a href="mailto:virtuosagency@gmail.com">virtuosagency@gmail.com</a>
-          </div>
-          <div>
-            <div style="font-weight:700">Réseaux</div>
-            <p style="margin:4px 0 0">
-              <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> ·
-              <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a> ·
-              <a href="https://github.com" target="_blank" rel="noopener">GitHub</a> ·
-              <a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok</a>
-            </p>
+          
+          <div class="contact-cta">
+            <p style="margin: 20px 0 12px; font-size: 14px; color: var(--muted);">Besoin d'une réponse rapide ?</p>
+            <a href="tel:+33781451966" class="btn btn-outline btn-sm">Appeler maintenant</a>
           </div>
         </aside>
       </div>
