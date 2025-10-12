@@ -22,6 +22,7 @@ function bindMobileNav() {
 function buildHeaderHTML() {
   const isTpl = location.pathname.includes('/template/');
   const isGitHubPages = location.hostname === 'adel208.github.io';
+  const isVirtuosLife = location.hostname === 'virtuos.life';
   
   let root, tpl, homeUrl;
   
@@ -30,10 +31,15 @@ function buildHeaderHTML() {
     root = isTpl ? '/VirtuosStudio/' : '/VirtuosStudio/';
     tpl = isTpl ? '/VirtuosStudio/template/' : '/VirtuosStudio/template/';
     homeUrl = '/VirtuosStudio/';
+  } else if (isVirtuosLife) {
+    // Production URLs
+    root = isTpl ? '/' : '/';
+    tpl = isTpl ? '/template/' : '/template/';
+    homeUrl = '/';
   } else {
     // Local development URLs
     root = isTpl ? '../' : './';
-    tpl = isTpl ? './' : './template/';
+    tpl = isTpl ? './template/' : './template/';
     homeUrl = isTpl ? '../index.html' : './index.html';
   }
   
@@ -68,6 +74,7 @@ function buildHeaderHTML() {
 function buildFooterHTML() {
   const isTpl = location.pathname.includes('/template/');
   const isGitHubPages = location.hostname === 'adel208.github.io';
+  const isVirtuosLife = location.hostname === 'virtuos.life';
   
   let root, tpl, homeUrl;
   
@@ -76,10 +83,15 @@ function buildFooterHTML() {
     root = isTpl ? '/VirtuosStudio/' : '/VirtuosStudio/';
     tpl = isTpl ? '/VirtuosStudio/template/' : '/VirtuosStudio/template/';
     homeUrl = '/VirtuosStudio/';
+  } else if (isVirtuosLife) {
+    // Production URLs
+    root = isTpl ? '/' : '/';
+    tpl = isTpl ? '/template/' : '/template/';
+    homeUrl = '/';
   } else {
     // Local development URLs
     root = isTpl ? '../' : './';
-    tpl = isTpl ? './' : './template/';
+    tpl = isTpl ? './template/' : './template/';
     homeUrl = isTpl ? '../index.html' : './index.html';
   }
   return `
