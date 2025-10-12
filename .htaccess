@@ -1,0 +1,16 @@
+# Configuration des types MIME pour les images
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+AddType image/webp .webp
+AddType image/svg+xml .svg
+
+# Headers pour les images Open Graph
+<FilesMatch "\.(jpg|jpeg|png|webp)$">
+    Header set Content-Type "image/jpeg"
+    Header set Cache-Control "public, max-age=31536000"
+</FilesMatch>
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
