@@ -32,12 +32,11 @@ function buildHeaderHTML() {
           <span></span><span></span><span></span>
         </button>
         <ul id="nav-list" class="nav-list">
-          <li><a href="${root}index.html">Accueil</a></li>
+          <li class="desktop-only"><a href="${root}index.html">Accueil</a></li>
           <li><a href="${tpl}projets.html">Projets</a></li>
-          <li><a href="${tpl}blog.html">Blog</a></li>
-          <li><a href="${tpl}tarifs.html">Tarifs</a></li>
+          <li class="desktop-only"><a href="${tpl}blog.html">Blog</a></li>
+          <li class="desktop-only"><a href="${tpl}tarifs.html">Tarifs</a></li>
           <li><a href="${tpl}contact.html">Contact</a></li>
-          <li class="only-mobile"><a href="tel:+33781451966">+33 7 81 45 19 66</a></li>
           <li class="only-mobile"><a class="btn btn-primary" href="${tpl}contact.html">Obtenir un devis</a></li>
         </ul>
         <div class="nav-cta">
@@ -56,85 +55,75 @@ function buildFooterHTML() {
   const tpl = isTpl ? './' : './template/';
   return `
     <div class="container footer-inner">
-      <div class="brand-col">
+      <div class="footer-brand">
         <a href="${root}index.html" class="brand brand-lg">Virtuos<span>Studio</span></a>
-        <p>Sites web premium: design sombre, animations maîtrisées et SEO efficace.</p>
+        <p>Agence web premium spécialisée en design moderne et SEO.</p>
       </div>
-      <div class="links-col">
+      
+      <div class="footer-nav">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="${root}index.html">Accueil</a></li>
           <li><a href="${tpl}projets.html">Projets</a></li>
           <li><a href="${tpl}blog.html">Blog</a></li>
           <li><a href="${tpl}tarifs.html">Tarifs</a></li>
           <li><a href="${tpl}contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="links-col">
-        <h4>Ressources</h4>
-        <ul>
-          <li><a href="${tpl}faq.html">FAQ</a></li>
-          <li><a href="${tpl}confidentialite.html">Confidentialité</a></li>
-          <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
-        </ul>
-      </div>
-      <div class="contact-col footer-contact">
+      
+      <div class="footer-contact">
         <h4>Contact</h4>
-        <ul>
-          <li>
-            <a href="mailto:virtuosagency@gmail.com">
-              <span class="icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v12H3z" stroke="currentColor" opacity=".9"/><path d="M3 7l9 7 9-7" stroke="currentColor"/></svg>
-              </span>
-              <span>virtuosagency@gmail.com</span>
-            </a>
-          </li>
-          <li>
-            <a href="tel:+33781451966">
-              <span class="icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 4l3 1-1 4c1.5 3 3.5 5 6 6l4-1 1 3-2 3c-6 0-11-5-11-11L5 4z" stroke="currentColor"/></svg>
-              </span>
-              <span>+33 7 81 45 19 66</span>
-            </a>
-          </li>
-        </ul>
+        <div class="contact-info">
+          <a href="mailto:virtuosagency@gmail.com" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            virtuosagency@gmail.com
+          </a>
+          <a href="tel:+33781451966" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            +33 7 81 45 19 66
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-social">
+        <h4>Suivez-nous</h4>
+        <div class="social-links">
+          <a href="https://www.behance.net/adeljebali" target="_blank" rel="noopener" aria-label="Behance">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.5 4C5.5 4 4 5.5 4 7.5v9C4 18.5 5.5 20 7.5 20h9c2 0 3.5-1.5 3.5-3.5v-9C20 5.5 18.5 4 16.5 4h-9zm7.5 2h3v1h-3V6zM8 7h2.5c1.4 0 2.5 1.1 2.5 2.5S11.9 12 10.5 12H8V7zm0 7h3c1.7 0 3 1.3 3 3s-1.3 3-3 3H8v-6z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/adel.djeb.144/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="var(--bg)"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="var(--bg)" stroke-width="2"/>
+            </svg>
+          </a>
+          <a href="https://github.com/Adel208" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.13-1.11-1.44-1.11-1.44-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="footer-links-bar">
-      <ul class="footer-links">
-        <li><a href="${tpl}faq.html">FAQ</a></li>
-        <li><a href="${tpl}confidentialite.html">Confidentialité</a></li>
-        <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
-      </ul>
-    </div>
-    <div class="socials">
-      <a href="https://www.behance.net/adeljebali" target="_blank" rel="noopener" aria-label="Behance">
-        <span class="icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 4C5.5 4 4 5.5 4 7.5v9C4 18.5 5.5 20 7.5 20h9c2 0 3.5-1.5 3.5-3.5v-9C20 5.5 18.5 4 16.5 4h-9zm7.5 2h3v1h-3V6zM8 7h2.5c1.4 0 2.5 1.1 2.5 2.5S11.9 12 10.5 12H8V7zm0 7h3c1.7 0 3 1.3 3 3s-1.3 3-3 3H8v-6z" stroke="currentColor"/></svg>
-        </span>
-        <span>Behance</span>
-      </a>
-      <a href="https://www.instagram.com/adel.djeb.144/" target="_blank" rel="noopener" aria-label="Instagram">
-        <span class="icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/><circle cx="12" cy="12" r="4" stroke="currentColor"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        </span>
-        <span>Instagram</span>
-      </a>
-      <a href="https://github.com/Adel208" target="_blank" rel="noopener" aria-label="GitHub">
-        <span class="icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.13-1.11-1.44-1.11-1.44-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" stroke="currentColor"/></svg>
-        </span>
-        <span>GitHub</span>
-      </a>
-      <a href="https://www.facebook.com/share/19YV6Zni92/" target="_blank" rel="noopener" aria-label="Facebook">
-        <span class="icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" stroke="currentColor"/></svg>
-        </span>
-        <span>Facebook</span>
-      </a>
-    </div>
-    <div class="copyright">
-      &copy; <span id="year"></span> Virtuos Studio. Tous droits r&eacute;serv&eacute;s.
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-legal">
+          <a href="${tpl}mentions-legales.html">Mentions légales</a>
+          <a href="${tpl}confidentialite.html">Confidentialité</a>
+          <a href="${tpl}faq.html">FAQ</a>
+        </div>
+        <div class="copyright">
+          &copy; <span id="year"></span> Virtuos Studio. Tous droits réservés.
+        </div>
+      </div>
     </div>`;
 }
 
