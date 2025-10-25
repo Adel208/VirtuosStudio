@@ -62,6 +62,22 @@ function buildHeaderHTML() {
           <li class="only-mobile"><a class="btn btn-primary" href="${tpl}contact.html">Obtenir un devis</a></li>
         </ul>
         <div class="nav-cta" style="margin-left: 48px;">
+          <button class="theme-toggle" aria-label="Changer de thème" title="Basculer entre thème sombre et clair">
+            <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
           <a class="btn btn-primary" href="${tpl}contact.html">Obtenir un devis</a>
         </div>
       </nav>
@@ -160,11 +176,6 @@ function buildFooterHTML() {
     
     <div class="footer-bottom">
       <div class="container">
-        <div class="footer-legal">
-          <a href="${tpl}mentions-legales.html">Mentions légales</a>
-          <a href="${tpl}confidentialite.html">Confidentialité</a>
-          <a href="${tpl}faq.html">FAQ</a>
-        </div>
         <div class="copyright">
           &copy; <span id="year"></span> Virtuos Studio. Tous droits réservés.
         </div>
@@ -474,14 +485,6 @@ window.addEventListener('load', () => {
 
       gsap.from('.subtitle', { y: 8, opacity: 0, duration: 0.4, delay: 0.16, ease: 'power2.out' });
       gsap.from('.hero-cta .btn', { y: 6, opacity: 0, duration: 0.4, delay: 0.22, stagger: 0.06, ease: 'power2.out' });
-      gsap.from('.hero-badges span', { y: 4, opacity: 0, duration: 0.4, delay: 0.28, stagger: 0.05, ease: 'power2.out' });
-      // Subtle reveal for hero logos and micro proof (logo pills)
-      if (document.querySelector('.logos .logo-pill')) {
-        gsap.from('.logos .logo-pill', { y: 6, opacity: 0, duration: 0.35, delay: 0.34, stagger: 0.04, ease: 'power2.out' });
-      }
-      if (document.querySelector('.micro-proof')) {
-        gsap.from('.micro-proof', { y: 6, opacity: 0, duration: 0.35, delay: 0.42, ease: 'power2.out' });
-      }
 
       // Scroll reveals
       const revealUp = document.querySelectorAll('.service, .project, .price');
@@ -614,4 +617,29 @@ window.addEventListener('load', () => {
       });
     }
   }
+});
+
+// Theme toggle functionality
+function initThemeToggle() {
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (!themeToggle) return;
+
+  // Get saved theme or default to dark
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    console.log('Theme switched to:', newTheme);
+  });
+}
+
+// Initialize theme toggle when DOM is loaded
+window.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
 });
