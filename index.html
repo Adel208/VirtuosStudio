@@ -216,20 +216,20 @@
             </div>
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 20px;">
               <div style="text-align: center; padding: 16px; background: var(--glass); border-radius: 8px;">
-                <div style="font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 4px;">+30</div>
+                <div class="stat-number" data-target="30" style="font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 4px;">0</div>
                 <div style="color: var(--muted); font-size: 14px;">Projets réussis</div>
               </div>
               <div style="text-align: center; padding: 16px; background: var(--glass); border-radius: 8px;">
-                <div style="font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 4px;">2-3 sem.</div>
-                <div style="color: var(--muted); font-size: 14px;">Délai moyen</div>
+                <div class="stat-number" data-target="2.5" style="font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 4px;">0</div>
+                <div style="color: var(--muted); font-size: 14px;">Délai moyen (sem.)</div>
               </div>
               <div style="text-align: center; padding: 16px; background: var(--glass); border-radius: 8px;">
-                <div style="font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 4px;">100%</div>
+                <div class="stat-number" data-target="100" style="font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 4px;">0</div>
                 <div style="color: var(--muted); font-size: 14px;">Sur-mesure</div>
               </div>
               <div style="text-align: center; padding: 16px; background: var(--glass); border-radius: 8px;">
-                <div style="font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 4px;">24h</div>
-                <div style="color: var(--muted); font-size: 14px;">Réactivité</div>
+                <div class="stat-number" data-target="24" style="font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 4px;">0</div>
+                <div style="color: var(--muted); font-size: 14px;">Réactivité (h)</div>
               </div>
             </div>
           </div>
@@ -426,6 +426,151 @@
       </div>
     </section>
 
+    <section class="testimonials section" id="testimonials" style="background: var(--elev); padding: 80px 0;">
+      <div class="container">
+        <div class="eyebrow">Témoignages</div>
+        <h2 class="section-title">Ce que disent nos clients</h2>
+        <div class="divider" aria-hidden="true"></div>
+        <div class="divider divider-mobile" aria-hidden="true"></div>
+        
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 48px;">
+          
+          <article class="card testimonial" style="padding: 32px; text-align: center;">
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                <div style="display: flex; gap: 4px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+              </div>
+              <blockquote style="font-size: 18px; line-height: 1.6; color: var(--text); margin: 0 0 24px; font-style: italic;">
+                "Site magnifique et très professionnel. L'équipe a su comprendre nos besoins et livrer exactement ce qu'on attendait. Les performances sont excellentes !"
+              </blockquote>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 12px;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #000; font-size: 18px;">
+                M
+              </div>
+              <div style="text-align: left;">
+                <div style="font-weight: 600; color: var(--text); margin-bottom: 4px;">Marie Dubois</div>
+                <div style="font-size: 14px; color: var(--muted);">Directrice Marketing, TechStart</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card testimonial" style="padding: 32px; text-align: center;">
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                <div style="display: flex; gap: 4px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+              </div>
+              <blockquote style="font-size: 18px; line-height: 1.6; color: var(--text); margin: 0 0 24px; font-style: italic;">
+                "Service impeccable ! Le site génère 3x plus de leads qu'avant. L'équipe Virtuos Studio est réactive et très professionnelle. Je recommande vivement."
+              </blockquote>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 12px;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #000; font-size: 18px;">
+                P
+              </div>
+              <div style="text-align: left;">
+                <div style="font-weight: 600; color: var(--text); margin-bottom: 4px;">Pierre Martin</div>
+                <div style="font-size: 14px; color: var(--muted);">Fondateur, InnovaCorp</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card testimonial" style="padding: 32px; text-align: center;">
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                <div style="display: flex; gap: 4px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+              </div>
+              <blockquote style="font-size: 18px; line-height: 1.6; color: var(--text); margin: 0 0 24px; font-style: italic;">
+                "Design moderne et fonctionnel. Notre site e-commerce a vu ses ventes augmenter de 40% depuis la mise en ligne. Un vrai partenaire de confiance !"
+              </blockquote>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 12px;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #000; font-size: 18px;">
+                S
+              </div>
+              <div style="text-align: left;">
+                <div style="font-weight: 600; color: var(--text); margin-bottom: 4px;">Sophie Laurent</div>
+                <div style="font-size: 14px; color: var(--muted);">CEO, FashionStore</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;">
+          <div style="display: inline-flex; align-items: center; gap: 16px; padding: 16px 24px; background: var(--glass); border-radius: 50px; border: 1px solid var(--border);">
+            <div style="display: flex; gap: 2px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--brand)">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--brand)">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--brand)">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--brand)">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--brand)">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <span style="font-weight: 600; color: var(--text);">Note moyenne : 4.9/5</span>
+            <span style="color: var(--muted); font-size: 14px;">sur 30+ projets</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="pricing section" id="pricing">
       <div class="container">
         <div class="eyebrow">Offres</div>
@@ -588,5 +733,43 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/contact-form.js"></script>
+  
+  <!-- Animation des compteurs statistiques -->
+  <script>
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+      
+      counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-target'));
+        const increment = target / 100;
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          // Gérer les décimales pour les valeurs < 10
+          if (target < 10) {
+            counter.textContent = current.toFixed(1);
+          } else {
+            counter.textContent = Math.floor(current);
+          }
+        }, 20);
+      });
+    }
+    
+    // Animation au scroll avec GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    
+    ScrollTrigger.create({
+      trigger: '#why-us',
+      start: 'top 80%',
+      onEnter: () => {
+        animateCounters();
+      }
+    });
+  </script>
 </body>
 </html>

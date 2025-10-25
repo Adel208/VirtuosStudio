@@ -61,10 +61,7 @@ function buildHeaderHTML() {
           <li><a href="${tpl}contact.html">Contact</a></li>
           <li class="only-mobile"><a class="btn btn-primary" href="${tpl}contact.html">Obtenir un devis</a></li>
         </ul>
-        <div class="nav-cta">
-          <div class="nav-meta">
-            <a href="tel:+33781451966" class="phone">+33 7 81 45 19 66</a>
-          </div>
+        <div class="nav-cta" style="margin-left: 48px;">
           <a class="btn btn-primary" href="${tpl}contact.html">Obtenir un devis</a>
         </div>
       </nav>
