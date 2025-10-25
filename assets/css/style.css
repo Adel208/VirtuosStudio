@@ -46,9 +46,32 @@
   background: rgba(255,255,255,0.98);
 }
 
-/* Conditional animation classes */
-.has-hover .btn:hover{transform:translateY(-1px)}
-.has-hover .logo-pill:hover{transform:translateY(-2px)}
+/* Transitions globales plus douces */
+.section {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card {
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Transitions pour les éléments de contenu */
+.service, .project, .price, .testimonial {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Transitions pour les boutons - plus douces */
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
 
 /* High contrast mode */
 .high-contrast{

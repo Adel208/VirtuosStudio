@@ -469,28 +469,44 @@ window.addEventListener('load', () => {
     
     // Disable animations on mobile or reduced motion
     if (!prefersReduced && !isMobileEnv) {
-      // Intro timeline (softer)
-      gsap.from('.site-header', { y: -16, opacity: 0, duration: 0.4, ease: 'power2.out' });
-      gsap.from('.kicker', { y: 8, opacity: 0, duration: 0.4, delay: 0.08, ease: 'power2.out' });
+      // Intro timeline simplifiée - plus sobre
+      gsap.from('.site-header', { y: -8, opacity: 0, duration: 0.5, ease: 'power2.out' });
+      gsap.from('.kicker', { y: 4, opacity: 0, duration: 0.5, delay: 0.1, ease: 'power2.out' });
 
       if (document.querySelector('.title .word')) {
         gsap.from('.title .word', {
-          y: 16,
+          y: 8,
           opacity: 0,
-          stagger: 0.03,
-          duration: 0.6,
+          stagger: 0.02,
+          duration: 0.7,
           ease: 'power2.out'
         });
       }
 
-      gsap.from('.subtitle', { y: 8, opacity: 0, duration: 0.4, delay: 0.16, ease: 'power2.out' });
-      gsap.from('.hero-cta .btn', { y: 6, opacity: 0, duration: 0.4, delay: 0.22, stagger: 0.06, ease: 'power2.out' });
+      gsap.from('.subtitle', { y: 4, opacity: 0, duration: 0.5, delay: 0.2, ease: 'power2.out' });
+      gsap.from('.hero-cta .btn', { y: 3, opacity: 0, duration: 0.5, delay: 0.3, stagger: 0.05, ease: 'power2.out' });
 
-      // Scroll reveals
-      const revealUp = document.querySelectorAll('.service, .project, .price');
-      revealUp.forEach((el) => {
+      // Transitions douces au scroll pour les sections - plus sobre
+      const sections = document.querySelectorAll('.section');
+      sections.forEach((section) => {
+        gsap.from(section, {
+          y: 20,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+          }
+        });
+      });
+
+      // Transitions douces pour les éléments de contenu
+      const contentElements = document.querySelectorAll('.service, .project, .price, .testimonial');
+      contentElements.forEach((el) => {
         gsap.from(el, {
-          y: 16,
+          y: 12,
           opacity: 0,
           duration: 0.6,
           ease: 'power2.out',
@@ -502,13 +518,13 @@ window.addEventListener('load', () => {
         });
       });
 
-      // Reveal for section eyebrows and titles
+      // Transitions pour les en-têtes de section
       const sectionHeaders = document.querySelectorAll('.section .eyebrow, .section .section-title');
       sectionHeaders.forEach((el) => {
         gsap.from(el, {
-          y: 10,
+          y: 8,
           opacity: 0,
-          duration: 0.45,
+          duration: 0.5,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: el,
@@ -518,35 +534,35 @@ window.addEventListener('load', () => {
         });
       });
 
-      // Parallax glows
+      // Parallax glows simplifié - mouvement plus subtil
       gsap.to('.glow-1', {
-        yPercent: 10,
-        xPercent: 4,
+        yPercent: 5,
+        xPercent: 2,
         ease: 'none',
         scrollTrigger: {
           trigger: '#hero',
           start: 'top top',
           end: 'bottom top',
-          scrub: true
+          scrub: 1
         }
       });
       gsap.to('.glow-2', {
-        yPercent: -10,
-        xPercent: -4,
+        yPercent: -5,
+        xPercent: -2,
         ease: 'none',
         scrollTrigger: {
           trigger: '#hero',
           start: 'top top',
           end: 'bottom top',
-          scrub: true
+          scrub: 1
         }
       });
     }
 
-    // Magnetic hover for primary CTAs (hero/nav) — toned down, not on cards
+    // Effet magnétique très subtil pour les CTAs principaux
     const canHover = window.matchMedia('(hover: hover)').matches && !prefersReduced && !isMobileEnv;
     if (canHover) {
-      // Softer magnetic hover only on hero CTAs
+      // Effet magnétique très doux uniquement sur les CTAs hero
       const magnetBtns = document.querySelectorAll('.hero-cta .btn');
       magnetBtns.forEach((btn) => {
         let bounds;
@@ -554,8 +570,8 @@ window.addEventListener('load', () => {
         updateBounds();
         window.addEventListener('resize', updateBounds);
 
-        const toX = gsap.quickTo(btn, 'x', { duration: 0.2, ease: 'power2.out' });
-        const toY = gsap.quickTo(btn, 'y', { duration: 0.2, ease: 'power2.out' });
+        const toX = gsap.quickTo(btn, 'x', { duration: 0.3, ease: 'power2.out' });
+        const toY = gsap.quickTo(btn, 'y', { duration: 0.3, ease: 'power2.out' });
 
         btn.addEventListener('mousemove', (e) => {
           if (!bounds) {
@@ -563,8 +579,8 @@ window.addEventListener('load', () => {
           }
           const cx = bounds.left + bounds.width / 2;
           const cy = bounds.top + bounds.height / 2;
-          const dx = (e.clientX - cx) / 28; // softer
-          const dy = (e.clientY - cy) / 28; // softer
+          const dx = (e.clientX - cx) / 50; // très doux
+          const dy = (e.clientY - cy) / 50; // très doux
           toX(dx);
           toY(dy);
         });
@@ -575,12 +591,12 @@ window.addEventListener('load', () => {
       });
     }
 
-    // Glow pulse on main hero CTA (homepage)
+    // Glow pulse très subtil sur le CTA principal
     const heroPrimary = document.querySelector('#hero .hero-cta .btn.btn-secondary');
     if (heroPrimary && !prefersReduced && !isMobileEnv) {
       gsap.to(heroPrimary, {
-        boxShadow: '0 0 16px rgba(181,123,255,0.12), 0 0 0 2px rgba(108,246,255,0.06)',
-        duration: 2.0,
+        boxShadow: '0 0 8px rgba(181,123,255,0.08), 0 0 0 1px rgba(108,246,255,0.04)',
+        duration: 3.0,
         ease: 'sine.inOut',
         yoyo: true,
         repeat: -1
@@ -590,31 +606,8 @@ window.addEventListener('load', () => {
     // Premium hover tilt for cards (only on devices with hover) — softened
     const supportsHover = window.matchMedia('(hover: hover)').matches;
     if (supportsHover) {
-      const tiltCards = document.querySelectorAll('.project.card, .price.card');
-      const maxTilt = 1.2; // much softer tilt
-      tiltCards.forEach((card) => {
-        let bounds;
-        const updateBounds = () => { bounds = card.getBoundingClientRect(); };
-        updateBounds();
-        window.addEventListener('resize', updateBounds);
-
-        card.addEventListener('mousemove', (e) => {
-          if (!bounds) {
-            return;
-          }
-          const cx = bounds.left + bounds.width / 2;
-          const cy = bounds.top + bounds.height / 2;
-          const dx = (e.clientX - cx) / (bounds.width / 2);
-          const dy = (e.clientY - cy) / (bounds.height / 2);
-          const rotateY = dx * maxTilt; // left(-) to right(+)
-          const rotateX = -dy * maxTilt; // top(+) to bottom(-)
-          gsap.to(card, { rotateX, rotateY, duration: 0.12, ease: 'power2.out', transformPerspective: 800 });
-        });
-
-        card.addEventListener('mouseleave', () => {
-          gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.2, ease: 'power2.out' });
-        });
-      });
+      // Suppression des animations de tilt pour les cartes - plus sobre
+      // Les cartes gardent seulement les transitions CSS de base
     }
   }
 });
