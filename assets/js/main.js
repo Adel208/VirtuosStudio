@@ -92,7 +92,7 @@ function buildFooterHTML() {
     homeUrl = isTpl ? '../index.html' : './index.html';
   }
   return `
-    <div class="container footer-inner">
+    <div class="container footer-inner" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; align-items: start;">
       <div class="footer-brand">
         <a href="${homeUrl}" class="brand brand-lg">Virtuos<span>Studio</span></a>
         <p>Agence web premium spécialisée en design moderne et SEO.</p>
@@ -105,6 +105,15 @@ function buildFooterHTML() {
           <li><a href="${tpl}blog.html">Blog</a></li>
           <li><a href="${tpl}tarifs.html">Tarifs</a></li>
           <li><a href="${tpl}contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-legal">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="${tpl}faq.html">FAQ</a></li>
+          <li><a href="${tpl}politique-confidentialite.html">Politique de confidentialité</a></li>
+          <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
       
