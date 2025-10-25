@@ -39,7 +39,7 @@ function buildHeaderHTML() {
   } else {
     // Local development URLs
     root = isTpl ? '../' : './';
-    tpl = isTpl ? './template/' : './template/';
+    tpl = isTpl ? './' : './template/';
     homeUrl = isTpl ? '../index.html' : './index.html';
   }
   
