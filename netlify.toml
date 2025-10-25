@@ -27,8 +27,4 @@
   status = 301
   force = true
 
-# Redirection générique pour SPA (à la fin)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Redirection générique supprimée - les fichiers statiques sont servis directement
