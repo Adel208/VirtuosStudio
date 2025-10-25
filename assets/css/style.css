@@ -1,4 +1,4 @@
-/* Theme: Dark Futuristic Premium */
+/* Theme: Dark Futuristic Web Marketing */
 :root{
   --bg: #0b0d10;
   --elev: #141619;
@@ -90,7 +90,7 @@ a{color:inherit; text-decoration:none}
 .btn-outline{background:transparent}
 .btn:focus-visible{outline:2px solid var(--brand-2); outline-offset:2px}
 
-/* Subtle premium glow on hover */
+/* Subtle web marketing glow on hover */
 .btn-primary:hover{box-shadow: 0 8px 24px rgba(163,255,18,0.22), 0 0 0 2px rgba(108,246,255,0.15)}
 .btn-secondary:hover{box-shadow: 0 8px 24px rgba(181,123,255,0.22), 0 0 0 2px rgba(108,246,255,0.12)}
 .btn-outline:hover{box-shadow: 0 6px 18px rgba(0,0,0,0.35), 0 0 0 2px rgba(255,255,255,0.08)}
