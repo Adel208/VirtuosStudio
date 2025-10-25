@@ -12,7 +12,6 @@ Allow: /template/faq.html
 
 # Projets et réalisations
 Allow: /template/mailzen.html
-Allow: /template/VirtuosLife.html
 Allow: /template/wextrizy.html
 Allow: /template/extrizy.html
 Allow: /template/evasionvoyage.html
