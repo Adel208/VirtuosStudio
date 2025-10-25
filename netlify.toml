@@ -2,6 +2,32 @@
   publish = "."
   functions = "netlify/functions"
 
+# Redirections pour anciennes pages (301 permanent)
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index2-one-page"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index4-one-page"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/equiora.html"
+  to = "/template/projets.html"
+  status = 301
+  force = true
+
+# Redirection générique pour SPA (à la fin)
 [[redirects]]
   from = "/*"
   to = "/index.html"
