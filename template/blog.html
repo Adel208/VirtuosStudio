@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog Web Design & SEO | Virtuos Studio - Conseils d'Experts</title>
   <meta name="description" content="Découvrez nos conseils d'experts en web design, SEO, performance et UX. Articles de qualité pour améliorer votre présence digitale et booster vos conversions.">
-  <link rel="canonical" href="https://virtuos.life/template/blog.html" />
+  <link rel="canonical" href="https://virtuos.life/blog" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23A3FF12' d='M128 16l96 224H32z'/%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
@@ -37,6 +37,16 @@
       "url": "https://virtuos.life/"
     },
     "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Ce qui se cache derrière un Terminal",
+        "description": "Guide complet pour comprendre et utiliser le terminal sur Mac et PC. L'outil incontournable des développeurs et professionnels de l'IT.",
+        "datePublished": "2025-10-25",
+        "author": {
+          "@type": "Person",
+          "name": "Équipe Virtuos Studio"
+        }
+      },
       {
         "@type": "BlogPosting",
         "headline": "10 Tendances Web Design 2024 qui Boostent les Conversions",
@@ -103,7 +113,7 @@
             <div class="category-filters">
               <button class="category-filter active" data-category="all">
                 <span class="category-name">Tous</span>
-                <span class="category-count">6</span>
+                <span class="category-count">7</span>
               </button>
               <button class="category-filter" data-category="webmarketing">
                 <span class="category-name">Webmarketing</span>
@@ -111,7 +121,7 @@
               </button>
               <button class="category-filter" data-category="seo">
                 <span class="category-name">SEO</span>
-                <span class="category-count">2</span>
+                <span class="category-count">3</span>
               </button>
               <button class="category-filter" data-category="design">
                 <span class="category-name">Design</span>
@@ -119,7 +129,7 @@
               </button>
               <button class="category-filter" data-category="technique">
                 <span class="category-name">Technique</span>
-                <span class="category-count">2</span>
+                <span class="category-count">3</span>
               </button>
             </div>
           </div>
@@ -127,9 +137,42 @@
           <!-- Grille d'articles -->
           <div class="blog-articles-grid">
         
+        <!-- Article - Terminal -->
+        <article class="card" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden; background-image: url('../assets/img/articles/terminal.webp'); background-size: cover; background-position: center;">
+            <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px; z-index: 10;">
+              <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">TECHNIQUE</span>
+              <time style="color: #fff; font-size: 14px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 8px;">25 octobre 2025</time>
+            </div>
+          </div>
+          <div style="padding: 32px;">
+          
+          <h2 style="font-size: 24px; margin: 0 0 16px; line-height: 1.3;">
+            <a href="./articles/ce-qui-se-cache-derriere-un-terminal.html" style="color: var(--text); text-decoration: none;">
+              Ce qui se cache derrière un Terminal
+            </a>
+          </h2>
+          
+          <p style="color: var(--muted); margin: 0 0 20px; line-height: 1.6;">
+            Découvrez ce qu'est vraiment un terminal, comment l'utiliser sur Mac et PC, et pourquoi cet outil reste incontournable pour les développeurs et professionnels de l'IT. Guide complet pour débutants.
+          </p>
+          
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+            <span style="padding: 2px 8px; background: rgba(255,255,255,0.05); border-radius: 8px; font-size: 12px; color: var(--muted);">#terminal</span>
+            <span style="padding: 2px 8px; background: rgba(255,255,255,0.05); border-radius: 8px; font-size: 12px; color: var(--muted);">#mac</span>
+            <span style="padding: 2px 8px; background: rgba(255,255,255,0.05); border-radius: 8px; font-size: 12px; color: var(--muted);">#windows</span>
+          </div>
+          
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="./articles/ce-qui-se-cache-derriere-un-terminal.html" class="btn btn-outline">Lire l'article</a>
+            <span style="color: var(--muted); font-size: 14px;">⏱️ 10 min de lecture</span>
+          </div>
+          </div>
+        </article>
+        
         <!-- Article 0 - Web Search MCP -->
         <article class="card" style="padding: 0; overflow: hidden;">
-          <div style="position: relative; height: 200px; overflow: hidden; background-image: url('../assets/img/articles/websearch-mcp.jpg'); background-size: cover; background-position: center;">
+          <div style="position: relative; height: 200px; overflow: hidden; background-image: url('../assets/img/articles/websearch-mcp.webp'); background-size: cover; background-position: center;">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px; z-index: 10;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">WEBMARKETING</span>
               <time style="color: #fff; font-size: 14px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 8px;">23 octobre 2025</time>
@@ -162,7 +205,7 @@
         
         <!-- Article 0 - MCP Général -->
         <article class="card" style="padding: 0; overflow: hidden;">
-          <div style="position: relative; height: 200px; overflow: hidden; background-image: url('../assets/img/articles/mcp.jpg'); background-size: cover; background-position: center;">
+          <div style="position: relative; height: 200px; overflow: hidden; background-image: url('../assets/img/articles/mcp.webp'); background-size: cover; background-position: center;">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px; z-index: 10;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">TECHNOLOGIE</span>
               <time style="color: #fff; font-size: 14px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 8px;">22 octobre 2025</time>
@@ -230,7 +273,7 @@
         <!-- Article 1 - Web Design -->
         <article class="card" style="padding: 0; overflow: hidden;">
           <div style="position: relative; height: 200px; overflow: hidden;">
-            <img src="../assets/img/articles/tendances-web-design-2024-interface-moderne.jpg" alt="Tendances web design 2024 - Interface moderne avec éléments UI/UX" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <img src="../assets/img/articles/tendances-web-design-2024-interface-moderne.webp" alt="Tendances web design 2024 - Interface moderne avec éléments UI/UX" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">WEB DESIGN</span>
               <time style="color: #fff; font-size: 14px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 8px;">15 janvier 2024</time>
@@ -264,7 +307,7 @@
         <!-- Article 2 - SEO -->
         <article class="card" style="padding: 0; overflow: hidden;">
           <div style="position: relative; height: 200px; overflow: hidden;">
-            <img src="../assets/img/articles/seo-local-google-optimisation-entreprises.jpg" alt="SEO local - Recherche Google et optimisation locale" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <img src="../assets/img/articles/seo-local-google-optimisation-entreprises.webp" alt="SEO local - Recherche Google et optimisation locale" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">SEO</span>
               <time style="color: #fff; font-size: 14px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 8px;">10 janvier 2024</time>
@@ -298,7 +341,7 @@
         <!-- Article 3 - SEO PME -->
         <article class="card" style="padding: 0; overflow: hidden;">
           <div style="position: relative; height: 200px; overflow: hidden;">
-            <img src="../assets/img/articles/seo-referencement-pme-guide-complet.jpg" alt="SEO pour PME - Code et développement technique" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <img src="../assets/img/articles/seo-referencement-pme-guide-complet.webp" alt="SEO pour PME - Code et développement technique" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">SEO</span>
               <time style="color: #fff; font-size: 14px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 8px;">5 janvier 2024</time>
@@ -332,7 +375,7 @@
         <!-- Article 5 - Design Web Marketing -->
         <article class="card" style="padding: 0; overflow: hidden;">
           <div style="position: relative; height: 200px; overflow: hidden;">
-            <img src="../assets/img/articles/design-premium-sombre-interface-moderne.jpg" alt="Design web marketing sombre - Branding et identité visuelle moderne" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <img src="../assets/img/articles/design-premium-sombre-interface-moderne.webp" alt="Design web marketing sombre - Branding et identité visuelle moderne" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">DESIGN</span>
               <time style="color: #fff; font-size: 14px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 8px;">20 décembre 2023</time>

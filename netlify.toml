@@ -10,14 +10,38 @@
   force = true
 
 [[redirects]]
-  from = "/index2-one-page"
+  from = "/index4-one-page"
   to = "/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/index4-one-page"
+  from = "/index-4"
   to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index-2"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/testimonial"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog-single"
+  to = "/template/blog.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/portfolio-single"
+  to = "/template/projets.html"
   status = 301
   force = true
 
