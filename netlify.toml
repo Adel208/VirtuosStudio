@@ -75,4 +75,10 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/faq"
+  to = "/template/faq.html"
+  status = 301
+  force = true
+
 # Redirection générique supprimée - les fichiers statiques sont servis directement
