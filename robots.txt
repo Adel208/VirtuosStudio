@@ -30,6 +30,11 @@ Disallow: /template/audit-template.html
 Disallow: /template/merci.html
 Disallow: /template/audit-merci.html
 
+# Bloquer les pages d'erreur (pas d'intérêt SEO)
+Disallow: /error
+Disallow: /404
+Disallow: /*/error
+
 # Bloquer les fichiers temporaires et de développement
 Disallow: /*.tmp
 Disallow: /*.log
