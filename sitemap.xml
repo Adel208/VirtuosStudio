@@ -32,6 +32,13 @@
   </url>
 
   <url>
+    <loc>https://virtuos.life/template/Services.html</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://virtuos.life/template/blog.html</loc>
     <lastmod>2025-10-28</lastmod>
     <changefreq>weekly</changefreq>
