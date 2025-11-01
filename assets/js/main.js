@@ -55,11 +55,11 @@ function buildHeaderHTML() {
         </button>
         <ul id="nav-list" class="nav-list">
           <li class="desktop-only"><a href="${homeUrl}">Accueil</a></li>
-          <li><a href="${tpl}projets.html">Projets</a></li>
-          <li class="desktop-only"><a href="${tpl}blog.html">Blog</a></li>
-          <li class="desktop-only"><a href="${tpl}tarifs.html">Tarifs</a></li>
-          <li><a href="${tpl}contact.html">Contact</a></li>
-          <li class="only-mobile"><a class="btn btn-primary" href="${tpl}contact.html">Obtenir un devis</a></li>
+          <li><a href="${root}projets.html">Projets</a></li>
+          <li class="desktop-only"><a href="${root}blog.html">Blog</a></li>
+          <li class="desktop-only"><a href="${root}tarifs.html">Tarifs</a></li>
+          <li><a href="${root}contact.html">Contact</a></li>
+          <li class="only-mobile"><a class="btn btn-primary" href="${root}contact.html">Obtenir un devis</a></li>
         </ul>
         <div class="nav-cta" style="margin-left: 48px;">
           <button class="theme-toggle" aria-label="Changer de thème" title="Basculer entre thème sombre et clair">
@@ -78,7 +78,7 @@ function buildHeaderHTML() {
               <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
             </svg>
           </button>
-          <a class="btn btn-primary" href="${tpl}contact.html">Obtenir un devis</a>
+          <a class="btn btn-primary" href="${root}contact.html">Obtenir un devis</a>
         </div>
       </nav>
     </div>`;
@@ -138,17 +138,17 @@ function buildFooterHTML() {
       <div class="footer-nav">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="${tpl}projets.html">Projets</a></li>
-          <li><a href="${tpl}blog.html">Blog</a></li>
-          <li><a href="${tpl}tarifs.html">Tarifs</a></li>
-          <li><a href="${tpl}contact.html">Contact</a></li>
+          <li><a href="${root}projets.html">Projets</a></li>
+          <li><a href="${root}blog.html">Blog</a></li>
+          <li><a href="${root}tarifs.html">Tarifs</a></li>
+          <li><a href="${root}contact.html">Contact</a></li>
         </ul>
       </div>
       
       <div class="footer-legal">
         <h4>Légal</h4>
         <ul>
-          <li><a href="${tpl}faq.html">FAQ</a></li>
+          <li><a href="${root}faq.html">FAQ</a></li>
           <li><a href="${tpl}politique-confidentialite.html">Politique de confidentialité</a></li>
           <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
         </ul>

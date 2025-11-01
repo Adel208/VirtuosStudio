@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Virtuos Studio</title>
+  <meta name="description" content="Contactez Virtuos Studio pour obtenir un devis, des informations sur nos services ou planifier un appel.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://virtuos.life/contact.html" />
+  <meta property="og:title" content="Contact - Virtuos Studio | Devis Gratuit Agence Web Marketing" />
+  <meta property="og:description" content="Obtenez votre devis gratuit sous 24h. Contactez notre agence web marketing pour créer votre site vitrine moderne et performant. Réponse rapide garantie." />
+  <meta property="og:image" content="https://virtuos.li./assets/img/og-image-contact.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Contactez Virtuos Studio - Devis gratuit pour votre site web" />
+  <meta property="og:site_name" content="Virtuos Studio" />
+  <meta property="og:locale" content="fr_FR" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://virtuos.life/contact.html" />
+  <meta name="twitter:title" content="Contact - Virtuos Studio | Devis Gratuit Agence Web Marketing" />
+  <meta name="twitter:description" content="Obtenez votre devis gratuit sous 24h. Contactez notre agence web marketing pour créer votre site vitrine moderne et performant. Réponse rapide garantie." />
+  <meta name="twitter:image" content="https://virtuos.li./assets/img/og-image-contact.jpg" />
+  <meta name="twitter:image:alt" content="Contactez Virtuos Studio - Devis gratuit pour votre site web" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23A3FF12' d='M128 16l96 224H32z'/%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CD8731D445"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CD8731D445');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://virtuos.life/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://virtuos.life/contact.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header"></header>
+
+  <main class="section template-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="./index.html">Accueil</a> / Contact</div>
+      <h1 class="title">Entrons en contact</h1>
+      <p class="subtitle">Décrivez votre besoin et obtenez un retour rapide de notre équipe. Nous répondons sous 24h ouvrées.</p>
+
+      <div class="contact-grid">
+        <section class="card contact-form-card">
+          <h2 class="contact-form-title">Formulaire de contact</h2>
+          <p class="contact-form-subtitle">Tous les champs marqués d'un * sont obligatoires</p>
+          <form class="contact-form" method="POST" novalidate>
+            <input type="text" name="bot-field" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="contact-form-grid">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nom complet *</label>
+                <input type="text" id="contact-name" name="name" placeholder="Votre nom complet" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email *</label>
+                <input type="email" id="contact-email" name="email" placeholder="votre@email.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Téléphone</label>
+                <input type="tel" id="contact-phone" name="phone" placeholder="+33 6 12 34 56 78" autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label for="contact-budget" class="form-label">Budget estimé *</label>
+                <select id="contact-budget" name="budget" required>
+                  <option value="" disabled selected>Sélectionnez votre budget</option>
+                  <option value="moins-1000">Moins de 1 000€</option>
+                  <option value="1000-3000">1 000€ - 3 000€</option>
+                  <option value="3000-7000">3 000€ - 7 000€</option>
+                  <option value="7000-plus">7 000€ et plus</option>
+                </select>
+              </div>
+              <div class="form-group form-group-full">
+                <label for="contact-message" class="form-label">Décrivez votre projet *</label>
+                <textarea id="contact-message" name="message" placeholder="Parlez-nous de votre projet, vos objectifs, vos besoins spécifiques..." rows="6" required></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-secondary contact-submit-btn">
+                <span class="btn-text">Envoyer ma demande</span>
+                <span class="btn-loading" style="display: none;">Envoi en cours...</span>
+              </button>
+              <p class="form-note">Réponse garantie sous 24h ouvrées</p>
+            </div>
+          </form>
+        </section>
+
+        <aside class="card contact-info-card">
+          <h2 class="contact-info-title">Coordonnées</h2>
+          <p class="contact-info-subtitle">Vous pouvez aussi nous joindre directement via les coordonnées ci-dessous.</p>
+          
+          <div class="contact-info-grid">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Téléphone</div>
+                <a href="tel:+33781451966" class="contact-info-link">+33 7 81 45 19 66</a>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <a href="mailto:virtuosagency@gmail.com" class="contact-info-link">virtuosagency@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Réseaux sociaux</div>
+                <div class="social-links-contact">
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-link">Instagram</a>
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-link">Facebook</a>
+                  <a href="https://github.com" target="_blank" rel="noopener" class="social-link">GitHub</a>
+                  <a href="https://www.tiktok.com" target="_blank" rel="noopener" class="social-link">TikTok</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-cta">
+            <p class="contact-cta-text">Besoin d'une réponse rapide ?</p>
+            <a href="tel:+33781451966" class="btn btn-outline btn-sm">Appeler maintenant</a>
+          </div>
+        </aside>
+      </div>
+
+      <section class="card contact-location">
+        <h2 class="contact-location-title">Localisation</h2>
+        <div class="template-frame contact-map">
+          <iframe title="Localisation Virtuos Studio" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.489%2C51.28%2C0.236%2C51.686&amp;layer=mapnik" loading="lazy"></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.3"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src=./assets/js/main.js"></script>
+  <script src=./assets/js/contact-form.js"></script>
+</body>
+</html>

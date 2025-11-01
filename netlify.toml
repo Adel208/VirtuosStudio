@@ -35,37 +35,37 @@
 
 [[redirects]]
   from = "/blog-single"
-  to = "/template/blog.html"
+  to = "/blog.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "/portfolio-single"
-  to = "/template/projets.html"
+  to = "/projets.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "/template/equiora.html"
-  to = "/template/projets.html"
+  to = "/projets.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog"
-  to = "/template/blog.html"
+  to = "/blog.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "/service"
-  to = "/template/Services.html"
+  to = "/services.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "/portfolio-gallery"
-  to = "/template/projets.html"
+  to = "/projets.html"
   status = 301
   force = true
 
@@ -77,7 +77,50 @@
 
 [[redirects]]
   from = "/faq"
-  to = "/template/faq.html"
+  to = "/faq.html"
+  status = 301
+  force = true
+
+# Redirections des anciennes URLs /template/ vers les nouvelles URLs à la racine
+[[redirects]]
+  from = "/template/blog.html"
+  to = "/blog.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/contact.html"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/faq.html"
+  to = "/faq.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/tarifs.html"
+  to = "/tarifs.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/projets.html"
+  to = "/projets.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/Services.html"
+  to = "/services.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/articles/*"
+  to = "/articles/:splat"
   status = 301
   force = true
 
