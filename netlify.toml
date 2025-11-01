@@ -51,4 +51,28 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/blog"
+  to = "/template/blog.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/service"
+  to = "/template/Services.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/portfolio-gallery"
+  to = "/template/projets.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index2-one-page"
+  to = "/"
+  status = 301
+  force = true
+
 # Redirection générique supprimée - les fichiers statiques sont servis directement

@@ -4,21 +4,15 @@
 User-agent: *
 Allow: /
 
-# Pages importantes à indexer en priorité
-Allow: /index.html
-Allow: /template/contact.html
-Allow: /template/tarifs.html
-Allow: /template/faq.html
-
-# Projets et réalisations
-Allow: /template/mailzen.html
-Allow: /template/wextrizy.html
-Allow: /template/extrizy.html
-Allow: /template/evasionvoyage.html
-Allow: /template/Presse.html
-
-# Articles de blog
-Allow: /template/articles/
+# Bloquer les anciennes URLs redirigées (éviter l'indexation des doublons)
+Disallow: /index-2
+Disallow: /index-4
+Disallow: /index4-one-page
+Disallow: /index2-one-page
+Disallow: /testimonial
+Disallow: /portfolio-gallery
+Disallow: /service
+Disallow: /blog
 
 # Bloquer les fichiers sensibles
 Disallow: /netlify/
@@ -43,19 +37,23 @@ Disallow: /*~
 Disallow: /.git/
 Disallow: /node_modules/
 
-# Autoriser les ressources CSS et images pour l'indexation
-Allow: /assets/css/
-Allow: /assets/img/
-
 # Sitemap
 Sitemap: https://virtuos.life/sitemap.xml
 
 # Délai entre les requêtes (optionnel, pour éviter la surcharge)
 Crawl-delay: 1
 
-# Instructions spécifiques pour Google
+# Instructions spécifiques pour Google - bloquer explicitement les anciennes URLs
 User-agent: Googlebot
 Allow: /
+Disallow: /index-2
+Disallow: /index-4
+Disallow: /index4-one-page
+Disallow: /index2-one-page
+Disallow: /testimonial
+Disallow: /portfolio-gallery
+Disallow: /service
+Disallow: /blog
 Crawl-delay: 1
 
 # Instructions spécifiques pour Bing
