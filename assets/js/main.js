@@ -632,7 +632,46 @@ function initThemeToggle() {
   });
 }
 
+// Blog category filtering
+function initBlogFilters() {
+  const filters = document.querySelectorAll('.category-filter');
+  const articles = document.querySelectorAll('.blog-articles-grid article[data-category]');
+  
+  if (!filters.length || !articles.length) return;
+  
+  filters.forEach(filter => {
+    filter.addEventListener('click', () => {
+      const category = filter.getAttribute('data-category');
+      
+      // Update active state
+      filters.forEach(f => f.classList.remove('active'));
+      filter.classList.add('active');
+      
+      // Filter articles
+      articles.forEach(article => {
+        const articleCategory = article.getAttribute('data-category');
+        
+        if (category === 'all' || articleCategory === category) {
+          article.style.display = 'block';
+          // Animation d'apparition
+          if (typeof gsap !== 'undefined') {
+            gsap.from(article, {
+              opacity: 0,
+              y: 20,
+              duration: 0.4,
+              ease: 'power2.out'
+            });
+          }
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
 // Initialize theme toggle when DOM is loaded
 window.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
+  initBlogFilters();
 });

@@ -40,7 +40,7 @@
 
   <url>
     <loc>https://virtuos.life/blog.html</loc>
-    <lastmod>2025-10-28</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -53,6 +53,48 @@
   </url>
 
   <!-- Articles de blog -->
+  <url>
+    <loc>https://virtuos.life/articles/meta-ia-code-genere-2026.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://virtuos.life/articles/gemini-3-pro-analyse.html</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://virtuos.life/articles/ce-qui-se-cache-derriere-un-terminal.html</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://virtuos.life/articles/websearch-mcp-webmarketing.html</loc>
+    <lastmod>2025-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://virtuos.life/articles/mcp-model-context-protocol.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://virtuos.life/articles/mcp-gmail-claude-desktop.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <url>
     <loc>https://virtuos.life/articles/tendances-web-design-2024.html</loc>
     <lastmod>2025-10-12</lastmod>

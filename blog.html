@@ -39,6 +39,26 @@
     "blogPost": [
       {
         "@type": "BlogPosting",
+        "headline": "Meta mise tout sur l'IA : 50% de Code Généré Automatiquement d'ici 2026",
+        "description": "Mark Zuckerberg révèle sa vision révolutionnaire : confier 50% du développement de Meta à l'intelligence artificielle d'ici 2026. Une transformation qui pourrait redéfinir l'industrie.",
+        "datePublished": "2025-11-24",
+        "author": {
+          "@type": "Person",
+          "name": "Équipe Virtuos Studio"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Gemini 3 Pro : Analyse Complète des Performances et Limitations en 2025",
+        "description": "Score record de 1501 sur LMArena, mais est-ce vraiment à la hauteur ? Analyse approfondie des performances exceptionnelles, hallucinations fréquentes et problèmes de codage.",
+        "datePublished": "2025-11-23",
+        "author": {
+          "@type": "Person",
+          "name": "Équipe Virtuos Studio"
+        }
+      },
+      {
+        "@type": "BlogPosting",
         "headline": "Ce qui se cache derrière un Terminal",
         "description": "Guide complet pour comprendre et utiliser le terminal sur Mac et PC. L'outil incontournable des développeurs et professionnels de l'IT.",
         "datePublished": "2025-10-25",
@@ -113,11 +133,11 @@
             <div class="category-filters">
               <button class="category-filter active" data-category="all">
                 <span class="category-name">Tous</span>
-                <span class="category-count">8</span>
+                <span class="category-count">9</span>
               </button>
               <button class="category-filter" data-category="ia">
                 <span class="category-name">Intelligence Artificielle</span>
-                <span class="category-count">1</span>
+                <span class="category-count">2</span>
               </button>
               <button class="category-filter" data-category="webmarketing">
                 <span class="category-name">Webmarketing</span>
@@ -141,8 +161,41 @@
           <!-- Grille d'articles -->
           <div class="blog-articles-grid">
         
+        <!-- Article - Meta IA Code 2026 -->
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="ia">
+          <div style="position: relative; height: 200px; overflow: hidden; background-image: url('./assets/img/articles/marckzuckerberg.jpg'); background-size: cover; background-position: center;">
+            <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px; z-index: 10;">
+              <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">INTELLIGENCE ARTIFICIELLE</span>
+              <time style="color: #fff; font-size: 14px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 8px;">24 novembre 2025</time>
+            </div>
+          </div>
+          <div style="padding: 32px;">
+          
+          <h2 style="font-size: 24px; margin: 0 0 16px; line-height: 1.3;">
+            <a href="./articles/meta-ia-code-genere-2026.html" style="color: var(--text); text-decoration: none;">
+              Meta mise tout sur l'IA : 50% de Code Généré Automatiquement d'ici 2026
+            </a>
+          </h2>
+          
+          <p style="color: var(--muted); margin: 0 0 20px; line-height: 1.6;">
+            Mark Zuckerberg révèle sa vision révolutionnaire : confier près de la moitié du développement de Meta à l'intelligence artificielle d'ici 2026. Une transformation qui pourrait redéfinir l'industrie technologique.
+          </p>
+          
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+            <span style="padding: 2px 8px; background: rgba(255,255,255,0.05); border-radius: 8px; font-size: 12px; color: var(--muted);">#meta</span>
+            <span style="padding: 2px 8px; background: rgba(255,255,255,0.05); border-radius: 8px; font-size: 12px; color: var(--muted);">#ia</span>
+            <span style="padding: 2px 8px; background: rgba(255,255,255,0.05); border-radius: 8px; font-size: 12px; color: var(--muted);">#développement</span>
+          </div>
+          
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="./articles/meta-ia-code-genere-2026.html" class="btn btn-outline">Lire l'article</a>
+            <span style="color: var(--muted); font-size: 14px;">⏱️ 15 min de lecture</span>
+          </div>
+          </div>
+        </article>
+        
         <!-- Article - Gemini 3 Pro -->
-        <article class="card" style="padding: 0; overflow: hidden;">
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="ia">
           <div style="position: relative; height: 200px; overflow: hidden; background-image: url('./assets/img/articles/gem.jpg'); background-size: cover; background-position: center;">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px; z-index: 10;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">INTELLIGENCE ARTIFICIELLE</span>
@@ -175,7 +228,7 @@
         </article>
         
         <!-- Article - Terminal -->
-        <article class="card" style="padding: 0; overflow: hidden;">
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="technique">
           <div style="position: relative; height: 200px; overflow: hidden; background-image: url('./assets/img/articles/terminal.webp'); background-size: cover; background-position: center;">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px; z-index: 10;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">TECHNIQUE</span>
@@ -208,7 +261,7 @@
         </article>
         
         <!-- Article 0 - Web Search MCP -->
-        <article class="card" style="padding: 0; overflow: hidden;">
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="webmarketing">
           <div style="position: relative; height: 200px; overflow: hidden; background-image: url('./assets/img/articles/websearch-mcp.webp'); background-size: cover; background-position: center;">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px; z-index: 10;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">WEBMARKETING</span>
@@ -241,7 +294,7 @@
         </article>
         
         <!-- Article 0 - MCP Général -->
-        <article class="card" style="padding: 0; overflow: hidden;">
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="technique">
           <div style="position: relative; height: 200px; overflow: hidden; background-image: url('./assets/img/articles/mcp.webp'); background-size: cover; background-position: center;">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px; z-index: 10;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">TECHNOLOGIE</span>
@@ -274,7 +327,7 @@
         </article>
 
         <!-- Article 1 - MCP Gmail -->
-        <article class="card" style="padding: 0; overflow: hidden;">
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="technique">
           <div style="position: relative; height: 200px; overflow: hidden; background: linear-gradient(135deg, rgba(163,255,18,0.3) 0%, rgba(163,255,18,0.1) 100%);">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px;">
               <span style="padding: 4px 12px; background: rgba(163,255,18,0.9); border-radius: 12px; font-size: 12px; color: #000; font-weight: 600;">AUTOMATION</span>
@@ -308,7 +361,7 @@
         </article>
 
         <!-- Article 1 - Web Design -->
-        <article class="card" style="padding: 0; overflow: hidden;">
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="design">
           <div style="position: relative; height: 200px; overflow: hidden;">
             <img src="./assets/img/articles/tendances-web-design-2024-interface-moderne.webp" alt="Tendances web design 2024 - Interface moderne avec éléments UI/UX" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px;">
@@ -342,7 +395,7 @@
         </article>
 
         <!-- Article 2 - SEO -->
-        <article class="card" style="padding: 0; overflow: hidden;">
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="seo">
           <div style="position: relative; height: 200px; overflow: hidden;">
             <img src="./assets/img/articles/seo-local-google-optimisation-entreprises.webp" alt="SEO local - Recherche Google et optimisation locale" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px;">
@@ -376,7 +429,7 @@
         </article>
 
         <!-- Article 3 - SEO PME -->
-        <article class="card" style="padding: 0; overflow: hidden;">
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="seo">
           <div style="position: relative; height: 200px; overflow: hidden;">
             <img src="./assets/img/articles/seo-referencement-pme-guide-complet.webp" alt="SEO pour PME - Code et développement technique" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px;">
@@ -410,7 +463,7 @@
         </article>
 
         <!-- Article 5 - Design Web Marketing -->
-        <article class="card" style="padding: 0; overflow: hidden;">
+        <article class="card" style="padding: 0; overflow: hidden;" data-category="design">
           <div style="position: relative; height: 200px; overflow: hidden;">
             <img src="./assets/img/articles/design-premium-sombre-interface-moderne.webp" alt="Design web marketing sombre - Branding et identité visuelle moderne" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             <div style="position: absolute; top: 16px; left: 16px; display: flex; align-items: center; gap: 12px;">
