@@ -2117,3 +2117,94 @@ a{color:inherit; text-decoration:none}
 .brand .brand-name span{color:var(--brand)}
 .site-footer .brand .brand-name span{color:#a3ff12}
 .site-footer .brand .brand-mark{color:#a3ff12}
+
+/* =====================================================================
+   RESPONSIVE v2 — corrections tablette et mobile (octobre 2026)
+   Placé en fin de fichier pour primer sur les règles précédentes.
+   ===================================================================== */
+
+/* Logo du pied de page : symbole et nom côte à côte (était en display:block) */
+.site-footer .brand, .footer-brand .brand{display:inline-flex; align-items:center; gap:.32em}
+
+/* Étiquettes des projets : 11px était trop petit */
+.project-tag{font-size:12px}
+
+/* Petit portable (≤1024px) : on garde le hero et les tarifs sur plusieurs colonnes */
+@media (min-width:901px) and (max-width:1024px){
+  .hero-layout{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:32px}
+  .hero-visual{height:420px; max-width:none}
+  .pricing-grid{grid-template-columns:repeat(3,1fr); gap:18px}
+  .pricing-grid .price{padding:24px 20px}
+}
+
+/* Tablette (641–900px) : deux colonnes au lieu d'une seule pleine largeur */
+@media (min-width:641px) and (max-width:900px){
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  #projects .projects-grid .project:first-child{grid-column:span 2}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .testi-grid .testi-featured{grid-column:1 / -1; grid-row:auto}
+  .pricing-grid{grid-template-columns:repeat(3,1fr); gap:14px}
+  .pricing-grid .price{padding:22px 16px}
+  .pricing-grid .price .price-tag{font-size:34px}
+  .hero-visual{height:400px}
+}
+
+/* Téléphone (≤640px) */
+@media (max-width:640px){
+  /* Marges latérales de 16px (au lieu de 3% soit ~11px) */
+  .container{width:calc(100% - 32px)}
+
+  /* Hero : moins de vide en haut, visuel plus compact */
+  .hero.section{padding:28px 0 48px !important}
+  .hero-layout{gap:28px}
+  .hero-visual{height:300px}
+  .hero-trust{gap:16px; flex-wrap:nowrap}
+  .hero-trust li{min-width:0}
+  .hero-trust b{font-size:20px}
+  .hero-trust span{font-size:12px}
+
+  /* Sections un peu moins hautes */
+  .section{padding:64px 0}
+
+  /* Carrousels horizontaux : projets, témoignages et tarifs (au lieu de tout empiler) */
+  #projects .projects-grid, .testi-grid, .pricing-grid, #why-us .services-grid{
+    display:grid; grid-template-columns:none; grid-template-rows:none;
+    grid-auto-flow:column; grid-auto-columns:86%;
+    gap:14px; overflow-x:auto; overscroll-behavior-x:contain;
+    scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+    margin-inline:-16px; padding:6px 16px 18px; scroll-padding-inline:16px;
+    scrollbar-width:none;
+  }
+  #projects .projects-grid::-webkit-scrollbar, .testi-grid::-webkit-scrollbar, .pricing-grid::-webkit-scrollbar, #why-us .services-grid::-webkit-scrollbar{display:none}
+  #projects .projects-grid > *, .testi-grid > *, .pricing-grid > *, #why-us .services-grid > *{scroll-snap-align:start; min-width:0}
+  #why-us .services-grid{grid-auto-columns:80%}
+  #why-us .service.card{grid-template-columns:1fr; row-gap:12px}
+  #why-us .service.card > *{grid-column:1 !important}
+  #projects .projects-grid .project:first-child{grid-column:auto; display:flex; flex-direction:column}
+  .testi-grid .testi-featured{grid-row:auto; padding:26px}
+  .pricing-grid .price.popular{transform:none}
+  .pricing-grid .price .btn{margin-top:14px}
+
+  /* Atouts : cartes plus compactes */
+  .service.card{padding:18px !important}
+  .service.card p{font-size:15px; line-height:1.55}
+  .svc-metric{margin-top:12px; padding-top:12px}
+  .svc-metric b{font-size:28px}
+
+  /* Méthode : numéro à gauche, texte à droite */
+  .process-steps{row-gap:22px}
+  .process-steps li{display:grid; grid-template-columns:40px 1fr; column-gap:14px; align-items:start}
+  .process-steps .step-num{grid-row:1 / span 3; width:40px; height:40px; font-size:14px; margin:0}
+  .process-steps h4{grid-column:2; margin:6px 0 4px; font-size:17px}
+  .process-steps p{grid-column:2; margin:0 0 8px}
+  .process-steps .step-time{grid-column:2; justify-self:start}
+
+  /* Offre BGE : texte puis boutons, au lieu de deux colonnes serrées */
+  .promo-offer .grid{grid-template-columns:1fr !important; gap:16px}
+  .promo-offer .hero-cta{justify-content:flex-start !important; flex-wrap:wrap}
+
+  /* Pied de page : contact centré comme le reste */
+  .site-footer .footer-inner{text-align:center}
+  .site-footer .contact-link{justify-content:center}
+}
