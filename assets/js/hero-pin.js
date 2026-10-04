@@ -15,23 +15,15 @@
     var track = root.querySelector('.hp-track');
     var cards = Array.prototype.slice.call(root.querySelectorAll('.hp-card'));
     var caps = cards.map(function (c) { return c.querySelector('.hp-cap'); });
-    var dims = cards.map(function (c) { return c.querySelector('.hp-dim'); });
     var segs = Array.prototype.slice.call(root.querySelectorAll('.hp-segs i'));
     var count = root.querySelector('.hp-count');
     var hint = root.querySelector('.hp-hint');
     if (cards.length < 3) return;
 
-    // Position de repos de chaque rang dans la pile : devant, derrière, tout derrière
-    var rank = [
-      { y: 0,  scale: 1,    dim: 0 },
-      { y: 20, scale: .94,  dim: .5 },
-      { y: 40, scale: .88,  dim: .75 }
-    ];
-
+    // Une seule capture visible à la fois : les autres attendent, cachées, légèrement en dessous
     gsap.set(cards, { transformOrigin: '50% 100%' });
     cards.forEach(function (c, i) {
-      gsap.set(c, { y: rank[i].y, scale: rank[i].scale, zIndex: 10 - i });
-      gsap.set(dims[i], { opacity: rank[i].dim });
+      gsap.set(c, { y: i === 0 ? 0 : 50, scale: i === 0 ? 1 : .96, opacity: i === 0 ? 1 : 0, zIndex: 10 - i });
       gsap.set(caps[i], { opacity: i === 0 ? 1 : 0 });
     });
 
@@ -49,19 +41,13 @@
     });
 
     function pass(from, at) {
-      var to = from + 1, third = from + 2;
-      // La carte de devant s'envole et s'efface
+      var to = from + 1;
+      // La capture actuelle monte et s'efface...
       tl.to(caps[from], { opacity: 0, duration: .25 }, at);
-      tl.to(cards[from], { y: -70, rotation: from % 2 ? 3 : -3, scale: 1.04, opacity: 0, duration: .7, ease: 'power2.in' }, at);
-      // La suivante passe devant
-      tl.to(cards[to], { y: 0, scale: 1, duration: .7, ease: 'power2.out' }, at);
-      tl.to(dims[to], { opacity: 0, duration: .7 }, at);
+      tl.to(cards[from], { y: -60, scale: 1.02, opacity: 0, duration: .5, ease: 'power2.in' }, at);
+      // ...pendant que la suivante arrive d'en dessous
+      tl.to(cards[to], { y: 0, scale: 1, opacity: 1, duration: .5, ease: 'power2.out' }, at + .25);
       tl.to(caps[to], { opacity: 1, duration: .3 }, at + .4);
-      // La troisième remonte d'un rang
-      if (cards[third]) {
-        tl.to(cards[third], { y: rank[1].y, scale: rank[1].scale, duration: .7, ease: 'power2.out' }, at);
-        tl.to(dims[third], { opacity: rank[1].dim, duration: .7 }, at);
-      }
     }
     pass(0, .3);
     pass(1, 1.3);
