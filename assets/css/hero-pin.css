@@ -18,7 +18,7 @@
 .hp-link{display:flex; flex-direction:column; flex:1; color:inherit; text-decoration:none}
 .hp-link:focus-visible{outline:2px solid var(--brand); outline-offset:-2px; border-radius:14px}
 .hp-card picture{display:block}
-.hp-card img{display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; object-position:top left}
+.hp-card img{display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; object-position:top left}
 .hp-bar{display:none; gap:6px; padding:10px 14px; background:#171a1f; border-bottom:1px solid rgba(255,255,255,.08)}
 .hp-bar i{width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.22)}
 .hp-bar i:first-child{background:#ff5f57}.hp-bar i:nth-child(2){background:#febc2e}.hp-bar i:nth-child(3){background:#28c840}
@@ -43,7 +43,7 @@
 .hp-on .hp-visual{display:flex; flex-direction:column; align-items:center; min-width:0}
 .hp-on .hp-deck{display:grid; grid-template-columns:minmax(0,1fr); gap:0; position:relative; width:100%; max-width:540px; perspective:1400px}
 .hp-on .hp-card{grid-area:1 / 1; will-change:transform; box-shadow:0 40px 90px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.04) inset}
-.hp-on .hp-card img{aspect-ratio:3/2}
+.hp-on .hp-card img{aspect-ratio:16/9}
 .hp-on .hp-bar{display:flex}
 .hp-on .hp-dim{display:block; position:absolute; inset:0; z-index:2; background:#0b0d10; opacity:0; pointer-events:none}
 .hp-on .hp-cap{flex-direction:row; align-items:center; justify-content:space-between; gap:14px; padding:16px 18px 18px; min-height:80px}
