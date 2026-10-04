@@ -4,19 +4,11 @@
 User-agent: *
 Allow: /
 
-# Bloquer les anciennes URLs redirigées (éviter l'indexation des doublons)
-Disallow: /index-2
-Disallow: /index-4
-Disallow: /index4-one-page
-Disallow: /index2-one-page
-Disallow: /testimonial
-Disallow: /portfolio-gallery
-Disallow: /service
-Disallow: /blog
+# Les anciennes URLs sont redirigées en 301 (netlify.toml) : ne pas les bloquer,
+# sinon Google ne voit pas la redirection.
 
 # Bloquer les fichiers sensibles
 Disallow: /netlify/
-Disallow: /assets/js/
 Disallow: /.env
 Disallow: /package.json
 Disallow: /README.md
@@ -48,18 +40,15 @@ Sitemap: https://virtuos.life/sitemap.xml
 # Délai entre les requêtes (optionnel, pour éviter la surcharge)
 Crawl-delay: 1
 
-# Instructions spécifiques pour Google - bloquer explicitement les anciennes URLs
+# Instructions spécifiques pour Google (Googlebot ne lit que ce bloc)
+# Les anciennes URLs ne sont pas bloquées : elles redirigent en 301.
+# « Disallow: /blog » bloquait aussi /blog.html, et « /service » /services.html.
 User-agent: Googlebot
 Allow: /
-Disallow: /index-2
-Disallow: /index-4
-Disallow: /index4-one-page
-Disallow: /index2-one-page
-Disallow: /testimonial
-Disallow: /portfolio-gallery
-Disallow: /service
-Disallow: /blog
-Crawl-delay: 1
+Disallow: /netlify/
+Disallow: /template/audit-template.html
+Disallow: /template/merci.html
+Disallow: /template/audit-merci.html
 
 # Instructions spécifiques pour Bing
 User-agent: Bingbot

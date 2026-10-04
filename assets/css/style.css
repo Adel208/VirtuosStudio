@@ -374,7 +374,7 @@ a{color:inherit; text-decoration:none}
 .form-grid input, .form-grid select, .form-grid textarea{
   width:100%; background:var(--card); color:var(--text); border:1px solid var(--border); border-radius:12px; padding:12px 14px; font-size:15px
 }
-.form-grid textarea{grid-column: span 2}
+.form-grid textarea{grid-column: 1 / -1}  /* pleine largeur sans créer de colonne en plus sur mobile */
 @media (max-width: 768px){.form-grid{grid-template-columns: 1fr}}
 @media (max-width: 1024px){.contact-grid{grid-template-columns: 1fr}}
 
@@ -1714,6 +1714,7 @@ a{color:inherit; text-decoration:none}
 .hero-visual{position:relative; height:520px; perspective:1400px}
 .hv-glow{position:absolute; inset:8% 6%; background:radial-gradient(circle at 30% 30%, rgba(163,255,18,.28), transparent 55%), radial-gradient(circle at 75% 70%, rgba(125,211,252,.28), transparent 55%); filter:blur(50px)}
 .hv-card{position:absolute; margin:0; width:78%; border-radius:14px; overflow:hidden; background:#0f1215; border:1px solid rgba(255,255,255,.14); box-shadow:0 30px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.04) inset; transition:transform .5s cubic-bezier(.2,.7,.2,1), border-color .3s ease, box-shadow .3s ease, opacity .3s ease}
+.hv-card picture{display:block}
 .hv-card img{display:block; width:100%; height:auto; transition:filter .3s ease}
 .hv-link{display:block; color:inherit; text-decoration:none; cursor:pointer}
 .hv-link:focus-visible{outline:2px solid var(--brand); outline-offset:-2px; border-radius:14px}
@@ -1981,7 +1982,7 @@ a{color:inherit; text-decoration:none}
 .contact-points a:hover{color:var(--text)}
 .contact-split .contact-form{padding:32px; border-radius:22px; background:var(--elev); border:1px solid var(--border)}
 [data-theme="light"] .contact-split .contact-form{background:#fff; box-shadow:0 30px 70px rgba(15,23,42,.1)}
-.contact-split .btn-secondary{width:100%; height:54px; font-size:16px}
+.contact-split .btn-secondary, .contact-split .btn-primary{width:100%; height:54px; font-size:16px}
 
 /* ===== Footer v2 ===== */
 .site-footer{margin-top:0; background:#0b1220; border-top:none; color:rgba(255,255,255,.75)}
@@ -2045,7 +2046,7 @@ a{color:inherit; text-decoration:none}
 .promo-banner .promo-inner{padding:6px 0; gap:12px}
 .promo-banner .promo-text{font-size:13px}
 .promo-banner .btn{height:28px; padding:0 12px; font-size:12.5px; border-radius:999px}
-.promo-banner .promo-close{margin-left:2px; padding:4px; line-height:1}
+.promo-banner .promo-close{margin-left:2px; padding:4px; line-height:1; min-width:36px; min-height:36px; display:inline-flex; align-items:center; justify-content:center}
 .promo-banner .promo-inner{flex-direction:row !important; flex-wrap:wrap; justify-content:center}
 
 /* Burger + fullscreen menu */
@@ -2093,3 +2094,6 @@ a{color:inherit; text-decoration:none}
   .navbar .nav-list, [data-theme="light"] .navbar .nav-list, .no-backdrop .navbar .nav-list, [data-theme="light"] .no-backdrop .navbar .nav-list{background:transparent !important; box-shadow:none !important; border:none !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important}
   .navbar .nav-list li{background:none}
 }
+
+/* Accessibilité : zones tactiles d'au moins ~32px pour les liens du pied de page */
+.site-footer li a{display:inline-block; padding:6px 0}

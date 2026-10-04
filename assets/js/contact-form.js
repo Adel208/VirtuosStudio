@@ -3,6 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Gestion du formulaire de contact
   const contactForm = document.querySelector('.contact-form');
+
+  // Boutons qui mènent au formulaire avec un message prérempli (ex. « audit gratuit »)
+  document.querySelectorAll('[data-prefill]').forEach(link => {
+    link.addEventListener('click', () => {
+      const message = contactForm && contactForm.querySelector('[name="message"]');
+      if (!message) return;
+      if (!message.value.trim()) message.value = link.dataset.prefill;
+      setTimeout(() => message.focus({ preventScroll: true }), 800);
+    });
+  });
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();

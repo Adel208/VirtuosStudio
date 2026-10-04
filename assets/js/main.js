@@ -302,11 +302,16 @@ function addActiveNavStates() {
 }
 
 // GA4 Conversion Tracking
+// gtag n'existe qu'après acceptation des cookies (bannière tarteaucitron) : sans accord, rien n'est envoyé.
+function track(...args) {
+  if (typeof window.gtag === 'function') window.gtag(...args);
+}
+
 function setupConversionTracking() {
   // Track phone calls
   document.querySelectorAll('a[href^="tel:"]').forEach(link => {
     link.addEventListener('click', () => {
-      gtag('event', 'phone_call', {
+      track('event', 'phone_call', {
         'event_category': 'contact',
         'event_label': 'phone_click',
         'value': 1
@@ -318,7 +323,7 @@ function setupConversionTracking() {
   // Track email clicks
   document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
     link.addEventListener('click', () => {
-      gtag('event', 'email_contact', {
+      track('event', 'email_contact', {
         'event_category': 'contact',
         'event_label': 'email_click',
         'value': 1
@@ -330,7 +335,7 @@ function setupConversionTracking() {
   // Track CTA button clicks
   document.querySelectorAll('.btn-primary').forEach(button => {
     button.addEventListener('click', () => {
-      gtag('event', 'cta_click', {
+      track('event', 'cta_click', {
         'event_category': 'engagement',
         'event_label': button.textContent.trim(),
         'value': 1
@@ -357,7 +362,7 @@ function setupConversionTracking() {
         formValue = 2;
       }
       
-      gtag('event', 'form_submit', {
+      track('event', 'form_submit', {
         'event_category': 'conversion',
         'event_label': formType,
         'value': formValue
