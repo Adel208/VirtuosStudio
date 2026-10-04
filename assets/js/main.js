@@ -6,6 +6,60 @@ function updateYear() {
   }
 }
 
+function initHeaderBehavior() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const navToggle = document.querySelector('.nav-toggle');
+  const navList = document.getElementById('nav-list');
+  let lastY = window.scrollY, ticking = false;
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 8);
+    const menuOpen = navList && navList.classList.contains('open');
+    const mobile = window.matchMedia('(max-width: 980px)').matches;
+    header.classList.toggle('is-hidden', mobile && !menuOpen && y > 160 && y > lastY + 4);
+    if (y < lastY - 4) header.classList.remove('is-hidden');
+    lastY = y;
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+
+  if (navList) {
+    navList.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => {
+      navList.classList.remove('open');
+      if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    }));
+  }
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      document.body.classList.toggle('nav-open', navToggle.getAttribute('aria-expanded') === 'true');
+    });
+  }
+
+  const links = [...document.querySelectorAll('.nav-list a[data-section]')];
+  const sections = links
+    .map((a) => ({ a, el: document.getElementById(a.dataset.section) }))
+    .filter((x) => x.el && x.el.closest('main'));
+  if (sections.length && 'IntersectionObserver' in window) {
+    const setActive = (id) => {
+      document.querySelectorAll('.nav-list a').forEach((l) => l.classList.toggle('active', l.dataset.section === id));
+    };
+    const visible = new Map();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => visible.set(e.target.id, e.isIntersecting ? e.intersectionRatio : 0));
+      let best = null, ratio = 0;
+      visible.forEach((r, id) => { if (r > ratio) { ratio = r; best = id; } });
+      if (best) setActive(best);
+    }, { rootMargin: '-35% 0px -45% 0px', threshold: [0, 0.1, 0.5, 1] });
+    sections.forEach(({ el }) => io.observe(el));
+    setActive('hero');
+  }
+}
+
 function bindMobileNav() {
   const navToggle = document.querySelector('.nav-toggle');
   const navList = document.getElementById('nav-list');
@@ -54,14 +108,14 @@ function buildHeaderHTML() {
           <span></span><span></span><span></span>
         </button>
         <ul id="nav-list" class="nav-list">
-          <li class="desktop-only"><a href="${homeUrl}">Accueil</a></li>
-          <li><a href="${root}projets.html">Projets</a></li>
-          <li class="desktop-only"><a href="${root}blog.html">Blog</a></li>
-          <li class="desktop-only"><a href="${root}tarifs.html">Tarifs</a></li>
-          <li><a href="${root}contact.html">Contact</a></li>
+          <li><a href="${homeUrl}" data-section="hero">Accueil</a></li>
+          <li><a href="${root}projets.html" data-section="projects">Projets</a></li>
+          <li><a href="${root}blog.html">Blog</a></li>
+          <li><a href="${root}tarifs.html" data-section="pricing">Tarifs</a></li>
+          <li><a href="${root}contact.html" data-section="contact">Contact</a></li>
           <li class="only-mobile"><a class="btn btn-primary" href="${root}contact.html">Obtenir un devis</a></li>
         </ul>
-        <div class="nav-cta" style="margin-left: 48px;">
+        <div class="nav-cta">
           <button class="theme-toggle" aria-label="Changer de thème" title="Basculer entre thème sombre et clair">
             <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -364,17 +418,18 @@ window.addEventListener('DOMContentLoaded', () => {
   // Inject global header/footer first for consistency across pages
   renderGlobalHeaderFooter();
   bindMobileNav();
+  initHeaderBehavior();
   updateYear();
   console.log('Navigation initialized');
 
   const title = document.querySelector('.title');
-  if (title && !prefersReduced && !isMobileEnv) {
+  if (title && !title.closest('#hero') && !prefersReduced && !isMobileEnv) {
     split = new SplitType(title, { types: 'lines, words' });
   }
 
-  // Inject promo banner (20% new founders) under header if not dismissed
+  // Inject promo banner (10% new founders) under header if not dismissed
   try {
-    const KEY = 'promo_banner_dismissed_v1';
+    const KEY = 'promo_banner_dismissed_v2';
     const dismissed = localStorage.getItem(KEY) === '1';
     const header = document.querySelector('.site-header');
     if (header && !dismissed) {
@@ -382,9 +437,9 @@ window.addEventListener('DOMContentLoaded', () => {
       banner.className = 'promo-banner';
       banner.innerHTML = `
         <div class="container promo-inner">
-          <div class="promo-text"> <b>-20% pour les nouveaux cr&eacute;ateurs d&rsquo;entreprise</b> sur votre premier projet. Code <b>NEW20</b></div>
+          <div class="promo-text"> <b>-10% pour les b&eacute;n&eacute;ficiaires BGE ADIL</b> sur votre premier projet. Code <b>NEW10</b></div>
           <div class="promo-cta">
-            <a class="btn btn-outline" href="${location.pathname.includes('/template/') ? './contact.html' : './template/contact.html'}?promo=NEW20">Profiter de l&rsquo;offre</a>
+            <a class="btn btn-outline" href="${location.pathname.includes('/template/') ? './contact.html' : './template/contact.html'}?promo=NEW10">Profiter de l&rsquo;offre</a>
             <button class="promo-close" aria-label="Masquer la promotion">✕</button>
           </div>
         </div>`;
@@ -473,7 +528,11 @@ window.addEventListener('load', () => {
       gsap.from('.site-header', { y: -8, opacity: 0, duration: 0.5, ease: 'power2.out' });
       gsap.from('.kicker', { y: 4, opacity: 0, duration: 0.5, delay: 0.1, ease: 'power2.out' });
 
-      if (document.querySelector('.title .word')) {
+      if (document.querySelector('#hero .title')) {
+        gsap.from('#hero .title', { y: 12, opacity: 0, duration: 0.7, delay: 0.1, ease: 'power2.out' });
+        gsap.from('.hero-trust li', { y: 8, opacity: 0, duration: 0.5, delay: 0.5, stagger: 0.08, ease: 'power2.out' });
+        gsap.from('.hero-visual', { y: 24, opacity: 0, duration: 0.9, delay: 0.2, ease: 'power3.out', clearProps: 'transform,opacity' });
+      } else if (document.querySelector('.title .word')) {
         gsap.from('.title .word', {
           y: 8,
           opacity: 0,
@@ -617,8 +676,8 @@ function initThemeToggle() {
   const themeToggle = document.querySelector('.theme-toggle');
   if (!themeToggle) return;
 
-  // Get saved theme or default to dark
-  const savedTheme = localStorage.getItem('theme') || 'dark';
+  // Get saved theme or default to light
+  const savedTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
 
   themeToggle.addEventListener('click', () => {
