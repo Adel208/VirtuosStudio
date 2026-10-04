@@ -109,6 +109,7 @@ function buildHeaderHTML() {
         </button>
         <ul id="nav-list" class="nav-list">
           <li><a href="${homeUrl}" data-section="hero">Accueil</a></li>
+          <li><a href="${root}services.html">Services</a></li>
           <li><a href="${root}projets.html" data-section="projects">Projets</a></li>
           <li><a href="${root}blog.html">Blog</a></li>
           <li><a href="${root}tarifs.html" data-section="pricing">Tarifs</a></li>
@@ -192,6 +193,7 @@ function buildFooterHTML() {
       <div class="footer-nav">
         <h4>Navigation</h4>
         <ul>
+          <li><a href="${root}services.html">Services</a></li>
           <li><a href="${root}projets.html">Projets</a></li>
           <li><a href="${root}blog.html">Blog</a></li>
           <li><a href="${root}tarifs.html">Tarifs</a></li>
@@ -440,11 +442,14 @@ window.addEventListener('DOMContentLoaded', () => {
     if (header && !dismissed) {
       const banner = document.createElement('div');
       banner.className = 'promo-banner';
+      // Racine du site déduite de l'adresse de main.js (fonctionne depuis /, /articles/ et /template/)
+      const mainScript = document.querySelector('script[src*="assets/js/main.js"]');
+      const siteRoot = mainScript ? mainScript.src.replace(/assets\/js\/main\.js.*$/, '') : '/';
       banner.innerHTML = `
         <div class="container promo-inner">
           <div class="promo-text"> <b>-10% pour les b&eacute;n&eacute;ficiaires BGE ADIL</b> sur votre premier projet. Code <b>NEW10</b></div>
           <div class="promo-cta">
-            <a class="btn btn-outline" href="${location.pathname.includes('/template/') ? './contact.html' : './template/contact.html'}?promo=NEW10">Profiter de l&rsquo;offre</a>
+            <a class="btn btn-outline" href="${siteRoot}contact.html?promo=NEW10">Profiter de l&rsquo;offre</a>
             <button class="promo-close" aria-label="Masquer la promotion">✕</button>
           </div>
         </div>`;

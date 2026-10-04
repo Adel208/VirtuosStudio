@@ -1,7 +1,10 @@
 // Consentement aux cookies (CNIL) : Google Analytics ne se charge qu'après accord du visiteur.
 // Bibliothèque : tarteaucitron.js, chargée juste avant ce fichier.
+// Racine du site déduite de l'adresse de ce script (virtuos.life ou GitHub Pages /VirtuosStudio/).
+var siteRoot = document.currentScript.src.replace(/assets\/js\/consent\.js.*$/, '');
+
 tarteaucitron.init({
-  privacyUrl: '/template/politique-confidentialite.html',
+  privacyUrl: siteRoot + 'template/politique-confidentialite.html',
   hashtag: '#tarteaucitron',
   cookieName: 'tarteaucitron',
   orientation: 'bottom',

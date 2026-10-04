@@ -3,152 +3,220 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Étude de cas — Site de dépannage plomberie | Virtuos Studio</title>
-  <meta name="description" content="Étude de cas Services — Site de services techniques axé conversion. Présentation, objectifs, résultats, stack et informations projet." />
+  <title>Services : création de site web, refonte, SEO local | Virtuos Studio</title>
+  <meta name="description" content="Création de site vitrine, refonte, landing page, SEO local et maintenance au Perreux-sur-Marne et dans le Val-de-Marne. Devis gratuit sous 24h." />
   <link rel="canonical" href="https://virtuos.life/services.html" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://virtuos.life/services.html" />
+  <meta property="og:title" content="Services : création de site web, refonte, SEO local | Virtuos Studio" />
+  <meta property="og:description" content="Création de site vitrine, refonte, landing page, SEO local et maintenance au Perreux-sur-Marne et dans le Val-de-Marne. Devis gratuit sous 24h." />
+  <meta property="og:image" content="https://virtuos.life/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Virtuos Studio" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Services : création de site web, refonte, SEO local | Virtuos Studio" />
+  <meta name="twitter:description" content="Création de site vitrine, refonte, landing page, SEO local et maintenance au Perreux-sur-Marne et dans le Val-de-Marne. Devis gratuit sous 24h." />
+  <meta name="twitter:image" content="https://virtuos.life/assets/img/og-image.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23A3FF12' d='M128 16l96 224H32z'/%3E%3C/svg%3E">
+  <link href="./assets/fonts/space-grotesk.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/vendor/lenis.css" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=refresh20" />
+
+  <!-- Cookies : Google Analytics chargé seulement après consentement (tarteaucitron) -->
+  <script>var tarteaucitronForceLanguage = 'fr';</script>
+  <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.35.1/tarteaucitron.min.js"></script>
+  <script src="./assets/js/consent.js"></script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://virtuos.life/"},
-      {"@type": "ListItem", "position": 2, "name": "Projets", "item": "https://virtuos.life/projets.html"},
-      {"@type": "ListItem", "position": 3, "name": "Services", "item": "https://virtuos.life/services.html"}
+      {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://virtuos.life/services.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Création de site web",
+    "provider": {"@type": "Organization", "name": "Virtuos Studio", "url": "https://virtuos.life/"},
+    "areaServed": [
+      {"@type": "City", "name": "Le Perreux-sur-Marne"},
+      {"@type": "AdministrativeArea", "name": "Val-de-Marne"},
+      {"@type": "AdministrativeArea", "name": "Île-de-France"}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services web",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Site vitrine sur-mesure"}, "price": "1550", "priceCurrency": "EUR"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Refonte de site web"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landing page"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Site sur-mesure et e-commerce"}, "price": "5990", "priceCurrency": "EUR"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO local"}, "price": "299", "priceCurrency": "EUR"},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Maintenance et hébergement"}, "price": "149", "priceCurrency": "EUR"}
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Combien de temps faut-il pour créer un site ?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Une landing page est livrée en 5 à 7 jours, un site vitrine de 5 à 8 pages en 2 à 3 semaines. Les projets avec fonctionnalités avancées demandent 4 à 6 semaines."}},
+      {"@type": "Question", "name": "Combien coûte un site vitrine ?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Nos sites vitrines commencent à 1 550 € (formule Starter). La formule Pro est à 2 990 € et les projets sur-mesure démarrent à 5 990 €. Design, développement, hébergement et support sont inclus."}},
+      {"@type": "Question", "name": "Travaillez-vous uniquement au Perreux-sur-Marne ?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Non. Nous accompagnons en priorité les entreprises du Perreux-sur-Marne et du Val-de-Marne, mais nous travaillons aussi à distance avec des clients partout en France."}},
+      {"@type": "Question", "name": "Pourrai-je modifier mon site moi-même ?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Oui. Selon vos besoins, nous intégrons un outil d'édition simple et nous vous formons à la gestion de votre site."}}
     ]
   }
   </script>
 </head>
 <body>
   <header class="site-header"></header>
-  <main class="section template-hero">
-    <div class="container">
-      <div class="breadcrumbs"><a href="./index.html">Accueil</a> / Projets / Services</div>
-      <div class="eyebrow">Projet</div>
-      <h1 class="title">Services</h1>
-      <div class="divider" aria-hidden="true"></div>
-      <p class="subtitle">Site de services techniques axé sur la clarté de l’offre, la visibilité des CTA et l’accès rapide au contact, avec une performance soignée.</p>
-      <div class="hero-cta" style="margin-top:16px">
-        <a class="btn btn-secondary" href="https://plomberies.netlify.app/" target="_blank" rel="noopener">Visiter le site</a>
-      </div>
-      <div class="meta" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
-        <span class="badge">Conversion</span>
-        <span class="badge">UI/UX</span>
-        <span class="badge">SEO</span>
-        <span class="badge">Performance</span>
-      </div>
-      <div class="template-frame card">
-        <iframe src="https://plomberies.netlify.app/" title="Services"></iframe>
-      </div>
-      
-      <div class="card" style="margin-top:20px">
-        <div class="grid" style="grid-template-columns: 1.2fr .8fr; gap:16px; align-items:start">
-          <section>
-            <h3 style="margin:0 0 8px">Présentation</h3>
-            <p style="margin:0; color:var(--muted)">Refonte d’un site de services pour améliorer la clarté de l’offre et la conversion. Travail sur la hiérarchie visuelle, la mise en évidence des CTA et l’ergonomie mobile, avec un socle technique léger pour des temps de chargement réduits.</p>
-          </section>
-          <aside>
-            <h3 style="margin:0 0 8px">Fiche projet</h3>
-            <ul style="margin:0; padding-left:18px; color:var(--muted)">
-              <li><b>Date</b>: 2025-08</li>
-              <li><b>Auteur</b>: Virtuos Studio</li>
-              <li><b>Rôle</b>: UI/UX, Front‑end</li>
-              <li><b>Durée</b>: 1 semaine</li>
-              <li><b>Livrables</b>: Maquettes, Intégration, Optimisations</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
 
-      <div class="card" style="margin-top:16px">
-        <div class="grid" style="grid-template-columns: 1fr 1fr; gap:16px">
-          <section>
-            <h3 style="margin:0 0 8px">Objectifs</h3>
-            <ul style="margin:0; padding-left:18px; color:var(--muted)">
-              <li>Clarifier l’offre et les parcours</li>
-              <li>Rendre les CTA plus visibles</li>
-              <li>Optimiser les performances et le SEO</li>
-            </ul>
-          </section>
-          <section>
-            <h3 style="margin:0 0 8px">Résultats</h3>
-            <ul style="margin:0; padding-left:18px; color:var(--muted)">
-              <li>+17% de soumissions de formulaire</li>
-              <li>−12% de taux de rebond</li>
-              <li>Meilleure lisibilité mobile</li>
-            </ul>
-          </section>
+  <main>
+    <section class="section hero template-hero" id="services-hero">
+      <div class="container hero-inner">
+        <div class="kicker">Services</div>
+        <h1 class="title">Création de site web au Perreux-sur-Marne</h1>
+        <p class="subtitle">Sites vitrines, refontes, landing pages et référencement local pour les artisans, commerçants et PME du Perreux-sur-Marne, du Val-de-Marne et de toute l'Île-de-France.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="./contact.html">Obtenir un devis gratuit</a>
+          <a class="btn btn-outline" href="./tarifs.html">Voir les tarifs</a>
         </div>
       </div>
+    </section>
 
-      <div class="card" style="margin-top:16px">
-        <div class="grid" style="grid-template-columns: 1fr 1fr; gap:16px">
-          <section>
-            <h3 style="margin:0 0 8px">Responsabilités</h3>
-            <ul style="margin:0; padding-left:18px; color:var(--muted)">
-              <li>Conception UI/UX</li>
-              <li>Intégration front‑end</li>
-              <li>Optimisation perf & SEO</li>
-            </ul>
-          </section>
-          <section>
-            <h3 style="margin:0 0 8px">Stack & intégrations</h3>
-            <ul style="margin:0; padding-left:18px; color:var(--muted)">
-              <li>HTML/CSS/JS (vanilla)</li>
-              <li>Netlify (hébergement, formulaires)</li>
-              <li>Google Analytics, SEO technique</li>
-            </ul>
-          </section>
+    <section class="section" id="offres">
+      <div class="container">
+        <div class="eyebrow">Nos services</div>
+        <h2 class="section-title">Ce que nous faisons pour vous</h2>
+        <div class="divider" aria-hidden="true"></div>
+
+        <div class="grid services-grid">
+          <article class="card service">
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-brand.svg" alt="" width="24" height="24"></div>
+            <h3>Site vitrine sur-mesure</h3>
+            <p>Un site de <strong>5 à 8 pages</strong> qui présente votre activité, rassure vos visiteurs et les pousse à vous contacter. Design unique, adapté au mobile, formulaire de contact inclus.</p>
+            <div class="svc-metric"><b>dès 1 550 €</b><span>livré en 2 à 3 semaines</span></div>
+          </article>
+
+          <article class="card service">
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-ux.svg" alt="" width="24" height="24"></div>
+            <h3>Refonte de site</h3>
+            <p>Votre site a vieilli, il est lent ou ne génère plus de demandes ? Nous le modernisons <strong>sans perdre votre référencement</strong> : chaque ancienne page est redirigée vers la nouvelle.</p>
+            <div class="svc-metric"><b>Sur devis</b><span>selon l'existant</span></div>
+          </article>
+
+          <article class="card service">
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-perf.svg" alt="" width="24" height="24"></div>
+            <h3>Landing page</h3>
+            <p>Une page unique et ciblée pour une offre, une campagne publicitaire ou un lancement. Pensée pour <strong>convertir</strong> : un message clair et un seul appel à l'action.</p>
+            <div class="svc-metric"><b>5 à 7 jours</b><span>de délai de livraison</span></div>
+          </article>
+
+          <article class="card service">
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-brand.svg" alt="" width="24" height="24"></div>
+            <h3>Site sur-mesure et e-commerce</h3>
+            <p>Parcours utilisateur sur-mesure, boutique en ligne, intégrations (API, outils no-code) et design system pour les projets plus ambitieux.</p>
+            <div class="svc-metric"><b>dès 5 990 €</b><span>formule Elite</span></div>
+          </article>
+
+          <article class="card service">
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-seo.svg" alt="" width="24" height="24"></div>
+            <h3>SEO local</h3>
+            <p>Être trouvé quand on cherche votre métier près de chez vous : <strong>fiche Google</strong>, pages locales, contenus, optimisation technique et suivi de vos positions.</p>
+            <div class="svc-metric"><b>299 € / mois</b><span>avec rapport mensuel</span></div>
+          </article>
+
+          <article class="card service">
+            <div class="icon" aria-hidden="true"><img src="./assets/img/service-perf.svg" alt="" width="24" height="24"></div>
+            <h3>Maintenance et hébergement</h3>
+            <p>Mises à jour, sauvegardes, surveillance du site et petites modifications chaque mois. L'hébergement est <strong>inclus dans toutes nos formules</strong>.</p>
+            <div class="svc-metric"><b>149 € / mois</b><span>1h de modifications incluse</span></div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section" id="methode">
+      <div class="container">
+        <div class="process">
+          <div class="process-head">
+            <div class="eyebrow">Notre méthode</div>
+            <h3>De l'idée à la mise en ligne, en 4 étapes</h3>
+            <p>Un seul interlocuteur du premier échange au suivi après lancement.</p>
+          </div>
+          <ol class="process-steps">
+            <li><span class="step-num">01</span><h4>Brief &amp; stratégie</h4><p>Objectifs, cible et arborescence définis avec vous.</p><span class="step-time">2-3 jours</span></li>
+            <li><span class="step-num">02</span><h4>Design</h4><p>Maquettes sur-mesure validées avant tout développement.</p><span class="step-time">3-5 jours</span></li>
+            <li><span class="step-num">03</span><h4>Développement</h4><p>Intégration, SEO et performances optimisés.</p><span class="step-time">1-2 semaines</span></li>
+            <li><span class="step-num">04</span><h4>Mise en ligne &amp; suivi</h4><p>Lancement, formation et support après livraison.</p><span class="step-time">14 à 60 jours de support</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="zone">
+      <div class="container">
+        <div class="eyebrow">Zone d'intervention</div>
+        <h2 class="section-title">Une agence web proche de chez vous</h2>
+        <div class="divider" aria-hidden="true"></div>
+        <p class="subtitle" style="max-width:780px">Nous accompagnons en priorité les entreprises du <strong>Perreux-sur-Marne</strong> et des villes voisines du Val-de-Marne et de l'est parisien : Nogent-sur-Marne, Bry-sur-Marne, Champigny-sur-Marne, Fontenay-sous-Bois, Vincennes, Neuilly-Plaisance et Neuilly-sur-Marne. Nous travaillons aussi à distance avec des clients partout en France.</p>
+      </div>
+    </section>
+
+    <section class="section" id="faq-services">
+      <div class="container">
+        <h2 class="section-title">Questions fréquentes</h2>
+        <div class="grid faq-grid">
+          <article class="card">
+            <h3 style="margin:0 0 8px; font-size:18px">Combien de temps faut-il pour créer un site ?</h3>
+            <p style="margin:0; color:var(--muted)">Une landing page est livrée en 5 à 7 jours, un site vitrine de 5 à 8 pages en 2 à 3 semaines. Les projets avec fonctionnalités avancées demandent 4 à 6 semaines.</p>
+          </article>
+          <article class="card">
+            <h3 style="margin:0 0 8px; font-size:18px">Combien coûte un site vitrine ?</h3>
+            <p style="margin:0; color:var(--muted)">À partir de 1 550 € (Starter), 2 990 € (Pro) et 5 990 € pour le sur-mesure. Design, développement, hébergement et support sont inclus.</p>
+          </article>
+          <article class="card">
+            <h3 style="margin:0 0 8px; font-size:18px">Travaillez-vous uniquement au Perreux-sur-Marne ?</h3>
+            <p style="margin:0; color:var(--muted)">Non : le Perreux et le Val-de-Marne en priorité, mais aussi à distance partout en France.</p>
+          </article>
+          <article class="card">
+            <h3 style="margin:0 0 8px; font-size:18px">Pourrai-je modifier mon site moi-même ?</h3>
+            <p style="margin:0; color:var(--muted)">Oui. Selon vos besoins, nous intégrons un outil d'édition simple et nous vous formons à la gestion de votre site.</p>
+          </article>
+        </div>
+        <div class="hero-cta" style="margin-top:24px">
+          <a class="btn btn-primary" href="./contact.html">Obtenir un devis gratuit</a>
+          <a class="btn btn-outline" href="./projets.html">Voir nos réalisations</a>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <section class="section" id="more-projects">
-    <div class="container">
-      <div class="eyebrow">Découvrir</div>
-      <h2 class="section-title">Autres projets</h2>
-      <div class="divider" aria-hidden="true"></div>
-      <div class="grid projects-grid" style="margin-top:12px">
-        <article class="card project">
-          <div class="project-thumb"><img src="./template/wextrizy/wextrizy-studio-creatif-site-web-moderne.png" alt="Aperçu Wextrizy" loading="lazy" decoding="async" width="640" height="360"></div>
-          <h3>Wextrizy</h3>
-          <p>Studio créatif moderne et interactions soignées.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://wextrizy.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
-            <a class="btn btn-outline" href="./template/wextrizy.html">Détails</a>
-          </div>
-        </article>
-        <article class="card project">
-          <div class="project-thumb"><img src="./template/extrizy/extrizy-identite-digitale-site-web-energique.png" alt="Aperçu Extrizy" loading="lazy" decoding="async" width="640" height="360"></div>
-          <h3>Extrizy</h3>
-          <p>Identité digitale énergique et interface soignée.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://extrizy.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
-            <a class="btn btn-outline" href="./template/extrizy.html">Détails</a>
-          </div>
-        </article>
-        <article class="card project">
-          <div class="project-thumb"><img src="./template/Presse/site-web-media-presse-afrique-actualites.png" alt="Aperçu Presse" loading="lazy" decoding="async" width="640" height="360"></div>
-          <h3>Presse</h3>
-          <p>Plateforme éditoriale audacieuse, contenu riche.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://lafrique.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
-            <a class="btn btn-outline" href="./template/Presse.html">Détails</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <footer class="site-footer"></footer>
 
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="https://unpkg.com/split-type@0.3.3"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <!-- Libraries -->
+  <script src="./assets/vendor/lenis.min.js"></script>
+  <script src="./assets/vendor/split-type.min.js"></script>
+  <script src="./assets/vendor/gsap.min.js"></script>
+  <script src="./assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/main.js?v=promo1"></script>
 </body>
 </html>

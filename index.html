@@ -38,18 +38,16 @@
   
   <!-- WhatsApp -->
   <meta property="og:image:secure_url" content="https://virtuos.life/assets/img/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+  <link href="./assets/fonts/space-grotesk.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="./assets/fonts/space-grotesk.css" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="./assets/vendor/lenis.css" />
   <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light")}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
-  <link rel="stylesheet" href="./assets/css/style.css?v=refresh18" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=refresh20" />
   
   <!-- Cookies : Google Analytics chargé seulement après consentement (tarteaucitron) -->
   <script>var tarteaucitronForceLanguage = 'fr';</script>
   <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.35.1/tarteaucitron.min.js"></script>
-  <script src="/assets/js/consent.js"></script>
+  <script src="./assets/js/consent.js"></script>
   
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23A3FF12' d='M128 16l96 224H32z'/%3E%3C/svg%3E">
   <script type="application/ld+json">
@@ -339,7 +337,7 @@
             </div>
           </article>
           <article class="card project">
-            <div class="project-thumb"><span class="project-tag">Voyage · Réservation</span><img src="./template/evasionvoyage/evasion-voyage-agence-site-web-reservation.png" alt="Evasion Voyage - Site web agence de voyage avec storytelling visuel" loading="lazy" decoding="async" width="640" height="360" srcset="./template/evasionvoyage/evasion-voyage-agence-site-web-reservation.png 640w, ./template/evasionvoyage/evasion-voyage-agence-site-web-reservation.png 1280w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" title="Evasion Voyage - Projet agence de voyage par Virtuos Studio"></div>
+            <div class="project-thumb"><span class="project-tag">Voyage · Réservation</span><picture><source srcset="./template/evasionvoyage/evasion-voyage-agence-site-web-reservation.webp" type="image/webp"><img src="./template/evasionvoyage/evasion-voyage-agence-site-web-reservation.png" alt="Evasion Voyage - Site web agence de voyage avec storytelling visuel" loading="lazy" decoding="async" width="640" height="360" srcset="./template/evasionvoyage/evasion-voyage-agence-site-web-reservation.png 640w, ./template/evasionvoyage/evasion-voyage-agence-site-web-reservation.png 1280w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" title="Evasion Voyage - Projet agence de voyage par Virtuos Studio"></picture></div>
             <h3>Evasion Voyage</h3>
             <p>Agence de voyage moderne avec storytelling visuel.</p>
             <div class="project-meta"><b>Objectif</b>: augmenter les demandes · <b>Résultat</b>: +25% de clics vers le devis</div>
@@ -552,12 +550,12 @@
 
   <footer class="site-footer"></footer>
 
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="https://unpkg.com/split-type@0.3.3"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="./assets/vendor/lenis.min.js"></script>
+  <script src="./assets/vendor/split-type.min.js"></script>
+  <script src="./assets/vendor/gsap.min.js"></script>
   <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="./assets/js/main.js?v=consent1"></script>
+  <script src="./assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/main.js?v=promo1"></script>
   <script src="./assets/js/contact-form.js?v=2"></script>
   
   <!-- Animation des compteurs statistiques -->
