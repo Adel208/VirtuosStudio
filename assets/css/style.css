@@ -2241,13 +2241,14 @@ a{color:inherit; text-decoration:none}
   .site-footer .footer-contact .contact-link svg{width:14px; height:14px}
 
   /* Navigation : liens en ligne */
-  .site-footer .footer-nav{order:3; display:block !important; width:100%; padding-top:22px; border-top:1px solid rgba(255,255,255,.08)}
+  /* Menu de navigation masqué sur mobile et tablette (le menu du haut suffit) */
+  .site-footer .footer-nav{display:none !important}
   .site-footer .footer-nav ul, .site-footer .footer-legal ul{display:flex !important; flex-direction:row !important; flex-wrap:wrap; justify-content:center; gap:2px 22px !important; margin:0; padding:0; list-style:none}
   .site-footer .footer-nav li, .site-footer .footer-legal li{margin:0}
   .site-footer .footer-nav a{font-size:15px; padding:8px 0}
 
   /* Légal : plus discret */
-  .site-footer .footer-legal{order:4; display:block !important; width:100%; margin-top:-10px}
+  .site-footer .footer-legal{order:3; display:block !important; width:100%; padding-top:20px; border-top:1px solid rgba(255,255,255,.08)}
   .site-footer .footer-legal ul{gap:2px 16px !important}
   .site-footer .footer-inner .footer-legal a{font-size:13px; color:rgba(255,255,255,.55); padding:6px 0}
 
