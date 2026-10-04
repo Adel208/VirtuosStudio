@@ -1,46 +1,51 @@
-const nodemailer = require('nodemailer');
+const { createTransport, sender, recipient, escapeHtml, isEmail, clip, json } = require('../lib/mailer');
 
 exports.handler = async (event) => {
   // Autoriser uniquement POST
   if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ message: 'Method Not Allowed' })
-    };
+    return json(405, { message: 'Method Not Allowed' });
+  }
+
+  let data;
+  try {
+    data = JSON.parse(event.body || '{}');
+  } catch {
+    return json(400, { message: 'Requête invalide' });
+  }
+
+  // Champ piège invisible : rempli uniquement par les robots
+  if (data['bot-field']) {
+    return json(200, { message: 'Email envoyé avec succès!' });
+  }
+
+  const name = clip(data.name, 120);
+  const email = clip(data.email, 200);
+  const phone = clip(data.phone, 40);
+  const budget = clip(data.budget, 60);
+  const message = clip(data.message, 5000);
+
+  if (!name || !isEmail(email) || !message) {
+    return json(400, { message: 'Nom, e-mail valide et message sont obligatoires' });
   }
 
   try {
-    // Parser les données du formulaire
-    const data = JSON.parse(event.body);
-    const { name, email, phone, budget, message } = data;
-
-    // Configuration du transporteur Nodemailer avec Gmail
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.GMAIL_USER, // Votre email Gmail
-        pass: process.env.GMAIL_APP_PASSWORD // App Password Gmail
-      }
-    });
-
-    // Contenu de l'email
-    const mailOptions = {
-      from: process.env.GMAIL_USER,
-      to: process.env.GMAIL_USER, // Vous recevez l'email sur votre propre adresse
+    await createTransport().sendMail({
+      from: sender(),
+      to: recipient(),
       replyTo: email, // Pour répondre directement au client
-      subject: `Nouveau message de ${name} - Virtuos Studio`,
+      subject: `Nouveau message de ${name.replace(/[\r\n]+/g, ' ')} - Virtuos Studio`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333;">Nouveau message depuis le site Virtuos Studio</h2>
           <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <p><strong>Nom :</strong> ${name}</p>
-            <p><strong>Email :</strong> <a href="mailto:${email}">${email}</a></p>
-            <p><strong>Téléphone :</strong> ${phone || 'Non fourni'}</p>
-            <p><strong>Budget estimé :</strong> ${budget}</p>
+            <p><strong>Nom :</strong> ${escapeHtml(name)}</p>
+            <p><strong>Email :</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
+            <p><strong>Téléphone :</strong> ${escapeHtml(phone) || 'Non fourni'}</p>
+            <p><strong>Budget estimé :</strong> ${escapeHtml(budget) || 'Non précisé'}</p>
           </div>
           <div style="margin: 20px 0;">
             <h3 style="color: #333;">Message :</h3>
-            <p style="white-space: pre-wrap;">${message}</p>
+            <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
           </div>
           <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
           <p style="color: #666; font-size: 12px;">
@@ -48,24 +53,12 @@ exports.handler = async (event) => {
           </p>
         </div>
       `
-    };
+    });
 
-    // Envoyer l'email
-    await transporter.sendMail(mailOptions);
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'Email envoyé avec succès!' })
-    };
-
+    return json(200, { message: 'Email envoyé avec succès!' });
   } catch (error) {
-    console.error('Erreur lors de l\'envoi de l\'email:', error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ 
-        message: 'Erreur lors de l\'envoi de l\'email',
-        error: error.message 
-      })
-    };
+    // Le détail reste dans les logs Netlify, il n'est pas renvoyé au visiteur
+    console.error("Erreur lors de l'envoi de l'email:", error);
+    return json(500, { message: "Erreur lors de l'envoi de l'email" });
   }
 };
