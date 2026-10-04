@@ -1,0 +1,71 @@
+/* =====================================================================
+   HERO TÉLÉPHONE (≤640px) — sans captures : typographie, halos qui dérivent,
+   bouton avec reflet, bandeau « pour qui », chiffres clés en verre dépoli.
+   Tablette et ordinateur : hero d'origine (trois captures décalées), non modifié.
+   ===================================================================== */
+
+/* Éléments propres au téléphone, cachés ailleurs */
+.hero .subtitle-short{display:none}
+.hp-sectors, .hp-stats{display:none}
+
+@media (max-width:640px){
+  #hero.hero.section{padding:12px 0 36px !important}
+  #hero .hero-visual{display:none !important}
+  #hero .hero-trust{display:none}
+  #hero .hero-layout{grid-template-columns:minmax(0,1fr); gap:0}
+  #hero .hero-inner{min-width:0}
+
+  /* Fond : deux halos qui dérivent lentement */
+  #hero .glow-1, #hero .glow-2{opacity:.5}
+  #hero .glow-1{animation:hpDrift 15s ease-in-out infinite alternate}
+  #hero .glow-2{animation:hpDrift 19s ease-in-out infinite alternate-reverse}
+
+  #hero .kicker{margin-bottom:16px}
+  #hero .title{font-size:clamp(34px,10.2vw,41px); line-height:1.06; letter-spacing:-.04em; margin:0 0 14px}
+  #hero .title .grad{background-size:180% 100%; animation:hpSheen 7s ease-in-out infinite alternate}
+  #hero .subtitle-long{display:none}
+  #hero .subtitle-short{display:block; font-size:16.5px !important; line-height:1.55; color:var(--muted); margin:0 0 24px; max-width:32ch}
+
+  /* Bouton principal : grand, avec un reflet qui passe ; le second devient un lien */
+  #hero .hero-cta{flex-direction:column; align-items:stretch; gap:4px; margin:0 0 26px}
+  #hero .hero-cta .btn-secondary{position:relative; overflow:hidden; height:58px; width:100%; justify-content:center; font-size:17px; border-radius:16px;
+    box-shadow:0 16px 38px -12px rgba(110,70,230,.6)}
+  #hero .hero-cta .btn-secondary::after{content:""; position:absolute; top:0; bottom:0; left:-60%; width:45%;
+    background:linear-gradient(100deg, transparent, rgba(255,255,255,.38), transparent); transform:skewX(-18deg); animation:hpShine 3.8s ease-in-out infinite 1.6s}
+  #hero .hero-cta .hero-link{display:flex; justify-content:center; height:auto !important; padding:10px 0 !important; background:none !important;
+    border:none !important; box-shadow:none !important; color:var(--text); font-weight:600; font-size:15px !important}
+  #hero .hero-cta .hero-link::after{content:" →"; margin-left:4px}
+
+  /* Bandeau « pour qui » qui défile */
+  .hp-sectors{display:block; margin:0 -16px 24px; overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image:linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent)}
+  .hp-sectors-track{display:flex; gap:8px; width:max-content; margin:0; padding:0 8px; list-style:none; animation:hpMarquee 28s linear infinite}
+  .hp-sectors-track li{flex:0 0 auto; padding:8px 15px; border:1px solid var(--border); background:var(--glass); border-radius:999px;
+    font-size:13.5px; font-weight:600; color:var(--text); white-space:nowrap}
+
+  /* Chiffres clés */
+  .hp-stats{display:grid; grid-template-columns:repeat(3,1fr); list-style:none; margin:0; padding:18px 4px; border:1px solid var(--border); border-radius:20px;
+    background:var(--glass); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px)}
+  .hp-stats li{position:relative; display:flex; flex-direction:column; align-items:center; gap:3px; text-align:center}
+  .hp-stats li + li::before{content:""; position:absolute; left:0; top:10%; bottom:10%; width:1px; background:var(--border)}
+  .hp-stats b{font-size:24px; letter-spacing:-.03em; background:linear-gradient(90deg, var(--brand), var(--brand-2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent}
+  .hp-stats span{font-size:12px; color:var(--muted)}
+}
+
+/* Apparition en cascade au chargement (téléphone, sauf « réduire les animations ») */
+@media (max-width:640px) and (prefers-reduced-motion:no-preference){
+  #hero .kicker, #hero .title, #hero .subtitle-short, #hero .hero-cta, .hp-sectors, .hp-stats{animation:hpRise .9s cubic-bezier(.2,.7,.2,1) both}
+  #hero .title{animation-delay:.08s}
+  #hero .subtitle-short{animation-delay:.2s}
+  #hero .hero-cta{animation-delay:.32s}
+  .hp-sectors{animation-delay:.44s}
+  .hp-stats{animation-delay:.56s}
+}
+@media (max-width:640px) and (prefers-reduced-motion:reduce){
+  #hero .glow-1, #hero .glow-2, #hero .title .grad, #hero .hero-cta .btn-secondary::after, .hp-sectors-track{animation:none}
+}
+@keyframes hpRise{from{opacity:0; transform:translateY(18px); filter:blur(8px)} to{opacity:1; transform:none; filter:none}}
+@keyframes hpSheen{from{background-position:0 0} to{background-position:100% 0}}
+@keyframes hpShine{0%{left:-60%} 55%,100%{left:130%}}
+@keyframes hpMarquee{to{transform:translateX(calc(-50% - 4px))}}
+@keyframes hpDrift{from{transform:translate(0,0) scale(1)} to{transform:translate(50px,40px) scale(1.18)}}

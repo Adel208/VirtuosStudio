@@ -47,8 +47,8 @@
   <noscript><link href="./assets/fonts/space-grotesk.css" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="./assets/vendor/lenis.css" />
   <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light")}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
-  <link rel="stylesheet" href="./assets/css/style.css?v=refresh30" />
-  <link rel="stylesheet" href="./assets/css/hero-pin.css?v=4" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=refresh31" />
+  <link rel="stylesheet" href="./assets/css/hero-mobile.css?v=1" />
   
   <!-- Cookies : Google Analytics chargé seulement après consentement (tarteaucitron) -->
   <script>var tarteaucitronForceLanguage = 'fr';</script>
@@ -146,88 +146,75 @@
   <header class="site-header"></header>
 
   <main>
-    <section class="hero hp" id="hero">
-      <div class="hp-track">
-        <div class="hp-stage">
-          <div class="hero-grid-bg" aria-hidden="true"></div>
-          <div class="hp-inner">
-            <div class="hp-copy hero-inner">
-              <div class="kicker"><span class="kicker-dot" aria-hidden="true"></span>Agence web au Perreux (94)</div>
-              <h1 class="title">Des sites web <span class="grad">sur-mesure</span> qui font grandir votre activité</h1>
-              <p class="subtitle subtitle-long">Design moderne, SEO intégré et sites rapides pour les artisans, commerçants et PME du Perreux-sur-Marne, du Val-de-Marne et de toute l'Île-de-France.</p>
-              <p class="subtitle subtitle-short">Des sites rapides et visibles sur Google pour artisans et PME.</p>
-              <div class="hero-cta">
-                <a href="./contact.html" class="btn btn-secondary">Obtenir un devis gratuit <span aria-hidden="true">→</span></a>
-                <a href="#projects" class="btn btn-outline hero-link">Voir nos projets</a>
-              </div>
-              <div class="hp-sectors" aria-label="Pour les artisans, commerçants et PME">
-                <ul class="hp-sectors-track">
-                  <li>Artisans</li><li>Restaurants</li><li>Coiffeurs</li><li>Commerçants</li><li>PME</li><li>Associations</li>
-                  <li aria-hidden="true">Artisans</li><li aria-hidden="true">Restaurants</li><li aria-hidden="true">Coiffeurs</li><li aria-hidden="true">Commerçants</li><li aria-hidden="true">PME</li><li aria-hidden="true">Associations</li>
-                </ul>
-              </div>
-              <ul class="hp-stats" aria-label="Nos engagements">
-                <li><b>24h</b><span>devis gratuit</span></li>
-                <li><b>3 sem.</b><span>délai de livraison</span></li>
-                <li><b>4.9/5</b><span>clients satisfaits</span></li>
-              </ul>
-              <ul class="hero-trust hp-trust" aria-label="Nos engagements">
-                <li><b>24h</b><span>devis gratuit</span></li>
-                <li><b>3 sem.</b><span>délai de livraison</span></li>
-                <li><b>890 €</b><span>site web dès</span></li>
-              </ul>
-            </div>
+    <section class="hero section" id="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-inner">
+          <div class="kicker"><span class="kicker-dot" aria-hidden="true"></span>Agence web au Perreux (94)</div>
+          <h1 class="title">Des sites web <span class="grad">sur-mesure</span> qui font grandir votre activité</h1>
+          <p class="subtitle subtitle-long">Design moderne, SEO intégré et sites rapides pour les artisans, commerçants et PME du Perreux-sur-Marne, du Val-de-Marne et de toute l'Île-de-France.</p>
+          <p class="subtitle subtitle-short">Des sites rapides et visibles sur Google pour artisans et PME.</p>
+          <div class="hero-cta">
+            <a href="./contact.html" class="btn btn-secondary">Obtenir un devis gratuit <span aria-hidden="true">→</span></a>
+            <a href="#projects" class="btn btn-outline hero-link">Voir nos projets</a>
+          </div>
+          <div class="hp-sectors" aria-label="Pour les artisans, commerçants et PME">
+            <ul class="hp-sectors-track">
+              <li>Artisans</li><li>Restaurants</li><li>Coiffeurs</li><li>Commerçants</li><li>PME</li><li>Associations</li>
+              <li aria-hidden="true">Artisans</li><li aria-hidden="true">Restaurants</li><li aria-hidden="true">Coiffeurs</li><li aria-hidden="true">Commerçants</li><li aria-hidden="true">PME</li><li aria-hidden="true">Associations</li>
+            </ul>
+          </div>
+          <ul class="hp-stats" aria-label="Nos engagements">
+            <li><b>24h</b><span>devis gratuit</span></li>
+            <li><b>3 sem.</b><span>délai de livraison</span></li>
+            <li><b>4.9/5</b><span>clients satisfaits</span></li>
+          </ul>
+          <ul class="hero-trust" aria-label="Nos engagements">
+            <li><b>24h</b><span>devis gratuit</span></li>
+            <li><b>3 sem.</b><span>délai de livraison</span></li>
+            <li><b>890 €</b><span>site web dès</span></li>
+          </ul>
+        </div>
 
-            <div class="hp-visual" role="region" aria-label="Nos réalisations">
-              <div class="hp-deck">
-          <article class="hp-card">
-            <a class="hp-link" href="https://lefondvert.netlify.app/" target="_blank" rel="noopener" aria-label="Voir le site Le Diamant Vert (nouvel onglet)">
-              <div class="hp-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="hero-visual">
+          <div class="hv-glow" aria-hidden="true"></div>
+          <figure class="hv-card hv-back">
+            <a class="hv-link" href="https://lefondvert.netlify.app/" target="_blank" rel="noopener" aria-label="Voir le site Le Diamant Vert (nouvel onglet)">
+              <div class="hv-bar"><i></i><i></i><i></i></div>
               <picture>
                 <source media="(min-width: 641px)" srcset="./template/lefondvert/le-fond-vert-boutique-diamants-bagues.webp" type="image/webp">
                 <source media="(min-width: 641px)" srcset="./template/lefondvert/le-fond-vert-boutique-diamants-bagues.png" type="image/png">
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="640" height="360" loading="eager" decoding="async">
               </picture>
-              <span class="hp-cap"><span class="hp-cap-text"><b>Le Diamant Vert</b><small>Joaillerie · E-commerce</small></span><span class="hp-go"><span>Voir<span class="hp-more">&nbsp;le site</span></span><span aria-hidden="true">↗</span></span></span>
-              <span class="hp-dim" aria-hidden="true"></span>
             </a>
-          </article>
-          <article class="hp-card">
-            <a class="hp-link" href="https://aritzan.netlify.app/" target="_blank" rel="noopener" aria-label="Voir le site Artizan (nouvel onglet)">
-              <div class="hp-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          </figure>
+          <figure class="hv-card hv-mid">
+            <a class="hv-link" href="https://aritzan.netlify.app/" target="_blank" rel="noopener" aria-label="Voir le site Artizan (nouvel onglet)">
+              <div class="hv-bar"><i></i><i></i><i></i></div>
               <picture>
                 <source media="(min-width: 641px)" srcset="./template/artizan/artizan-electricien-site-web-devis-intervention.webp" type="image/webp">
                 <source media="(min-width: 641px)" srcset="./template/artizan/artizan-electricien-site-web-devis-intervention.png" type="image/png">
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="640" height="360" loading="eager" decoding="async">
               </picture>
-              <span class="hp-cap"><span class="hp-cap-text"><b>Artizan</b><small>Artisan · Électricité</small></span><span class="hp-go"><span>Voir<span class="hp-more">&nbsp;le site</span></span><span aria-hidden="true">↗</span></span></span>
-              <span class="hp-dim" aria-hidden="true"></span>
             </a>
-          </article>
-          <article class="hp-card">
-            <a class="hp-link" href="https://virtuoswebsite.netlify.app/" target="_blank" rel="noopener" aria-label="Voir le site VirtuosWebsite (nouvel onglet)">
-              <div class="hp-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          </figure>
+          <figure class="hv-card hv-front">
+            <a class="hv-link" href="https://virtuoswebsite.netlify.app/" target="_blank" rel="noopener" aria-label="Voir le concept 3D VirtuosWebsite (nouvel onglet)">
+              <div class="hv-bar"><i></i><i></i><i></i></div>
               <picture>
                 <source media="(min-width: 641px)" srcset="./template/virtuoswebsite/virtuoswebsite-site-vitrine-verre-3d.webp" type="image/webp">
                 <source media="(min-width: 641px)" srcset="./template/virtuoswebsite/virtuoswebsite-site-vitrine-verre-3d.png" type="image/png">
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="640" height="360" loading="eager" decoding="async">
               </picture>
-              <span class="hp-cap"><span class="hp-cap-text"><b>VirtuosWebsite</b><small>Concept · Site 3D</small></span><span class="hp-go"><span>Voir<span class="hp-more">&nbsp;le site</span></span><span aria-hidden="true">↗</span></span></span>
-              <span class="hp-dim" aria-hidden="true"></span>
             </a>
-          </article>
-              </div>
-              <div class="hp-progress" aria-hidden="true">
-                <span class="hp-count">01 / 03</span>
-                <span class="hp-segs"><i></i><i></i><i></i></span>
-              </div>
-            </div>
-          </div>
-          <div class="hp-hint" aria-hidden="true">Faites défiler</div>
-          <div class="glow-1"></div>
-          <div class="glow-2"></div>
+          </figure>
+          <div class="hv-chip hv-chip-1" aria-hidden="true"><span class="hv-ico">⚡</span><div><b>+60%</b><small>trafic organique</small></div></div>
+          <div class="hv-chip hv-chip-2" aria-hidden="true"><span class="hv-ico">★</span><div><b>4.9/5</b><small>clients satisfaits</small></div></div>
+          <div class="hv-chip hv-chip-3" aria-hidden="true"><span class="hv-dot"></span><small>Livré en 2-3 semaines</small></div>
         </div>
       </div>
+      <div class="glow-1"></div>
+      <div class="glow-2"></div>
     </section>
 
     <section class="section" id="why-us">
@@ -572,7 +559,6 @@
   <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
   <script src="./assets/vendor/ScrollTrigger.min.js"></script>
   <script src="./assets/js/main.js?v=hero5"></script>
-  <script src="./assets/js/hero-pin.js?v=3"></script>
   <script src="./assets/js/contact-form.js?v=4"></script>
   
   <!-- Animation des compteurs statistiques -->

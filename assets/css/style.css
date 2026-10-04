@@ -2260,68 +2260,7 @@ a{color:inherit; text-decoration:none}
 /* Zone de notification vide : ne rien afficher */
 .toast:empty{display:none}
 
-/* =====================================================================
-   HERO — version téléphone (≤640px) : une seule capture, texte court,
-   un bouton principal, engagements sur une ligne, tout dans le 1er écran.
-   ===================================================================== */
-.hero .subtitle-short{display:none}
-/* Éléments réservés au téléphone, cachés ailleurs */
-.hv-cap, .hv-head, .hero-trust-m{display:none}
-
-@media (max-width:640px){
-  .hero .kicker{margin-bottom:12px}
-  .hero .title{margin-bottom:10px; font-size:clamp(28px,8.2vw,32px); line-height:1.12}
-
-  /* Texte court */
-  .hero .subtitle-long{display:none}
-  .hero .subtitle-short{display:block; font-size:16px !important; line-height:1.55; margin:0}
-
-  /* Un bouton principal, le second devient un lien */
-  .hero .hero-cta{flex-direction:column; align-items:stretch; gap:4px; margin:18px 0 18px}
-  .hero .hero-cta .hero-link{display:none !important}
-  .hero .hero-cta .btn{width:100%; justify-content:center}
-  .hero .hero-cta .hero-link{height:auto !important; padding:10px 0 !important; background:none !important; border:none !important; box-shadow:none !important; color:var(--text); font-weight:600; font-size:15px !important}
-  .hero .hero-cta .hero-link::after{content:" →"; margin-left:4px}
-
-  /* Engagements sur une ligne */
-  .hero-trust{gap:12px; padding-top:16px; justify-content:space-between}
-  .hero-trust b{font-size:18px}
-  .hero-trust span{font-size:11.5px; line-height:1.3}
-
-  /* Visuel : les trois réalisations côte à côte, visibles d'un coup, avec un bouton qui pulse */
-  .hero-visual{height:auto !important; perspective:none; min-width:0; max-width:none; width:100%; margin:0;
-    display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; align-items:stretch}
-  .hero-visual .hv-glow, .hero-visual .hv-chip, .hero-visual .hv-bar{display:none !important}
-  .hero-visual .hv-card{position:relative !important; inset:auto !important; width:auto !important; min-width:0;
-    transform:none !important; opacity:1 !important; animation:none !important; display:flex; flex-direction:column;
-    border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.35)}
-  .hero-visual .hv-link{display:flex; flex-direction:column; flex:1}
-  .hero-visual .hv-card img{aspect-ratio:4/3; object-fit:cover; object-position:top left}
-
-  .hv-head{grid-column:1 / -1; display:flex; align-items:baseline; justify-content:space-between; gap:12px}
-  .hv-head span{font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
-  .hv-head a{font-size:13px; font-weight:600; color:var(--text); text-decoration:none}
-
-  .hv-cap{display:flex; flex-direction:column; gap:8px; padding:9px 8px 10px; margin-top:auto}
-  .hv-cap-text b{display:block; font-size:12.5px; line-height:1.2; color:#fff; letter-spacing:-.01em}
-  .hv-cap-text small{display:none}
-  .hv-go{display:flex; align-items:center; justify-content:center; gap:4px; height:30px; border-radius:9px; white-space:nowrap;
-    font-size:12px; font-weight:800; color:#0b0d10; background:linear-gradient(90deg,#a3ff12,#7dd3fc);
-    animation:hvPulse 2.4s ease-in-out infinite}
-  @media (max-width:350px){.hv-more{display:none}}
-  .hero-visual .hv-mid .hv-go{animation-delay:.8s}
-  .hero-visual .hv-front .hv-go{animation-delay:1.6s}
-
-  /* Chiffres clés sous les cartes (sans prix) */
-  .hero-inner .hero-trust{display:none}
-  .hero-trust-m{display:flex}
-}
-
-@keyframes hvPulse{
-  0%,100%{box-shadow:0 0 0 0 rgba(163,255,18,.55), 0 6px 18px rgba(163,255,18,.22)}
-  50%{box-shadow:0 0 0 9px rgba(163,255,18,0), 0 6px 26px rgba(163,255,18,.5)}
-}
-@media (prefers-reduced-motion:reduce){.hv-go{animation:none}}
+/* Hero téléphone (≤640px) : voir assets/css/hero-mobile.css */
 
 /* =====================================================================
    TARIFS v3 — création + abonnements
