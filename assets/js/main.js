@@ -747,3 +747,22 @@ window.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initBlogFilters();
 });
+
+// Contact : pré-remplit le message selon la formule choisie sur la page Tarifs (?offre=…)
+window.addEventListener('DOMContentLoaded', () => {
+  const area = document.getElementById('contact-message');
+  if (!area || area.value) return;
+  const labels = {
+    essentiel: 'la création Essentiel',
+    starter: 'la création Starter',
+    pro: 'la création Pro',
+    elite: 'un projet sur-mesure Elite',
+    'cle-en-main': "l'offre clé en main (Starter + abonnement Croissance sur 12 mois)",
+    serenite: "l'abonnement Sérénité",
+    croissance: "l'abonnement Croissance",
+    visibilite: "l'abonnement Visibilité",
+    hebergement: "l'hébergement seul"
+  };
+  const label = labels[new URLSearchParams(location.search).get('offre')];
+  if (label) area.value = 'Bonjour, je suis intéressé(e) par ' + label + '.\n\n';
+});
