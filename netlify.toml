@@ -124,4 +124,11 @@
   status = 301
   force = true
 
+# Article tendances réécrit pour 2026 (l'ancienne adresse garde ses liens)
+[[redirects]]
+  from = "/articles/tendances-web-design-2024.html"
+  to = "/articles/tendances-web-design-2026.html"
+  status = 301
+  force = true
+
 # Redirection générique supprimée - les fichiers statiques sont servis directement
