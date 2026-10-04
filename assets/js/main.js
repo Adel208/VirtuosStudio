@@ -766,33 +766,3 @@ window.addEventListener('DOMContentLoaded', () => {
   const label = labels[new URLSearchParams(location.search).get('offre')];
   if (label) area.value = 'Bonjour, je suis intéressé(e) par ' + label + '.\n\n';
 });
-
-// Hero (téléphone) : pastilles de position des cartes + petit coup de pouce pour montrer qu'on peut glisser
-window.addEventListener('DOMContentLoaded', () => {
-  const rail = document.querySelector('.hero-visual');
-  const dots = [...document.querySelectorAll('.hv-dots i')];
-  if (!rail || !dots.length) return;
-  const phone = window.matchMedia('(max-width:640px)');
-  const cards = () => [...rail.querySelectorAll('.hv-card')].sort((a, b) => a.offsetLeft - b.offsetLeft);
-
-  const update = () => {
-    if (!phone.matches) return;
-    let best = 0, gap = Infinity;
-    cards().forEach((c, i) => {
-      const d = Math.abs(c.offsetLeft - 16 - rail.scrollLeft);
-      if (d < gap) { gap = d; best = i; }
-    });
-    dots.forEach((d, i) => d.classList.toggle('on', i === best));
-  };
-  rail.addEventListener('scroll', update, { passive: true });
-
-  if (phone.matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches) {
-    let touched = false;
-    ['pointerdown', 'touchstart', 'wheel'].forEach(e => rail.addEventListener(e, () => { touched = true; }, { once: true, passive: true }));
-    setTimeout(() => {
-      if (touched || rail.scrollLeft > 0) return;
-      rail.scrollTo({ left: 56, behavior: 'smooth' });
-      setTimeout(() => { if (!touched) rail.scrollTo({ left: 0, behavior: 'smooth' }); }, 650);
-    }, 1400);
-  }
-});
