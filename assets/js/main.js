@@ -453,7 +453,10 @@ window.addEventListener('DOMContentLoaded', () => {
             <button class="promo-close" aria-label="Masquer la promotion">✕</button>
           </div>
         </div>`;
-      header.insertAdjacentElement('afterend', banner);
+      // Sur mobile, le bandeau passe sous le hero de l'accueil pour ne pas repousser le titre
+      const heroSection = document.querySelector('#hero');
+      const onPhone = window.matchMedia('(max-width: 640px)').matches;
+      (onPhone && heroSection ? heroSection : header).insertAdjacentElement('afterend', banner);
       const closeBtn = banner.querySelector('.promo-close');
       closeBtn?.addEventListener('click', () => {
         banner.remove();

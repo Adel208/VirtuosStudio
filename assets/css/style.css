@@ -2258,3 +2258,35 @@ a{color:inherit; text-decoration:none}
 
 /* Zone de notification vide : ne rien afficher */
 .toast:empty{display:none}
+
+/* =====================================================================
+   HERO — version téléphone (≤640px) : une seule capture, texte court,
+   un bouton principal, engagements sur une ligne, tout dans le 1er écran.
+   ===================================================================== */
+.hero .subtitle-short{display:none}
+
+@media (max-width:640px){
+  .hero .kicker{margin-bottom:14px}
+  .hero .title{margin-bottom:12px}
+
+  /* Texte court */
+  .hero .subtitle-long{display:none}
+  .hero .subtitle-short{display:block; font-size:16px !important; line-height:1.55; margin:0}
+
+  /* Un bouton principal, le second devient un lien */
+  .hero .hero-cta{flex-direction:column; align-items:stretch; gap:4px; margin:22px 0 18px}
+  .hero .hero-cta .btn{width:100%; justify-content:center}
+  .hero .hero-cta .hero-link{height:auto !important; padding:10px 0 !important; background:none !important; border:none !important; box-shadow:none !important; color:var(--text); font-weight:600; font-size:15px !important}
+  .hero .hero-cta .hero-link::after{content:" →"; margin-left:4px}
+
+  /* Engagements sur une ligne */
+  .hero-trust{gap:12px; padding-top:16px; justify-content:space-between}
+  .hero-trust b{font-size:18px}
+  .hero-trust span{font-size:11.5px; line-height:1.3}
+
+  /* Visuel : une seule capture, droite, sans pastilles */
+  .hero-visual{height:auto !important; perspective:none}
+  .hero-visual .hv-back, .hero-visual .hv-mid, .hero-visual .hv-chip{display:none !important}
+  .hero-visual .hv-front{position:relative; inset:auto; right:auto; bottom:auto; width:100% !important; transform:none !important; animation:none !important}
+  .hero-visual .hv-glow{inset:10% 0}
+}
