@@ -164,7 +164,7 @@ exports.handler = async (event) => {
             
             <div style="text-align: center; margin: 30px 0;">
               <p style="color: #333; font-weight: 600; margin: 0 0 10px;">Une question ? Contactez-nous :</p>
-              <a href="mailto:virtuosagency@gmail.com" style="color: #A3FF12; text-decoration: none; font-weight: 600;">virtuosagency@gmail.com</a>
+              <a href="mailto:contact@virtuos.life" style="color: #A3FF12; text-decoration: none; font-weight: 600;">contact@virtuos.life</a>
             </div>
           </div>
           
