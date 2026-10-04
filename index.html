@@ -44,7 +44,7 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
   <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light")}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
-  <link rel="stylesheet" href="./assets/css/style.css?v=refresh14" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=refresh15" />
   
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CD8731D445"></script>
@@ -159,23 +159,29 @@
           </ul>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hv-glow"></div>
+        <div class="hero-visual">
+          <div class="hv-glow" aria-hidden="true"></div>
           <figure class="hv-card hv-back">
-            <div class="hv-bar"><i></i><i></i><i></i></div>
-            <img src="./template/lefondvert/le-fond-vert-boutique-diamants-bagues.png" alt="" width="640" height="360" loading="eager" decoding="async">
+            <a class="hv-link" href="https://lefondvert.netlify.app/" target="_blank" rel="noopener" aria-label="Voir le site Le Diamant Vert (nouvel onglet)">
+              <div class="hv-bar"><i></i><i></i><i></i></div>
+              <img src="./template/lefondvert/le-fond-vert-boutique-diamants-bagues.png" alt="" width="640" height="360" loading="eager" decoding="async">
+            </a>
           </figure>
           <figure class="hv-card hv-mid">
-            <div class="hv-bar"><i></i><i></i><i></i></div>
-            <img src="./template/mailzen/mailzen-application-saas-gestion-emails.png" alt="" width="640" height="360" loading="eager" decoding="async">
+            <a class="hv-link" href="https://aritzan.netlify.app/" target="_blank" rel="noopener" aria-label="Voir le site Artizan (nouvel onglet)">
+              <div class="hv-bar"><i></i><i></i><i></i></div>
+              <img src="./template/artizan/artizan-electricien-site-web-devis-intervention.png" alt="" width="640" height="360" loading="eager" decoding="async">
+            </a>
           </figure>
           <figure class="hv-card hv-front">
-            <div class="hv-bar"><i></i><i></i><i></i></div>
-            <img src="./template/artizan/artizan-electricien-site-web-devis-intervention.png" alt="" width="640" height="360" loading="eager" decoding="async">
+            <a class="hv-link" href="https://virtuoswebsite.netlify.app/" target="_blank" rel="noopener" aria-label="Voir le site VirtuosWebsite (nouvel onglet)">
+              <div class="hv-bar"><i></i><i></i><i></i></div>
+              <img src="./template/virtuoswebsite/virtuoswebsite-site-vitrine-verre-3d.png" alt="" width="640" height="360" loading="eager" decoding="async">
+            </a>
           </figure>
-          <div class="hv-chip hv-chip-1"><span class="hv-ico">⚡</span><div><b>+60%</b><small>trafic organique</small></div></div>
-          <div class="hv-chip hv-chip-2"><span class="hv-ico">★</span><div><b>4.9/5</b><small>clients satisfaits</small></div></div>
-          <div class="hv-chip hv-chip-3"><span class="hv-dot"></span><small>Livré en 2-3 semaines</small></div>
+          <div class="hv-chip hv-chip-1" aria-hidden="true"><span class="hv-ico">⚡</span><div><b>+60%</b><small>trafic organique</small></div></div>
+          <div class="hv-chip hv-chip-2" aria-hidden="true"><span class="hv-ico">★</span><div><b>4.9/5</b><small>clients satisfaits</small></div></div>
+          <div class="hv-chip hv-chip-3" aria-hidden="true"><span class="hv-dot"></span><small>Livré en 2-3 semaines</small></div>
         </div>
       </div>
       <div class="glow-1"></div>
@@ -318,6 +324,20 @@
         <div class="divider divider-mobile" aria-hidden="true"></div>
         <div class="grid projects-grid">
           <!-- Project cards generated manually -->
+          <article class="card project">
+            <div class="project-thumb"><span class="project-tag">Site vitrine · 3D</span>
+              <picture>
+                <source srcset="./template/virtuoswebsite/virtuoswebsite-site-vitrine-verre-3d.webp 1280w" type="image/webp" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                <img src="./template/virtuoswebsite/virtuoswebsite-site-vitrine-verre-3d.png" alt="VirtuosWebsite - Site vitrine premium avec logo en verre 3D animé au scroll" loading="lazy" decoding="async" width="640" height="360" srcset="./template/virtuoswebsite/virtuoswebsite-site-vitrine-verre-3d.png 1280w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" title="VirtuosWebsite - Site vitrine 3D par Virtuos Studio">
+              </picture>
+            </div>
+            <h3>VirtuosWebsite</h3>
+            <p>Site vitrine immersif : un logo en verre 3D qui se décompose et se recompose au scroll.</p>
+            <div class="project-meta"><b>Objectif</b>: une vitrine qui marque les esprits · <b>Technologie</b>: Three.js, WebGL temps réel</div>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://virtuoswebsite.netlify.app/" target="_blank" rel="noopener">Voir le site</a>
+            </div>
+          </article>
           <article class="card project">
             <div class="project-thumb"><span class="project-tag">Joaillerie · E-commerce</span><img src="./template/lefondvert/le-fond-vert-boutique-diamants-bagues.png" alt="Le Diamant Vert - Site web joaillerie et diamants, design élégant" loading="lazy" decoding="async" width="640" height="360" srcset="./template/lefondvert/le-fond-vert-boutique-diamants-bagues.png 640w, ./template/lefondvert/le-fond-vert-boutique-diamants-bagues.png 1280w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" title="Le Diamant Vert - Projet site joaillerie par Virtuos Studio"></div>
             <h3>Le Diamant Vert</h3>
