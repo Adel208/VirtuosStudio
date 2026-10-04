@@ -1,4 +1,4 @@
-const { createTransport, sender, recipient, escapeHtml, isEmail, clip, json } = require('../lib/mailer');
+const { createTransport, sender, recipient, escapeHtml, isEmail, clip, json, errorCode } = require('../lib/mailer');
 
 exports.handler = async (event) => {
   // Autoriser uniquement POST
@@ -59,6 +59,6 @@ exports.handler = async (event) => {
   } catch (error) {
     // Le détail reste dans les logs Netlify, il n'est pas renvoyé au visiteur
     console.error("Erreur lors de l'envoi de l'email:", error);
-    return json(500, { message: "Erreur lors de l'envoi de l'email" });
+    return json(500, { message: "Erreur lors de l'envoi de l'email", code: errorCode(error) });
   }
 };

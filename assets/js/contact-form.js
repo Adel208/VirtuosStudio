@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Rediriger vers la page de remerciement
           window.location.href = '/template/merci.html';
         } else {
-          throw new Error(result.message || 'Erreur lors de l\'envoi');
+          throw new Error((result.message || 'Erreur lors de l\'envoi') + (result.code ? ' [code: ' + result.code + ']' : ''));
         }
 
       } catch (error) {

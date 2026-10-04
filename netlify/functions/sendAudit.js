@@ -1,4 +1,4 @@
-const { createTransport, sender, recipient, escapeHtml, isEmail, clip, json } = require('../lib/mailer');
+const { createTransport, sender, recipient, escapeHtml, isEmail, clip, json, errorCode } = require('../lib/mailer');
 
 // Demande d'audit : notification envoyée à Virtuos Studio uniquement.
 // Pas de mail de confirmation au visiteur : la fonction est publique, un robot
@@ -67,6 +67,6 @@ exports.handler = async (event) => {
     return json(200, { message: "Demande d'audit envoyée avec succès! Vous recevrez votre rapport sous 24h.", success: true });
   } catch (error) {
     console.error("Erreur lors de l'envoi de la demande d'audit:", error);
-    return json(500, { message: "Erreur lors de l'envoi de la demande. Veuillez réessayer.", success: false });
+    return json(500, { message: "Erreur lors de l'envoi de la demande. Veuillez réessayer.", success: false, code: errorCode(error) });
   }
 };

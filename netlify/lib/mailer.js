@@ -42,4 +42,13 @@ const json = (statusCode, body) => ({
   body: JSON.stringify(body)
 });
 
-module.exports = { createTransport, sender, recipient, escapeHtml, isEmail, clip, json };
+// Catégorie d'erreur sans détail sensible, renvoyée au navigateur pour le diagnostic.
+function errorCode(error) {
+  const msg = String(error && error.message || '');
+  if (/SMTP_USER ou SMTP_PASS manquant/.test(msg)) return 'config';
+  if (error && (error.code === 'EAUTH' || /535|Invalid login|authentication/i.test(msg))) return 'auth';
+  if (error && /ECONNECTION|ETIMEDOUT|ESOCKET|ECONNREFUSED|ENOTFOUND/.test(error.code || msg)) return 'connexion';
+  return 'autre';
+}
+
+module.exports = { createTransport, sender, recipient, escapeHtml, isEmail, clip, json, errorCode };
