@@ -206,6 +206,7 @@ function buildFooterHTML() {
           <li><a href="${root}faq.html">FAQ</a></li>
           <li><a href="${tpl}politique-confidentialite.html">Politique de confidentialité</a></li>
           <li><a href="${tpl}mentions-legales.html">Mentions légales</a></li>
+          <li><a href="#tarteaucitron" onclick="if(window.tarteaucitron&&tarteaucitron.userInterface){tarteaucitron.userInterface.openPanel();}return false;">Gérer les cookies</a></li>
         </ul>
       </div>
       

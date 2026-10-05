@@ -14,7 +14,7 @@ tarteaucitron.init({
   showAlertSmall: false,
   cookieslist: false,
   closePopup: false,
-  showIcon: true,             // petite icône pour changer d'avis à tout moment
+  showIcon: false,            // icône retirée : le lien « Gérer les cookies » du pied de page permet de changer d'avis
   iconPosition: 'BottomLeft',
   adblocker: false,
   DenyAllCta: true,           // « Tout refuser » aussi visible que « Tout accepter »
