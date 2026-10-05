@@ -2375,3 +2375,10 @@ a{color:inherit; text-decoration:none}
   .duo-turnkey .btn{width:100%}
   .price-reassure{gap:8px 18px; margin-top:28px}
 }
+
+/* Pied de page ordinateur : Navigation et Légal au même rythme que Contact (liens de 20px, 14px d'écart) */
+@media (min-width:901px){
+  .site-footer .footer-nav ul, .site-footer .footer-legal ul{gap:14px !important}
+  .site-footer .footer-nav li, .site-footer .footer-legal li{margin:0; padding:0; line-height:20px}
+  .site-footer .footer-nav a, .site-footer .footer-legal a{display:flex; align-items:center; height:20px; padding:0; line-height:20px}
+}
