@@ -88,6 +88,19 @@
   status = 301
   force = true
 
+# Pages projets renommées en minuscules (une URL avec majuscule ne peut pas être indexée par Google)
+[[redirects]]
+  from = "/template/Presse.html"
+  to = "/template/presse.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/Medical.html"
+  to = "/template/medical.html"
+  status = 301
+  force = true
+
 # Redirections des anciennes URLs /template/ vers les nouvelles URLs à la racine
 [[redirects]]
   from = "/template/blog.html"
