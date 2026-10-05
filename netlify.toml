@@ -81,6 +81,13 @@
   status = 301
   force = true
 
+# Ancien article isolé (menu différent) : redirigé vers l'article du site
+[[redirects]]
+  from = "/blog/websearch-mcp-article.html"
+  to = "/articles/websearch-mcp-webmarketing.html"
+  status = 301
+  force = true
+
 # Redirections des anciennes URLs /template/ vers les nouvelles URLs à la racine
 [[redirects]]
   from = "/template/blog.html"

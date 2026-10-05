@@ -435,7 +435,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Inject promo banner (10% new founders) under header if not dismissed
   try {
-    const KEY = 'promo_banner_dismissed_v2';
+    const KEY = 'promo_banner_dismissed_v3';
     const dismissed = localStorage.getItem(KEY) === '1';
     const header = document.querySelector('.site-header');
     if (header && !dismissed) {
@@ -446,16 +446,14 @@ window.addEventListener('DOMContentLoaded', () => {
       const siteRoot = mainScript ? mainScript.src.replace(/assets\/js\/main\.js.*$/, '') : '/';
       banner.innerHTML = `
         <div class="container promo-inner">
-          <div class="promo-text"> <b>-10% pour les b&eacute;n&eacute;ficiaires BGE ADIL</b> sur votre premier projet. Code <b>NEW10</b></div>
+          <div class="promo-text"> <b>-7% pour les nouveaux cr&eacute;ateurs d&rsquo;entreprise</b> sur votre premier projet. Code <b>NEW7</b></div>
           <div class="promo-cta">
-            <a class="btn btn-outline" href="${siteRoot}contact.html?promo=NEW10">Profiter de l&rsquo;offre</a>
+            <a class="btn btn-outline" href="${siteRoot}contact.html?promo=NEW7">Profiter de l&rsquo;offre</a>
             <button class="promo-close" aria-label="Masquer la promotion">✕</button>
           </div>
         </div>`;
-      // Sur mobile, le bandeau passe sous le hero de l'accueil pour ne pas repousser le titre
-      const heroSection = document.querySelector('#hero');
-      const onPhone = window.matchMedia('(max-width: 640px)').matches;
-      (onPhone && heroSection ? heroSection : header).insertAdjacentElement('afterend', banner);
+      // Même emplacement sur toutes les pages : juste sous l'en-tête
+      header.insertAdjacentElement('afterend', banner);
       const closeBtn = banner.querySelector('.promo-close');
       closeBtn?.addEventListener('click', () => {
         banner.remove();
