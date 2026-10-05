@@ -195,7 +195,6 @@ function buildFooterHTML() {
         <ul>
           <li><a href="${root}services.html">Services</a></li>
           <li><a href="${root}projets.html">Projets</a></li>
-          <li><a href="${root}blog.html">Blog</a></li>
           <li><a href="${root}tarifs.html">Tarifs</a></li>
           <li><a href="${root}contact.html">Contact</a></li>
         </ul>
