@@ -2394,3 +2394,30 @@ a{color:inherit; text-decoration:none}
 
 /* En-tête : hauteur réservée dès le départ (évite le saut de page quand le menu est injecté) */
 .site-header{min-height:73px}
+
+/* Cookies (tarteaucitron) : vert du site à la place du jaune d'origine.
+   « Tout accepter » et « Tout refuser » gardent exactement le même style (exigence CNIL). */
+#tarteaucitronAlertBig #tarteaucitronPersonalize,
+#tarteaucitronAlertBig #tarteaucitronPersonalize2,
+#tarteaucitronAlertBig #tarteaucitronAllDenied2,
+#tarteaucitronAlertBig #tarteaucitronCloseAlert,
+#tarteaucitron #tarteaucitronPrivacyUrl,
+#tarteaucitron #tarteaucitronPrivacyUrlDialog,
+#tarteaucitronRoot .tarteaucitronCTAButton,
+#tarteaucitronRoot .tarteaucitronAllow,
+#tarteaucitronRoot .tarteaucitronDeny,
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine .tarteaucitronAsk .tarteaucitronAllow,
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine .tarteaucitronAsk .tarteaucitronDeny,
+#tarteaucitron #tarteaucitronServices #tarteaucitronServices_mandatory .tarteaucitronLine button.tarteaucitronAllow,
+#tarteaucitron #tarteaucitronSave,
+#tarteaucitron #tarteaucitronSaveButton{background:#047857 !important; color:#fff !important; border-radius:8px !important}
+#tarteaucitron #tarteaucitronServices #tarteaucitronAllAllowed.tarteaucitronIsSelected,
+#tarteaucitron #tarteaucitronServices #tarteaucitronAllDenied.tarteaucitronIsSelected,
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine .tarteaucitronAsk .tarteaucitronAllow.tarteaucitronIsSelected,
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine .tarteaucitronAsk .tarteaucitronDeny.tarteaucitronIsSelected{background:#047857 !important; color:#fff !important}
+#tarteaucitron #tarteaucitronServices,
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine.tarteaucitronIsAllowed,
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine.tarteaucitronIsDenied{border-color:#047857 !important}
+#tarteaucitronRoot a[href*="tarteaucitron.io"], #tarteaucitron .tarteaucitronSelfLink{color:#047857 !important}
+#tarteaucitronRoot button:focus-visible, #tarteaucitronRoot a:focus-visible{outline:2px solid #047857 !important; outline-offset:2px}
+#tarteaucitronRoot a.tarteaucitronSelfLink img{filter:hue-rotate(105deg) saturate(.85)}
