@@ -446,7 +446,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const siteRoot = mainScript ? mainScript.src.replace(/assets\/js\/main\.js.*$/, '') : '/';
       banner.innerHTML = `
         <div class="container promo-inner">
-          <div class="promo-text"> <b>-7% pour les nouveaux cr&eacute;ateurs d&rsquo;entreprise</b> sur votre premier projet. Code <b>NEW7</b></div>
+          <div class="promo-text"> <b>-7% pour les nouveaux cr&eacute;ateurs d&rsquo;entreprise</b> sur votre premier projet. Code <b>NEW7</b> &middot; Offre non cumulable</div>
           <div class="promo-cta">
             <a class="btn btn-outline" href="${siteRoot}contact.html?promo=NEW7">Profiter de l&rsquo;offre</a>
             <button class="promo-close" aria-label="Masquer la promotion">✕</button>
