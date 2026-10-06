@@ -2431,3 +2431,20 @@ a{color:inherit; text-decoration:none}
   #projects .projects-grid .project.is-wide p{font-size:16px}
   #projects .projects-grid .project.is-wide .actions{align-self:start; margin-bottom:0}
 }
+
+/* Hero : quatrième carte (Atelier), en haut à gauche ; les autres cartes sont décalées pour la laisser lisible */
+.hero-visual{height:560px}
+.hv-far{top:0; left:0; width:60%; z-index:1; transform:rotateY(-12deg) rotateX(4deg) translateZ(-70px); opacity:.92}
+.hv-back{top:70px}
+.hv-mid{top:215px}
+.hero-visual:hover .hv-far{transform:rotateY(-8deg) rotateX(2deg) translate(-6px,-6px)}
+.hv-far:hover,.hv-far:focus-within{opacity:1}
+.hv-chip-1{top:-3%; left:3%}
+@media (max-width:1024px){
+  .hero-visual{height:470px}
+  .hero-visual .hv-card{width:64%}
+  .hero-visual .hv-far{top:0; left:0; width:58%}
+  .hero-visual .hv-back{top:40px; right:0}
+  .hero-visual .hv-mid{top:175px; left:0}
+  .hv-chip-1{top:-4%}
+}
