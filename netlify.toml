@@ -151,4 +151,137 @@
   status = 301
   force = true
 
+# Adresses sans .html : redirection permanente vers la version officielle (évite les doublons pour Google)
+[[redirects]]
+  from = "/tarifs"
+  to = "/tarifs.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projets"
+  to = "/projets.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/audit-gratuit"
+  to = "/audit-gratuit.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/etude-de-cas-plomberie"
+  to = "/etude-de-cas-plomberie.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/atelier"
+  to = "/template/atelier.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/braise"
+  to = "/template/braise.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/maisonvermeil"
+  to = "/template/maisonvermeil.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/virtuoswebsite"
+  to = "/template/virtuoswebsite.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/artizan"
+  to = "/template/artizan.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/virtuoslife"
+  to = "/template/virtuoslife.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/presse"
+  to = "/template/presse.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/medical"
+  to = "/template/medical.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/btpconstruction"
+  to = "/template/btpconstruction.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/eskrib"
+  to = "/template/eskrib.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/evasionsignature"
+  to = "/template/evasionsignature.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/evasionvoyage"
+  to = "/template/evasionvoyage.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/extrizy"
+  to = "/template/extrizy.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/mailzen"
+  to = "/template/mailzen.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/sitia"
+  to = "/template/sitia.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/template/wextrizy"
+  to = "/template/wextrizy.html"
+  status = 301
+  force = true
+
 # Redirection générique supprimée - les fichiers statiques sont servis directement

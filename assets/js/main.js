@@ -94,7 +94,7 @@ function buildHeaderHTML() {
     // Local development URLs
     root = isTpl ? '../' : './';
     tpl = isTpl ? './' : './template/';
-    homeUrl = isTpl ? '../index.html' : './index.html';
+    homeUrl = isTpl ? '../' : './';
   }
   
   console.log('Building header - pathname:', location.pathname, 'hostname:', location.hostname);
@@ -167,7 +167,7 @@ function buildFooterHTML() {
     // Local development URLs
     root = isTpl ? '../' : './';
     tpl = isTpl ? './template/' : './template/';
-    homeUrl = isTpl ? '../index.html' : './index.html';
+    homeUrl = isTpl ? '../' : './';
   }
   return `
     <div class="container footer-inner" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; align-items: start;">
