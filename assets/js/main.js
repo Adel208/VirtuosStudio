@@ -756,3 +756,59 @@ window.addEventListener('DOMContentLoaded', () => {
   const label = labels[new URLSearchParams(location.search).get('offre')];
   if (label) area.value = 'Bonjour, je suis intéressé(e) par ' + label + '.\n\n';
 });
+
+// Pages de détail projet : aperçu du site interactif (voile « Cliquez pour explorer », choix ordinateur / mobile)
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.template-frame:not(.contact-map)').forEach((frame) => {
+    const iframe = frame.querySelector('iframe');
+    if (!iframe || frame.classList.contains('is-enhanced')) return;
+    frame.classList.add('is-enhanced');
+
+    const bar = document.createElement('div');
+    bar.className = 'tf-bar';
+    bar.innerHTML =
+      '<span class="tf-dots" aria-hidden="true"><i></i><i></i><i></i></span>' +
+      '<div class="tf-modes" role="group" aria-label="Taille de l\u2019aper\u00e7u">' +
+      '<button type="button" class="is-on" data-mode="desktop" aria-pressed="true">Ordinateur</button>' +
+      '<button type="button" data-mode="mobile" aria-pressed="false">Mobile</button></div>' +
+      '<button type="button" class="tf-exit" hidden>Quitter l\u2019aper\u00e7u</button>' +
+      '<a class="tf-open" target="_blank" rel="noopener">Ouvrir le site \u2197</a>';
+    bar.querySelector('.tf-open').href = iframe.getAttribute('src');
+
+    const stage = document.createElement('div');
+    stage.className = 'tf-stage';
+    iframe.parentNode.insertBefore(stage, iframe);
+    stage.appendChild(iframe);
+    frame.insertBefore(bar, stage);
+
+    const cover = document.createElement('button');
+    cover.type = 'button';
+    cover.className = 'tf-cover';
+    cover.setAttribute('aria-label', 'Activer l\u2019aper\u00e7u pour explorer le site');
+    cover.innerHTML =
+      '<span class="tf-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 8-6 2 4 7-3 1.5-4-7-5 4z"/></svg>Cliquez pour explorer le site</span>' +
+      '<span class="tf-sub">puis faites d\u00e9filer dans le cadre</span>';
+    stage.appendChild(cover);
+
+    const exit = bar.querySelector('.tf-exit');
+    const activate = () => { frame.classList.add('is-active'); exit.hidden = false; iframe.focus(); };
+    const deactivate = () => { frame.classList.remove('is-active'); exit.hidden = true; };
+    cover.addEventListener('click', activate);
+    exit.addEventListener('click', deactivate);
+    // Souris : on rend la main à la page quand le curseur quitte le cadre (le défilement n'est plus capturé)
+    if (window.matchMedia('(hover: hover)').matches) frame.addEventListener('mouseleave', deactivate);
+
+    bar.querySelectorAll('.tf-modes button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const mobile = btn.dataset.mode === 'mobile';
+        frame.classList.toggle('is-mobile', mobile);
+        bar.querySelectorAll('.tf-modes button').forEach((b) => {
+          const on = b === btn;
+          b.classList.toggle('is-on', on);
+          b.setAttribute('aria-pressed', String(on));
+        });
+      });
+    });
+  });
+});
+
