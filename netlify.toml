@@ -284,4 +284,28 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/creation-site-web-coiffeur"
+  to = "/creation-site-web-coiffeur.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/creation-site-web-artisan"
+  to = "/creation-site-web-artisan.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/creation-site-web-restaurant"
+  to = "/creation-site-web-restaurant.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/creation-site-web-commercant"
+  to = "/creation-site-web-commercant.html"
+  status = 301
+  force = true
+
 # Redirection générique supprimée - les fichiers statiques sont servis directement
