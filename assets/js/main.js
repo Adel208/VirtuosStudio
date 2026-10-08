@@ -812,3 +812,14 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Contact : ?promo=NEW7 / NEW10 ajoute le code au message (si le champ est vide)
+window.addEventListener('DOMContentLoaded', () => {
+  const area = document.getElementById('contact-message');
+  if (!area || area.value) return;
+  const code = (new URLSearchParams(location.search).get('promo') || '').toUpperCase();
+  const texts = {
+    NEW7: 'Bonjour, je crée mon entreprise et je souhaite profiter de l\u2019offre -7% (code NEW7).\n\n',
+    NEW10: 'Bonjour, je suis bénéficiaire BGE ADIL et je souhaite profiter de l\u2019offre -10% (code NEW10).\n\n'
+  };
+  if (texts[code]) area.value = texts[code];
+});

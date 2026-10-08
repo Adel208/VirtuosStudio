@@ -2552,3 +2552,11 @@ a{color:inherit; text-decoration:none}
 }
 @media (prefers-reduced-motion:reduce){.tf-pill{animation:none}}
 
+/* Petits blocs promo (remplacent le bandeau sur Tarifs et Contact) */
+.promo-mini{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:14px 18px; border:1px dashed var(--border); border-radius:14px; background:rgba(163,255,18,.05)}
+[data-theme="light"] .promo-mini{background:rgba(5,150,105,.06)}
+.promo-mini p{margin:0; font-size:15px; color:var(--text)}
+.promo-mini .btn{height:38px; padding:0 16px; font-size:14px; border-radius:999px}
+.promo-note{display:inline-block; margin:14px 0 4px; padding:8px 14px; border:1px dashed var(--border); border-radius:999px; font-size:14px; color:var(--muted)}
+.promo-note b{color:var(--text)}
+

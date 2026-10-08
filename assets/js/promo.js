@@ -2,6 +2,9 @@
 // pour éviter que la page « saute » quand il apparaît.
 (function () {
   try {
+    // Le bandeau n'est affiché que sur l'accueil et la page Tarifs (ailleurs : un petit bloc dédié).
+    var path = location.pathname.replace(/\/+$/, '');
+    if (!/(^|\/)(index\.html|tarifs(\.html)?)?$/.test(path) || /\/(articles|template)\//.test(path)) return;
     var KEY = 'promo_banner_dismissed_v3';
     if (localStorage.getItem(KEY) === '1') return;
     var header = document.querySelector('.site-header');
