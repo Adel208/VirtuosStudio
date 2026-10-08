@@ -109,7 +109,14 @@ function buildHeaderHTML() {
         </button>
         <ul id="nav-list" class="nav-list">
           <li><a href="${homeUrl}" data-section="hero">Accueil</a></li>
-          <li><a href="${root}services.html">Services</a></li>
+          <li class="has-sub">
+            <a href="${root}services.html">Services</a>
+            <button type="button" class="sub-toggle" aria-label="Afficher le sous-menu Services" aria-expanded="false"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            <ul class="sub-menu">
+              <li><a href="${root}services.html">Tous nos services</a></li>
+              <li><a href="${root}audit-gratuit.html">Audit gratuit</a></li>
+            </ul>
+          </li>
           <li><a href="${root}projets.html" data-section="projects">Projets</a></li>
           <li><a href="${root}blog.html">Blog</a></li>
           <li><a href="${root}tarifs.html" data-section="pricing">Tarifs</a></li>
@@ -194,6 +201,7 @@ function buildFooterHTML() {
         <h4 role="heading" aria-level="2">Navigation</h4>
         <ul>
           <li><a href="${root}services.html">Services</a></li>
+          <li><a href="${root}audit-gratuit.html">Audit gratuit</a></li>
           <li><a href="${root}projets.html">Projets</a></li>
           <li><a href="${root}tarifs.html">Tarifs</a></li>
           <li><a href="${root}contact.html">Contact</a></li>
@@ -263,6 +271,19 @@ function renderGlobalHeaderFooter() {
       });
     });
 
+    // Sous-menu Services : bouton chevron (clavier et tactile)
+    document.querySelectorAll('.has-sub').forEach((item) => {
+      const toggle = item.querySelector('.sub-toggle');
+      if (!toggle) return;
+      toggle.addEventListener('click', () => {
+        const open = item.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('click', (e) => {
+        if (!item.contains(e.target)) { item.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+      });
+    });
+
     // GA4 Conversion Tracking
     setupConversionTracking();
   } else {
@@ -276,6 +297,10 @@ function renderGlobalHeaderFooter() {
 
 function addActiveNavStates() {
   const currentPath = window.location.pathname;
+  // Page Audit gratuit : le menu « Services » reste mis en avant
+  if (currentPath.includes('audit-gratuit')) {
+    document.querySelectorAll('.has-sub > a').forEach((l) => l.classList.add('active'));
+  }
   const navLinks = document.querySelectorAll('.nav-list a');
   
   navLinks.forEach(link => {
@@ -725,7 +750,8 @@ window.addEventListener('DOMContentLoaded', () => {
     serenite: "l'abonnement Sérénité",
     croissance: "l'abonnement Croissance",
     visibilite: "l'abonnement Visibilité",
-    hebergement: "l'hébergement seul"
+    hebergement: "l'hébergement seul",
+    audit: "un audit gratuit de mon site (adresse du site : )"
   };
   const label = labels[new URLSearchParams(location.search).get('offre')];
   if (label) area.value = 'Bonjour, je suis intéressé(e) par ' + label + '.\n\n';
