@@ -798,6 +798,37 @@ window.addEventListener('DOMContentLoaded', () => {
     // Souris : on rend la main à la page quand le curseur quitte le cadre (le défilement n'est plus capturé)
     if (window.matchMedia('(hover: hover)').matches) frame.addEventListener('mouseleave', deactivate);
 
+    // Défilement automatique de l'aperçu (activé par data-autoscroll) : démarre à l'arrivée, s'arrête quand le visiteur prend la main
+    if (frame.hasAttribute('data-autoscroll') && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      let origin = '*';
+      try { origin = new URL(iframe.getAttribute('src'), location.href).origin; } catch (e) {}
+      const pill = cover.querySelector('.tf-pill');
+      const sub = cover.querySelector('.tf-sub');
+      const label = pill.lastChild;
+      const idle = { pill: label.textContent, sub: sub.textContent };
+      let loaded = false, visible = false, started = false;
+      const send = (action) => { try { iframe.contentWindow.postMessage({ type: 'virtuos-autoscroll', action }, origin); } catch (e) {} };
+      const showAuto = (on) => {
+        label.textContent = on ? 'Défilement automatique : cliquez pour prendre la main' : idle.pill;
+        sub.textContent = on ? 'vous pourrez ensuite défiler vous-même dans le cadre' : idle.sub;
+      };
+      const tryStart = () => {
+        if (started || !loaded || !visible) return;
+        started = true;
+        send('start');
+        showAuto(true);
+      };
+      iframe.addEventListener('load', () => { setTimeout(() => { loaded = true; tryStart(); }, 1200); });
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver((entries) => { visible = entries[0].isIntersecting; tryStart(); }, { threshold: 0.45 }).observe(frame);
+      } else { visible = true; }
+      cover.addEventListener('click', () => { send('stop'); showAuto(false); });
+      window.addEventListener('message', (e) => {
+        if (e.source !== iframe.contentWindow || !e.data || e.data.type !== 'virtuos-autoscroll-state') return;
+        showAuto(false);
+      });
+    }
+
     bar.querySelectorAll('.tf-modes button').forEach((btn) => {
       btn.addEventListener('click', () => {
         const mobile = btn.dataset.mode === 'mobile';
