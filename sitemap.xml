@@ -263,6 +263,19 @@
   </url>
 
   <url>
+    <loc>https://virtuos.life/template/artizan.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://virtuos.life/template/virtuoslife.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://virtuos.life/template/maisonvermeil.html</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
