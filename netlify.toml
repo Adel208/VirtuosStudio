@@ -195,6 +195,12 @@
   force = true
 
 [[redirects]]
+  from = "/template/sola"
+  to = "/template/sola.html"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/template/braise"
   to = "/template/braise.html"
   status = 301
