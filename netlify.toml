@@ -195,6 +195,12 @@
   force = true
 
 [[redirects]]
+  from = "/template/praxis"
+  to = "/template/praxis.html"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/template/atelier-web"
   to = "/template/atelier-web.html"
   status = 301
