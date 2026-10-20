@@ -284,6 +284,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://virtuos.life/template/evasion.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://virtuos.life/template/praxis.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>yearly</changefreq>
