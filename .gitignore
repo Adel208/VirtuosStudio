@@ -51,3 +51,6 @@ coverage/
 *.temp
 *.bak
 template/equiora/equioraAccueil-original.png
+
+# Visuels pub Facebook (hors site)
+pub-facebook/

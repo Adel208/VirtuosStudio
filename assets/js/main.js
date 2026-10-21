@@ -742,15 +742,12 @@ window.addEventListener('DOMContentLoaded', () => {
   const area = document.getElementById('contact-message');
   if (!area || area.value) return;
   const labels = {
-    essentiel: 'la création Essentiel',
-    starter: 'la création Starter',
-    pro: 'la création Pro',
-    elite: 'un projet sur-mesure Elite',
-    'cle-en-main': "l'offre clé en main (Starter + abonnement Croissance sur 12 mois)",
-    serenite: "l'abonnement Sérénité",
-    croissance: "l'abonnement Croissance",
-    visibilite: "l'abonnement Visibilité",
-    hebergement: "l'hébergement seul",
+    'site-3-pages': 'le site 3 pages (790 €)',
+    'site-6-pages': 'le site 6 pages (1 490 €)',
+    abonnement: "l'abonnement (0 € + 59 €/mois)",
+    entretien: "l'entretien de mon site (25 €/mois)",
+    'sur-mesure': 'un projet sur-mesure',
+    maquette: 'la maquette gratuite de ma page d’accueil',
     audit: "un audit gratuit de mon site (adresse du site : )"
   };
   const label = labels[new URLSearchParams(location.search).get('offre')];
