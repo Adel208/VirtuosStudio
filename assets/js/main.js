@@ -121,7 +121,7 @@ function buildHeaderHTML() {
           <li><a href="${root}blog.html">Blog</a></li>
           <li><a href="${root}tarifs.html" data-section="pricing">Tarifs</a></li>
           <li><a href="${root}contact.html" data-section="contact">Contact</a></li>
-          <li class="only-mobile"><a class="btn btn-primary" href="${root}contact.html">Obtenir un devis</a></li>
+          <li class="only-mobile"><a class="btn btn-primary" href="${root}contact.html?offre=maquette">Maquette gratuite</a></li>
         </ul>
         <div class="nav-cta">
           <button class="theme-toggle" aria-label="Changer de thème" title="Basculer entre thème sombre et clair">
@@ -140,7 +140,7 @@ function buildHeaderHTML() {
               <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
             </svg>
           </button>
-          <a class="btn btn-primary" href="${root}contact.html">Obtenir un devis</a>
+          <a class="btn btn-primary" href="${root}contact.html?offre=maquette">Maquette gratuite</a>
         </div>
       </nav>
     </div>`;

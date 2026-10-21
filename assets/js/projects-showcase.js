@@ -5,7 +5,21 @@
   var items = Array.prototype.slice.call(root.querySelectorAll('.pshow-item'));
   var slides = Array.prototype.slice.call(root.querySelectorAll('.pshow-slide'));
   var url = root.querySelector('.pshow-url');
+  var frame = root.querySelector('.pshow-frame');
+  var list = root.querySelector('.pshow-list');
+  var mobile = window.matchMedia('(max-width: 900px)');
   var current = 0;
+
+  // Sur mobile, l'aperçu s'affiche dans le projet ouvert ; sur ordinateur, à gauche de la liste.
+  function placeFrame() {
+    if (!frame) return;
+    if (mobile.matches) {
+      var inner = items[current].querySelector('.pshow-body-inner');
+      if (frame.parentNode !== inner) inner.insertBefore(frame, inner.firstChild);
+    } else if (frame.nextElementSibling !== list) {
+      root.insertBefore(frame, list);
+    }
+  }
 
   function select(index) {
     if (index === current) return;
@@ -22,7 +36,12 @@
       slide.tabIndex = on ? 0 : -1;
     });
     if (url) url.textContent = items[index].getAttribute('data-url') || 'virtuos.life';
+    placeFrame();
   }
+
+  placeFrame();
+  if (mobile.addEventListener) mobile.addEventListener('change', placeFrame);
+  else if (mobile.addListener) mobile.addListener(placeFrame);
 
   items.forEach(function (item, k) {
     var head = item.querySelector('.pshow-head');
