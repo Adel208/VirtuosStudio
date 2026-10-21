@@ -591,12 +591,14 @@
             <input type="text" name="name" placeholder="Nom" aria-label="Nom" autocomplete="name" required />
             <input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" required />
             <input type="tel" name="phone" placeholder="Téléphone" aria-label="Téléphone (facultatif)" autocomplete="tel" />
-            <select name="budget" aria-label="Budget estimé" required>
-              <option value="" disabled selected>Budget estimé</option>
-              <option>Moins de 1 000€</option>
-              <option>1 000€ - 3 000€</option>
-              <option>3 000€ - 7 000€</option>
-              <option>7 000€+</option>
+            <select name="offre" aria-label="Offre qui vous intéresse" required>
+              <option value="" disabled selected>Offre qui vous intéresse</option>
+              <option value="Je ne sais pas encore, je veux d'abord ma maquette gratuite" data-offre="maquette">Je ne sais pas encore, je veux d'abord ma maquette gratuite</option>
+              <option value="Site 3 pages : 790 €" data-offre="site-3-pages">Site 3 pages : 790 €</option>
+              <option value="Site 6 pages : 1 490 €" data-offre="site-6-pages">Site 6 pages : 1 490 €</option>
+              <option value="Abonnement : 0 € + 59 €/mois" data-offre="abonnement">Abonnement : 0 € + 59 €/mois</option>
+              <option value="Sur-mesure (boutique, réservation…)" data-offre="sur-mesure">Sur-mesure (boutique, réservation…)</option>
+              <option value="Entretien de mon site existant" data-offre="entretien">Entretien de mon site existant</option>
             </select>
             <textarea name="message" placeholder="Décrivez votre projet" aria-label="Décrivez votre projet" rows="5" required></textarea>
           </div>

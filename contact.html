@@ -92,13 +92,15 @@
                 <input type="tel" id="contact-phone" name="phone" placeholder="+33 6 12 34 56 78" autocomplete="tel" />
               </div>
               <div class="form-group">
-                <label for="contact-budget" class="form-label">Budget estimé *</label>
-                <select id="contact-budget" name="budget" required>
-                  <option value="" disabled selected>Sélectionnez votre budget</option>
-                  <option value="moins-1000">Moins de 1 000€</option>
-                  <option value="1000-3000">1 000€ - 3 000€</option>
-                  <option value="3000-7000">3 000€ - 7 000€</option>
-                  <option value="7000-plus">7 000€ et plus</option>
+                <label for="contact-offre" class="form-label">Offre qui vous intéresse *</label>
+                <select id="contact-offre" name="offre" required>
+                  <option value="" disabled selected>Choisissez une offre</option>
+                  <option value="Je ne sais pas encore, je veux d'abord ma maquette gratuite" data-offre="maquette">Je ne sais pas encore, je veux d'abord ma maquette gratuite</option>
+                  <option value="Site 3 pages : 790 €" data-offre="site-3-pages">Site 3 pages : 790 €</option>
+                  <option value="Site 6 pages : 1 490 €" data-offre="site-6-pages">Site 6 pages : 1 490 €</option>
+                  <option value="Abonnement : 0 € + 59 €/mois" data-offre="abonnement">Abonnement : 0 € + 59 €/mois</option>
+                  <option value="Sur-mesure (boutique, réservation…)" data-offre="sur-mesure">Sur-mesure (boutique, réservation…)</option>
+                  <option value="Entretien de mon site existant" data-offre="entretien">Entretien de mon site existant</option>
                 </select>
               </div>
               <div class="form-group form-group-full">

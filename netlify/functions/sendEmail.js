@@ -21,7 +21,8 @@ exports.handler = async (event) => {
   const name = clip(data.name, 120);
   const email = clip(data.email, 200);
   const phone = clip(data.phone, 40);
-  const budget = clip(data.budget, 60);
+  // « budget » : ancien nom du champ, gardé le temps que les navigateurs rechargent le script
+  const offre = clip(data.offre || data.budget, 80);
   const message = clip(data.message, 5000);
 
   if (!name || !isEmail(email) || !message) {
@@ -41,7 +42,7 @@ exports.handler = async (event) => {
             <p><strong>Nom :</strong> ${escapeHtml(name)}</p>
             <p><strong>Email :</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
             <p><strong>Téléphone :</strong> ${escapeHtml(phone) || 'Non fourni'}</p>
-            <p><strong>Budget estimé :</strong> ${escapeHtml(budget) || 'Non précisé'}</p>
+            <p><strong>Offre :</strong> ${escapeHtml(offre) || 'Non précisée'}</p>
           </div>
           <div style="margin: 20px 0;">
             <h3 style="color: #333;">Message :</h3>

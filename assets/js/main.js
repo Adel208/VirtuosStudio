@@ -750,8 +750,12 @@ window.addEventListener('DOMContentLoaded', () => {
     maquette: 'la maquette gratuite de ma page d’accueil',
     audit: "un audit gratuit de mon site (adresse du site : )"
   };
-  const label = labels[new URLSearchParams(location.search).get('offre')];
+  const key = new URLSearchParams(location.search).get('offre');
+  const label = labels[key];
   if (label) area.value = 'Bonjour, je suis intéressé(e) par ' + label + '.\n\n';
+  // Présélectionne la même offre dans la liste « Offre qui vous intéresse »
+  const option = key && document.querySelector('select[name="offre"] option[data-offre="' + CSS.escape(key) + '"]');
+  if (option) option.selected = true;
 });
 
 // Pages de détail projet : aperçu du site interactif (voile « Cliquez pour explorer », choix ordinateur / mobile)

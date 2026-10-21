@@ -2353,8 +2353,12 @@ a{color:inherit; text-decoration:none}
 .promo-note b{color:var(--text)}
 
 
+/* Contact : la liste des offres ne doit jamais élargir le formulaire (libellés longs) */
+.contact-form .form-group, .contact-form .form-grid > *{min-width:0}
+.contact-form select{min-width:0; max-width:100%; text-overflow:ellipsis}
+
 /* Contact : une seule colonne sur mobile (formulaire et coordonnées) */
 @media (max-width: 768px){
-  .contact-grid, .contact-form-grid{grid-template-columns:1fr; gap:16px}
+  .contact-grid, .contact-form-grid{grid-template-columns:minmax(0,1fr); gap:16px}
   .contact-form-card{padding:20px}
 }

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         name: contactForm.querySelector('[name="name"]').value,
         email: contactForm.querySelector('[name="email"]').value,
         phone: contactForm.querySelector('[name="phone"]').value,
-        budget: contactForm.querySelector('[name="budget"]').value,
+        offre: contactForm.querySelector('[name="offre"]').value,
         message: contactForm.querySelector('[name="message"]').value,
         'bot-field': (contactForm.querySelector('[name="bot-field"]') || {}).value || ''
       };
