@@ -34,3 +34,13 @@ tarteaucitron.init({
 
 tarteaucitron.user.gtagUa = 'G-CD8731D445';
 (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+
+// Pixel Meta (publicités Facebook / Instagram) : chargé seulement après accord du visiteur.
+// Sur les pages de remerciement, on enregistre en plus une demande de contact (« Lead »).
+tarteaucitron.user.facebookpixelId = '1840979967320623';
+tarteaucitron.user.facebookpixelMore = function () {
+  var page = location.pathname;
+  if (page.indexOf('/template/merci') !== -1) fbq('track', 'Lead', { content_name: 'Contact' });
+  if (page.indexOf('/template/audit-merci') !== -1) fbq('track', 'Lead', { content_name: 'Audit gratuit' });
+};
+(tarteaucitron.job = tarteaucitron.job || []).push('facebookpixel');
