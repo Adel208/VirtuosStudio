@@ -4,7 +4,7 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://virtuos.life/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,14 +12,14 @@
   <!-- Pages principales -->
   <url>
     <loc>https://virtuos.life/contact.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/tarifs.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -33,7 +33,7 @@
 
   <url>
     <loc>https://virtuos.life/services.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -47,7 +47,7 @@
 
   <url>
     <loc>https://virtuos.life/etude-de-cas-plomberie.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -61,7 +61,7 @@
 
   <url>
     <loc>https://virtuos.life/faq.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -111,7 +111,7 @@
 
   <url>
     <loc>https://virtuos.life/articles/tendances-web-design-2026.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -140,77 +140,77 @@
 
   <url>
     <loc>https://virtuos.life/articles/prix-site-vitrine-2026.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/articles/site-internet-artisan-checklist.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/articles/site-internet-restaurant.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/articles/site-internet-salon-coiffure.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/creation-site-web-nogent-sur-marne.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/creation-site-web-bry-sur-marne.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/creation-site-web-champigny-sur-marne.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/creation-site-web-coiffeur.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/creation-site-web-artisan.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/creation-site-web-restaurant.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/creation-site-web-commercant.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -218,124 +218,124 @@
   <!-- Pages de détail des projets -->
   <url>
     <loc>https://virtuos.life/template/presse.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/medical.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/btpconstruction.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/eskrib.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/evasionsignature.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/evasionvoyage.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/extrizy.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/mailzen.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/sitia.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/wextrizy.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/template/atelier.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/evasion.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/praxis.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/atelier-web.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/sola.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/braise.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/template/artizan.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/virtuoslife.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://virtuos.life/template/maisonvermeil.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://virtuos.life/template/virtuoswebsite.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
