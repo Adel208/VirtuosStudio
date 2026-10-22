@@ -201,6 +201,12 @@
   force = true
 
 [[redirects]]
+  from = "/template/alcove"
+  to = "/template/alcove.html"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/template/praxis"
   to = "/template/praxis.html"
   status = 301
