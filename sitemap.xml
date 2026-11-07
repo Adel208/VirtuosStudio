@@ -54,7 +54,7 @@
 
   <url>
     <loc>https://virtuos.life/blog.html</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -67,6 +67,13 @@
   </url>
 
   <!-- Articles de blog -->
+  <url>
+    <loc>https://virtuos.life/articles/site-cree-par-ia-ce-qui-manque.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://virtuos.life/articles/meta-ia-code-genere-2026.html</loc>
     <lastmod>2026-10-05</lastmod>
